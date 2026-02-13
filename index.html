@@ -64,10 +64,7 @@
   .nav-links a:hover { color: var(--amber); }
 
   /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .hero { grid-template-columns: 1fr;
     position: relative;
     overflow: hidden;
   }
@@ -277,12 +274,7 @@
   .sponsor-item:last-child { border-left: none; }
 
   /* ABOUT */
-  .about-section {
-    background: var(--forest);
-    padding: 5rem 4rem;
-    position: relative;
-    overflow: hidden;
-  }
+  .about-section { }
 
   .about-section::before {
     content: '';
@@ -821,7 +813,7 @@
     .hero-visual-panel { height: 260px; }
     .hero-text-panel { padding: 7rem 2rem 3rem; }
     .about-inner { grid-template-columns: 1fr; gap: 2rem; }
-    .about-section { padding: 3rem 2rem; }
+    .about-section { }
     .schedule-section { padding: 4rem 2rem; }
     .schedule-section::before { display: none; }
     .event-row { grid-template-columns: 85px 1fr; }
@@ -835,6 +827,55 @@
     .footer-bottom { padding: 1rem 2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
     .sponsors-bar { padding: 1.5rem 2rem; }
   }
+
+  .about-section {
+    padding: 2rem 3rem;
+  }
+  
+  .about-main-text {
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-main-text h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .about-main-text p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+  }
+  
+  .about-pillars {
+    gap: 1.5rem;
+  }
+  
+  .pillar {
+    padding: 1.5rem;
+  }
+
+
+  .event-row {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .event-subtopics {
+    margin-bottom: 0.8rem;
+  }
+  
+  .event-subtopics li {
+    padding: 0.3rem 0;
+    line-height: 1.5;
+  }
+  
+  .event-tags {
+    margin-bottom: 0.6rem;
+  }
+  
+  .event-meta {
+    margin-top: 0.8rem;
+  }
+
 </style>
 </head>
 <body>
@@ -866,19 +907,7 @@
       <a href="#about" class="btn-ghost">← اعرف أكثر</a>
     </div>
   </div>
-  <div class="hero-visual-panel">
-    
-    <div class="hero-graphic">
-      <div class="leaf-bg"></div>
-      <div class="leaf-mid"></div>
-      <div class="tent-icon">⛺</div>
-    </div>
-    <div class="hero-stat-block">
-      <div class="stat-num">21</div>
-      <div class="stat-label">نسخة متواصلة من العطاء المعرفي</div>
-    </div>
-  </div>
-</section>
+  </section>
 
 <!-- SPONSORS -->
 <div class="sponsors-bar">
