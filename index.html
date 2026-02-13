@@ -2,1383 +2,1202 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الخيمة الخضراء — ملتقى المعرفة والحوار</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ملتقى الخيمة الخضراء · رمضان 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --forest: #1a3a2a;
-    --moss: #2d5a3d;
-    --fern: #4a7c59;
-    --sage: #7aaa82;
-    --mist: #b8d4bb;
-    --cream: #f5f0e8;
-    --parchment: #ede5d4;
-    --earth: #8b6914;
-    --amber: #c49a2a;
-    --clay: #a0522d;
-    --charcoal: #1c1c1c;
-    --ink: #2a2a22;
+    --green-deep: #0B3D2E;
+    --green-main: #1A6B4A;
+    --green-accent: #2ECC71;
+    --green-light: #E8F5E9;
+    --green-mist: #F0F7F2;
+    --gold: #D4A843;
+    --gold-light: #F5E6C8;
+    --cream: #FEFCF6;
+    --text-dark: #1A1A1A;
+    --text-mid: #4A5548;
+    --text-light: #7A8A7E;
+    --shadow-soft: 0 2px 20px rgba(11,61,46,0.08);
+    --shadow-card: 0 4px 24px rgba(11,61,46,0.10);
+    --shadow-elevated: 0 12px 40px rgba(11,61,46,0.15);
+    --radius: 20px;
+    --radius-sm: 12px;
   }
 
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 
   body {
-    background-color: var(--cream);
-    color: var(--ink);
-    font-family: 'Cairo', sans-serif;
-    font-weight: 300;
+    font-family: 'Tajawal', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
     overflow-x: hidden;
-    direction: rtl;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
   }
 
+  /* ─── Decorative Background ─── */
   body::before {
     content: '';
     position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    top: -50%;
+    right: -30%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(46,204,113,0.06) 0%, transparent 70%);
     pointer-events: none;
-    z-index: 9999;
-    opacity: 0.4;
-  }
-
-  .sponsors-bar {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  /* NAV */
-  nav { position: sticky; top: 0; z-index: 1000; background: var(--forest); padding: 1.2rem 3rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--sage); }
-
-  .nav-logo { font-family: "Amiri", serif; font-size: 1.6rem; font-weight: 700; color: var(--cream); text-decoration: none; }
-
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-
-  .nav-links a { font-family: "Cairo", sans-serif; font-size: 1.2rem; font-weight: 500; color: var(--sage); text-decoration: none; transition: color 0.3s; }
-  .nav-links a:hover { color: var(--amber); }
-
-  /* HERO */
-  .hero { grid-template-columns: 1fr;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-text-panel {
-    background-color: var(--forest);
-    padding: 8rem 4rem 4rem 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-text-panel::before {
-    content: '';
-    position: absolute;
-    bottom: -60px; right: -60px;
-    width: 280px; height: 280px;
-    border-radius: 50%;
-    background: var(--moss);
-    opacity: 0.4;
-  }
-
-  .hero-text-panel::after {
-    content: '';
-    position: absolute;
-    top: 20%; left: -30px;
-    width: 120px; height: 120px;
-    border-radius: 50%;
-    background: var(--fern);
-    opacity: 0.3;
-  }
-
-  .hero-tag {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--sage);
-    margin-bottom: 1.5rem;
-    animation: fadeUp 0.8s ease both;
-  }
-
-  .hero-title {
-    font-family: 'Amiri', serif;
-    font-size: clamp(3rem, 5.5vw, 6rem);
-    font-weight: 700;
-    color: var(--cream);
-    line-height: 1.15;
-    animation: fadeUp 0.8s 0.1s ease both;
-  }
-
-  .hero-title em {
-    font-style: italic;
-    color: var(--sage);
-    display: block;
-  }
-
-  .hero-desc {
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    font-weight: 400;
-    line-height: 2;
-    color: var(--mist);
-    max-width: 420px;
-    animation: fadeUp 0.8s 0.2s ease both;
-  }
-
-  .hero-cta {
-    margin-top: 3rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    animation: fadeUp 0.8s 0.3s ease both;
-  }
-
-  .btn-primary {
-    background: var(--amber);
-    color: var(--forest);
-    border: none;
-    padding: 1rem 2.2rem;
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  .btn-primary:hover { background: var(--cream); transform: translateY(-2px); }
-
-  .btn-ghost {
-    color: var(--mist);
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-decoration: none;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-  }
-  .btn-ghost:hover { opacity: 1; }
-
-  .hero-visual-panel {
-    background-color: var(--parchment);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .hero-graphic {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .leaf-bg {
-    width: 80%; height: 80%;
-    border-radius: 60% 40% 50% 60% / 50% 60% 40% 50%;
-    background: linear-gradient(135deg, var(--moss) 0%, var(--forest) 100%);
-    opacity: 0.12;
-    animation: breathe 8s ease-in-out infinite;
-  }
-
-  .leaf-mid {
-    position: absolute;
-    width: 55%; height: 65%;
-    border-radius: 40% 60% 70% 30% / 60% 40% 60% 40%;
-    background: var(--fern);
-    opacity: 0.15;
-    animation: breathe 6s 1s ease-in-out infinite;
-  }
-
-  .tent-icon {
-    position: absolute;
-    font-size: 12rem;
-    opacity: 0.08;
-    animation: breathe 10s 2s ease-in-out infinite;
-  }
-
-  .hero-stat-block {
-    position: absolute;
-    bottom: 3rem;
-    left: 3rem;
-    text-align: left;
-    animation: fadeUp 0.8s 0.5s ease both;
-  }
-
-  .stat-num {
-    font-family: 'Amiri', serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--forest);
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--earth);
-    margin-top: 0.3rem;
-  }
-
-  .season-badge {
-    position: absolute;
-    top: 3rem; left: 3rem;
-    background: var(--forest);
-    color: var(--sage);
-    padding: 0.6rem 1.2rem;
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-
-  /* SPONSORS */
-  .sponsors-bar {
-    background: var(--parchment);
-    padding: 1.8rem 4rem;
-    display: flex;
-    align-items: center;
-    gap: 0;
-    border-bottom: 1px solid rgba(26,58,42,0.1);
-    flex-wrap: wrap;
-  }
-
-  .sponsors-label {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--earth);
-    white-space: nowrap;
-    margin-left: 2rem;
-  }
-
-  .sponsor-item {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--forest);
-    opacity: 0.45;
-    padding: 0 1.5rem;
-    border-left: 1px solid rgba(26,58,42,0.15);
-  }
-  .sponsor-item:last-child { border-left: none; }
-
-  /* ABOUT */
-  .about-section { }
-
-  .about-section::before {
-    content: '';
-    position: absolute;
-    left: -100px; top: -100px;
-    width: 400px; height: 400px;
-    border-radius: 50%;
-    background: var(--moss);
-    opacity: 0.15;
-  }
-
-  .about-inner {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 5rem;
-    align-items: start;
-    position: relative;
-    z-index: 1;
-  }
-
-  .about-main-text h2 {
-    font-family: 'Amiri', serif;
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 700;
-    color: var(--cream);
-    line-height: 1.5;
-    margin-bottom: 2rem;
-  }
-
-  .about-main-text h2 em {
-    font-style: italic;
-    color: var(--sage);
-  }
-
-  .about-main-text p {
-    color: var(--mist);
-    line-height: 2;
-    font-size: 0.95rem;
-    font-weight: 400;
-    margin-bottom: 1.2rem;
-  }
-
-  .about-pillars {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-
-  .pillar {
-    border-right: 3px solid var(--amber);
-    padding-right: 1.5rem;
-  }
-
-  .pillar h3 {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--amber);
-    margin-bottom: 0.7rem;
-  }
-
-  .pillar p {
-    color: var(--mist);
-    font-size: 0.88rem;
-    line-height: 1.8;
-    opacity: 0.85;
-    font-weight: 400;
-  }
-
-  /* SCHEDULE */
-  .schedule-section {
-    padding: 7rem 4rem;
-    background: var(--cream);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .schedule-section::before {
-    content: 'البرنامج';
-    position: absolute;
-    top: 3rem; left: 1rem;
-    font-family: 'Amiri', serif;
-    font-size: 8rem;
-    font-weight: 700;
-    color: var(--parchment);
-    line-height: 1;
-    pointer-events: none;
-    user-select: none;
-  }
-
-  .section-header {
-    display: flex;
-    align-items: baseline;
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-
-  .section-eyebrow {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--earth);
-  }
-
-  .section-title {
-    font-family: 'Amiri', serif;
-    font-size: clamp(2.5rem, 4vw, 4rem);
-    font-weight: 700;
-    color: var(--forest);
-    line-height: 1.1;
-  }
-
-  .month-block { margin-bottom: 3.5rem; }
-
-  .month-label {
-    font-family: 'Amiri', serif;
-    font-size: 1.4rem;
-    font-style: italic;
-    color: var(--earth);
-    margin-bottom: 1rem;
-    padding-bottom: 0.6rem;
-    border-bottom: 2px solid var(--parchment);
-  }
-
-  .event-row {
-    display: grid;
-    grid-template-columns: 110px 1fr auto;
-    align-items: start;
-    padding: 2rem 0;
-    border-bottom: 1px solid rgba(26,58,42,0.09);
-    gap: 2rem;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .event-row::before {
-    content: '';
-    position: absolute;
-    right: -4rem; left: -4rem;
-    top: 0; bottom: 0;
-    background: var(--parchment);
-    opacity: 0;
-    transition: opacity 0.2s;
     z-index: 0;
   }
-  .event-row:hover::before { opacity: 1; }
-  .event-row > * { position: relative; z-index: 1; }
-
-  .event-date {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -30%;
+    left: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(212,168,67,0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
   }
 
-  .event-day {
+  /* ─── Header ─── */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(254,252,246,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(11,61,46,0.06);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--green-main), var(--green-accent));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(26,107,74,0.3);
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .logo-text .title {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--green-deep);
+    letter-spacing: -0.3px;
+  }
+
+  .logo-text .sub {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+  }
+
+  /* ─── Hero ─── */
+  .hero {
+    position: relative;
+    padding: 32px 20px 28px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, var(--green-deep) 0%, var(--green-main) 100%);
+    z-index: 0;
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.06;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(255,255,255,0.5) 30px, rgba(255,255,255,0.5) 31px),
+      repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(255,255,255,0.5) 30px, rgba(255,255,255,0.5) 31px);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+    backdrop-filter: blur(10px);
+  }
+
+  .hero-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green-accent);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero h1 {
     font-family: 'Amiri', serif;
-    font-size: 2.5rem;
+    font-size: 30px;
     font-weight: 700;
-    color: var(--forest);
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .hero h1 span {
+    color: var(--gold);
+  }
+
+  .hero p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 300;
+    max-width: 320px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  .hero-stat .num {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--green-accent);
+  }
+
+  .hero-stat .label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
+    margin-top: 2px;
+  }
+
+  /* ─── Tracks / Categories ─── */
+  .tracks {
+    padding: 20px 16px 8px;
+  }
+
+  .tracks-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 0;
+  }
+  .tracks-scroll::-webkit-scrollbar { display: none; }
+
+  .track-chip {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1.5px solid transparent;
+    background: white;
+    color: var(--text-mid);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .track-chip.active {
+    background: var(--green-deep);
+    color: white;
+    border-color: var(--green-deep);
+    box-shadow: 0 4px 16px rgba(11,61,46,0.25);
+  }
+
+  .track-chip .icon {
+    font-size: 14px;
+  }
+
+  /* ─── Month Header ─── */
+  .month-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 20px 12px;
+  }
+
+  .month-header .line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to left, transparent, rgba(11,61,46,0.12));
+  }
+
+  .month-header h2 {
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--green-deep);
+    white-space: nowrap;
+  }
+
+  /* ─── Event Cards ─── */
+  .events {
+    padding: 0 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .event-card {
+    position: relative;
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s ease;
+    animation: fadeUp 0.5s ease backwards;
+  }
+
+  .event-card:nth-child(1) { animation-delay: 0.05s; }
+  .event-card:nth-child(2) { animation-delay: 0.1s; }
+  .event-card:nth-child(3) { animation-delay: 0.15s; }
+  .event-card:nth-child(4) { animation-delay: 0.2s; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .event-card:active {
+    transform: scale(0.985);
+  }
+
+  .card-accent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+  }
+
+  .card-top {
+    display: flex;
+    gap: 14px;
+    padding: 18px 18px 0;
+    align-items: flex-start;
+  }
+
+  .date-block {
+    flex-shrink: 0;
+    width: 54px;
+    height: 62px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--green-mist);
+    border: 1px solid rgba(11,61,46,0.06);
+  }
+
+  .date-block .day-num {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--green-deep);
     line-height: 1;
   }
 
-  .event-month-small {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--earth);
-    margin-top: 0.15rem;
-  }
-
-  .event-weekday {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.65rem;
+  .date-block .day-name {
+    font-size: 10px;
     font-weight: 500;
-    color: var(--fern);
-    margin-top: 0.2rem;
+    color: var(--green-main);
+    margin-top: 2px;
   }
 
-  .event-title {
-    font-family: 'Amiri', serif;
-    font-size: 1.4rem;
+  .card-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .card-info h3 {
+    font-size: 15px;
     font-weight: 700;
-    color: var(--forest);
-    margin-bottom: 0.7rem;
-    line-height: 1.35;
+    color: var(--text-dark);
+    line-height: 1.5;
+    margin-bottom: 6px;
   }
 
-  .event-subtopics {
-    list-style: none;
-    margin-bottom: 0.8rem;
-  }
-
-  .event-subtopics li {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 400;
-    color: var(--charcoal);
-    opacity: 0.7;
-    line-height: 1.7;
-    padding-right: 1.2rem;
-    position: relative;
-  }
-
-  
-
-  .event-tags {
+  .card-tags {
     display: flex;
-    gap: 0.5rem;
-    margin-top: 0.8rem;
+    gap: 6px;
     flex-wrap: wrap;
   }
 
   .tag {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.62rem;
+    font-size: 10px;
     font-weight: 600;
-    padding: 0.2rem 0.8rem;
-    border: 1px solid currentColor;
-    border-radius: 20px;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: var(--green-mist);
+    color: var(--green-main);
   }
 
-  .tag-env { color: var(--moss); }
-  .tag-soc { color: var(--clay); }
-  .tag-pol { color: var(--earth); }
-  .tag-sci { color: var(--fern); }
-  .tag-tech { color: #4a6080; }
-  .tag-art { color: #7a4a6e; }
+  .tag.gold {
+    background: var(--gold-light);
+    color: #9A7B2F;
+  }
 
-  .event-meta {
-    text-align: left;
-    min-width: 130px;
+  /* ─── Expandable Details ─── */
+  .card-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 18px;
+  }
+
+  .card-details.open {
+    max-height: 400px;
+    padding: 14px 18px;
+  }
+
+  .detail-list {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    gap: 8px;
   }
 
-  .event-format {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.67rem;
-    font-weight: 600;
-    color: var(--earth);
-    background: var(--parchment);
-    padding: 0.3rem 0.8rem;
-  }
-
-  .event-platform {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.67rem;
-    font-weight: 700;
-    color: var(--fern);
-  }
-
-  .event-register {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    background: var(--forest);
-    color: var(--cream);
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  .event-register:hover { background: var(--amber); color: var(--forest); }
-
-  /* FEATURES */
-  .features-section {
-    background: var(--parchment);
-    padding: 6rem 4rem;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
-  }
-
-  .feature-card {
-    background: var(--cream);
-    padding: 2.5rem;
+  .detail-list li {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.6;
+    padding-right: 18px;
     position: relative;
-    overflow: hidden;
-    transition: transform 0.3s;
   }
-  .feature-card:hover { transform: translateY(-5px); }
 
-  .feature-card::after {
+  .detail-list li::before {
     content: '';
     position: absolute;
-    bottom: 0; right: 0; left: 0;
-    height: 4px;
-    background: var(--fern);
-    transition: height 0.3s;
-  }
-  .feature-card:hover::after { height: 8px; }
-
-  .feature-icon { font-size: 2.5rem; margin-bottom: 1.5rem; display: block; }
-
-  .feature-title {
-    font-family: 'Amiri', serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--forest);
-    margin-bottom: 1rem;
+    right: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green-accent);
+    opacity: 0.6;
   }
 
-  .feature-desc {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.88rem;
-    font-weight: 400;
-    line-height: 1.9;
-    color: var(--charcoal);
-    opacity: 0.7;
+  /* ─── Card Footer ─── */
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px 14px;
+    border-top: 1px solid rgba(11,61,46,0.04);
+    margin-top: 4px;
   }
 
-  /* QUOTE */
-  .manifesto {
-    background: var(--forest);
-    padding: 8rem 4rem;
-    text-align: center;
+  .format-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  .format-badge .dot-live {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--green-accent);
+  }
+
+  .expand-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--green-main);
+    background: var(--green-mist);
+    border: none;
+    border-radius: 100px;
+    padding: 7px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  .expand-btn:active {
+    background: var(--green-light);
+    transform: scale(0.95);
+  }
+
+  .expand-btn .arrow {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    font-size: 10px;
+  }
+
+  .expand-btn.open .arrow {
+    transform: rotate(180deg);
+  }
+
+  /* ─── About Section ─── */
+  .about-section {
+    margin: 8px 16px 24px;
+    background: linear-gradient(135deg, var(--green-deep), #145C3F);
+    border-radius: var(--radius);
+    padding: 28px 22px;
     position: relative;
     overflow: hidden;
   }
 
-  .manifesto::before {
-    content: '❝';
+  .about-section::before {
+    content: '';
     position: absolute;
-    font-size: 40rem;
-    color: var(--moss);
-    opacity: 0.05;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    font-family: Georgia, serif;
+    top: -40px;
+    left: -40px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgba(46,204,113,0.08);
   }
 
-  .manifesto-quote {
+  .about-section h2 {
     font-family: 'Amiri', serif;
-    font-size: clamp(1.6rem, 3.5vw, 2.8rem);
-    font-weight: 400;
-    font-style: italic;
-    color: var(--cream);
-    line-height: 1.8;
-    max-width: 820px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
-  .manifesto-quote strong { font-weight: 700; color: var(--sage); font-style: normal; }
-
-  .manifesto-source {
-    margin-top: 3rem;
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--sage);
-    opacity: 0.7;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* NEWSLETTER */
-  .newsletter-section {
-    background: var(--amber);
-    padding: 5rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-
-  .newsletter-title {
-    font-family: 'Amiri', serif;
-    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-size: 20px;
     font-weight: 700;
-    color: var(--forest);
+    color: white;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .about-section p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.8;
+    position: relative;
+  }
+
+  .about-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .pillar {
+    text-align: center;
+    padding: 14px 8px;
+    background: rgba(255,255,255,0.07);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .pillar .icon {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .pillar .name {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
     line-height: 1.4;
   }
 
-  .newsletter-sub {
-    margin-top: 1rem;
-    color: var(--forest);
-    opacity: 0.7;
-    font-size: 0.9rem;
-    line-height: 1.8;
-    font-weight: 400;
-  }
-
-  .newsletter-form {
+  /* ─── Bottom Nav ─── */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(254,252,246,0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(11,61,46,0.06);
     display: flex;
+    justify-content: space-around;
+    padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
   }
 
-  .newsletter-form input {
-    flex: 1;
-    padding: 1rem 1.5rem;
-    border: 2px solid var(--forest);
-    background: transparent;
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.9rem;
-    color: var(--forest);
-    outline: none;
-    text-align: right;
-  }
-  .newsletter-form input::placeholder { opacity: 0.5; color: var(--forest); }
-
-  .newsletter-form button {
-    background: var(--forest);
-    color: var(--cream);
-    border: 2px solid var(--forest);
-    padding: 1rem 2rem;
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 6px 16px;
+    border-radius: 12px;
     cursor: pointer;
     transition: all 0.2s;
-    white-space: nowrap;
+    background: none;
+    border: none;
+    font-family: 'Tajawal', sans-serif;
   }
-  .newsletter-form button:hover { background: var(--cream); color: var(--forest); }
 
-  .zoom-note {
-    margin-top: 1.2rem;
+  .nav-item.active {
+    color: var(--green-main);
+  }
+
+  .nav-item:not(.active) {
+    color: var(--text-light);
+  }
+
+  .nav-item .nav-icon {
+    font-size: 20px;
+  }
+
+  .nav-item .nav-label {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  /* ─── Sections toggle ─── */
+  .section-page {
+    display: none;
+  }
+  .section-page.active {
+    display: block;
+  }
+
+  /* ─── Spacer for bottom nav ─── */
+  .bottom-spacer {
+    height: calc(72px + env(safe-area-inset-bottom));
+  }
+
+  /* ─── Scrollbar ─── */
+  ::-webkit-scrollbar { width: 0; }
+
+  /* ─── Zoom Button ─── */
+  .zoom-btn {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-  }
-
-  .zoom-badge {
-    background: var(--forest);
-    color: var(--cream);
-    padding: 0.3rem 0.9rem;
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.75rem;
+    justify-content: center;
+    gap: 8px;
+    width: calc(100% - 36px);
+    margin: 0 18px 14px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #2D8CFF, #1A6FD4);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.05em;
-  }
-
-  .zoom-text {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.8rem;
-    color: var(--forest);
-    opacity: 0.7;
-  }
-
-  /* FOOTER */
-  footer {
-    background: var(--charcoal);
-    padding: 4rem;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
-  }
-
-  .footer-brand {
-    font-family: 'Amiri', serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--cream);
-    margin-bottom: 1rem;
-  }
-  .footer-brand span { color: var(--sage); }
-
-  .footer-tagline {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.85rem;
-    color: var(--mist);
-    opacity: 0.6;
-    line-height: 1.8;
-    max-width: 280px;
-    font-weight: 400;
-  }
-
-  .footer-col h4 {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--sage);
-    margin-bottom: 1.5rem;
-  }
-
-  .footer-col ul { list-style: none; }
-  .footer-col ul li { margin-bottom: 0.8rem; }
-  .footer-col ul li a {
-    color: var(--mist);
+    cursor: pointer;
     text-decoration: none;
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 400;
-    opacity: 0.6;
-    transition: opacity 0.2s;
-  }
-  .footer-col ul li a:hover { opacity: 1; }
-
-  .footer-bottom {
-    background: var(--ink);
-    padding: 1.5rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 16px rgba(45,140,255,0.3);
   }
 
-  .footer-copy {
-    font-family: 'Cairo', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 400;
-    color: var(--mist);
-    opacity: 0.4;
+  .zoom-btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px rgba(45,140,255,0.3);
   }
 
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  .zoom-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
   }
 
-  @keyframes breathe {
-    0%, 100% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.05) rotate(3deg); }
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    nav { padding: 1.2rem 1.5rem; }
-    .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-visual-panel { height: 260px; }
-    .hero-text-panel { padding: 7rem 2rem 3rem; }
-    .about-inner { grid-template-columns: 1fr; gap: 2rem; }
-    .about-section { }
-    .schedule-section { padding: 4rem 2rem; }
-    .schedule-section::before { display: none; }
-    .event-row { grid-template-columns: 85px 1fr; }
-    .event-meta { display: none; }
-    .features-grid { grid-template-columns: 1fr; }
-    .features-section { padding: 4rem 2rem; }
-    .manifesto { padding: 5rem 2rem; }
-    .newsletter-section { grid-template-columns: 1fr; padding: 3rem 2rem; }
-    .newsletter-form { flex-direction: column; }
-    footer { grid-template-columns: 1fr 1fr; padding: 3rem 2rem; gap: 2rem; }
-    .footer-bottom { padding: 1rem 2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
-    .sponsors-bar { padding: 1.5rem 2rem; }
-  }
-
-  .about-section {
-    padding: 2rem 3rem;
-  }
-  
-  .about-main-text {
-    margin-bottom: 1.5rem;
-  }
-  
-  .about-main-text h2 {
-    margin-bottom: 1rem;
-  }
-  
-  .about-main-text p {
-    margin-bottom: 0.8rem;
-    line-height: 1.6;
-  }
-  
-  .about-pillars {
-    gap: 1.5rem;
-  }
-  
-  .pillar {
-    padding: 1.5rem;
-  }
-
-
-  .event-row {
-    padding: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .event-subtopics {
-    margin-bottom: 0.8rem;
-  }
-  
-  .event-subtopics li {
-    padding: 0.3rem 0;
-    line-height: 1.5;
-  }
-  
-  .event-tags {
-    margin-bottom: 0.6rem;
-  }
-  
-  .event-meta {
-    margin-top: 0.8rem;
-  }
-
+  /* ─── Color variants for card accents ─── */
+  .accent-society { background: linear-gradient(to bottom, #2ECC71, #27AE60); }
+  .accent-health { background: linear-gradient(to bottom, #3498DB, #2980B9); }
+  .accent-tech { background: linear-gradient(to bottom, #9B59B6, #8E44AD); }
+  .accent-climate { background: linear-gradient(to bottom, #1ABC9C, #16A085); }
+  .accent-food { background: linear-gradient(to bottom, #E67E22, #D35400); }
+  .accent-media { background: linear-gradient(to bottom, #E74C3C, #C0392B); }
+  .accent-economy { background: linear-gradient(to bottom, var(--gold), #B8942E); }
+  .accent-sports { background: linear-gradient(to bottom, #2ECC71, #27AE60); }
+  .accent-inclusion { background: linear-gradient(to bottom, #E91E63, #C2185B); }
+  .accent-arts { background: linear-gradient(to bottom, #FF9800, #F57C00); }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="main-nav">
-  <a href="#" class="nav-logo">الخيمة الخضراء</a>
-  <ul class="nav-links">
-    <li><a href="#about">عن الملتقى</a></li>
-    <li><a href="#schedule">البرنامج</a></li>
-    <li><a href="#features">مميزاتنا</a></li>
-    <li><a href="#newsletter">تسجيل</a></li>
-    <li><a href="#" onclick="alert('English version coming soon!'); return false;">English</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-text-panel">
-    <p class="hero-tag">ملتقى المعرفة والحوار · رمضان المبارك 2026 · النسخة 21</p>
-    <h1 class="hero-title">
-      ملتقى<br><em>الخيمة الخضراء</em>
-    </h1>
-    <p class="hero-desc">
-      الخيمة الخضراء منصة معرفية تستضيف أصحاب الرأي والعلم والخبرة، لمناقشة قضايا مجتمعية خلال شهر رمضان من كل عام، نقدمها حضورياً ومن خلال تقنية الزوم.
-    </p>
-    <div class="hero-cta">
-      <a href="#schedule" class="btn-primary">استعرض البرنامج</a>
-      <a href="#about" class="btn-ghost">← اعرف أكثر</a>
+<!-- Header -->
+<div class="header">
+  <div class="header-logo">
+    <div class="logo-icon">🌿</div>
+    <div class="logo-text">
+      <span class="title">الخيمة الخضراء</span>
+      <span class="sub">رمضان ٢٠٢٦</span>
     </div>
   </div>
-  </section>
+</div>
 
-<!-- SPONSORS -->
-<div class="sponsors-bar">
-  <span class="sponsors-label" style="font-size: 1.3rem; font-weight: 600;">بدعم من:</span>
-  <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACDAxMDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAUGBAcBAwgCCf/EAE4QAAEDAwMCAgYECQkGBQUBAAECAwQABREGEiEHMRNBFCJRYXGBCDKRoRUWFyNCUlSx0TNTYmRygpPB0iVDkpWi01Zjc+HwNUR0lMOy/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAMEAQIFBgf/xAA5EQACAQMCAwUGBAUEAwAAAAAAAQIDBBESIQUxQRNRYXGRBhQigaHRMrHB8BVCUuHxFiMzQ2Jygv/aAAwDAQACEQMRAD8A9l0pSgFKUoBSlKAUrHuMn0WG48BuKcAD3k4H76W+R6VDbfI2lQ5HvBwaAyKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQDNcZoaUAzTNKUAzTNKUAzTNKxLncoVtY8abIS0k/VB5KvgByajq1adGDqVJJRXNvZG0YuTxFZZl5pmoCHq6ySXwyJC2iTgF1G1J+fl86nhyMioLS/tr2Llb1FNLueTapRqUniawc5pmlKtkYzTNKUBzSg7UoBSlKAUpSgFKVU73r20WjW0HSklqUqXNSkoW20VISVHCQfjhXI4G05xTJhtLmWytcWZ7XEHqXdVXuTt007uRDXtT4YVhOzudyfrKBJ4KgMY4q93Kc1DDAWpIU84EpBPkAVKJ9gCQTn3VSJWtRJW6uLbV3Rp99UODFyEiUspC1FRVwltKBuJP62MZ4rDNZY23MK5Ow7R1GXbo9xlSZl1t60utuK3tB0hSkKUE4wAELPHIB94xza3YV46j+gP3GVGmWmAhDLTatjXiAJLikg5yCFoPvHwqOtMyNeby9bI2mWrTObgKlOOW+cktSGFJBT4KkBO5ZynvgD1Scgil2mxrPe0WuTplm7T1wUSkO3CckNR2Eg58VSwrasYVjGdw3EYAIrUjz1Jm7Pa4ndTbWuyyArTDWES1bU+GVYVv7Hcr6qQCOASc5rY9a9i61Edxlcu3OWtlmQIc6KSFeiuBBWCCnhTakHcCPJHtOKu9tnNzA+EqG9l0oWAfLAUk/ApKT862RJHHeZdKqdh17aLzrS4aWitS0S4QJWt1opSspOFAfD1eTjO7jNWysp5Nk0+QpSlDIpSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClK4zQHNKitQaisOn45kXy82+2tYzulSEt5+GTzWp9W/Sd6X2fe1ap0zUclPHh26Oooz/6i9qPsJrDko7s3hTnUeIrLN2mobVmqdO6Ut/4Q1JeYNqilW0OSXggKPsGe/yryDrj6UGv74lyPpuDC0tGVkB3IlycfFQCEn+6ce2tKXeZPvNzXdL3cJd0nr+tIlulxfwGeAPcMCqdW/pQ2W7O1a+z11X3n8K8efofptZ7pbrxAan2qdGnRHRlt6O4FoV8COKzK/MbTF6vmlZ5n6WvU6yyScqVFcwlf9pBylXzBreWh/pVatteyNrCxRb8wODLhKEZ8D2lByhR9wKazSvqU+bwzW74Bd0N4rUvD7Hselaq0T9IDpbqkoYb1E3a5yu8W5oMdYPsCleor5KNbRYeafaS8y6hxtQylaFAgj2giraae6OLKLi8SWDspXGax7lPg22IuXcZkeHGbGVuvuBCE/EnismDJoe1aY1r9JTpjp/xGLfcn9RTU8eBbGitIPvdOED5E1ovXX0nOoV+8RjTsaHpWIrgLTiVJI/tKGxJ+CTj21DUr06f4mXbbh9zcv8A24N+PT1PYeqdTaf0tbjcdR3mFaoo48SS8EAn2DPc/CsuyXa2Xu2tXKzz40+G8Mtvx3QtCvgRX5k3WVNu9yVc7zPl3Scr60iW6XV/InsPcKy9LX6/6TuBuGlb3NssknKjGX6i/wC22coV8xVRcSpuXJ4Ow/Zi4VPKktXd/c/TileOtE/Ss1VbgiPq/TsW+NDhUuC4I73xLZyhR+BTW59J/SN6UX/Y07qBVmlq/wBxdGFMc/28bD/xVcp1qdT8LOLcWNxbvFSDRt6lYdquttu0VMq13CJOYV2cjvJcSfmCay81KVDmlBSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgODShpQClKUBX9U6mYs5EdpAflqGdmcJQPaf4VEW7VN/cAfdsxkRu5Uy0sce48g1H2KD+HNYSn5Y3stOKcWD2POEp+H+QrK03fblcutur7O27/ALIs1rtrJaI7SnC+6SPZ+bU2D8E14bh0uJ8bqTu413SpJtQSSecdXn98+R1q6oWkVTcNUsZbLWzeoD1ncuiHfzLaSVg8KSR+iR7aqtrs8rU8tV3uq1tRlHDTaTyU+wewe/zrv1O3Ef1G1CZK0tuqb/CAb+qcqARn+lk/eKsca7W02d6cysJjRG1FxO3BbCBkgjywBU3Zx4zee73sk40v5U9pyXN47orG3STay0t9cu1pa6S3l17l3eb/ACwVO+saMj36HpVrxTfZbZdajRSpxxtoHBecBO1DYPGVEZPCcnip/RzkppiTaZqtz8FYSFfrIIyk/v8AurWf0R2Hb3ou5dULr+dvesbi/JdcUclqO04pplhJ8kJCDge+tspbCNSqcAx4sQBXvKV8f/6rqvhVtZ3VO4tYKG+mSSwmmnjKW2U8b+ZWVxOrTlCo89Vnv/wSVKUrvFQUpSgOR2pQdqUApSlAKUpQCq9erHp2/wBxD0qOw5c4acNu4w8yCcjae4BI7ipOddY8WWiGEPSJK07/AAmUblBP6x8kj4kZ8qqeoNQNwtU21+WwpgRylL6xzhmShYRn2HxWgnHtI9tYZrJrqQ2rLwxem5vjSWrekWd2Olx1X5tt1yQple4/q72UjPsV76r2mdTMmW25LXFss2JcpUmKqevbGfDuQ9HLo4StJPB5yAkgEGsG6i3M2+3wdRW+QoQlvNSWVpUkzYbzgeDiCP8AfNkJUpv62PEwDkV12tqZJ13qdqO1Dudh8AyYUR9xtbDylRm0MrSgqBWFYIJJ28dwRWmdyu5PJbr1KRPmNXCJKhyUsRC2tdvd3NI8Z1HqBQ7hKIxB7Z3dh2pZZaLfKduEyVCjJkREtoVcXdrTnguuDYVHkBSJIA742ng8isuzWu2aXRfXLfB229bjSj44K/CUopbOxRPrt7QhSU54wRn2cXq2WzVKbC7cIG+3pW4tIZSU+Kob2xvUD6re0rKk5GdwGfbkkw+fUrGpdSsemLXDXFvU2Vc48qWuCvMVnw04ZjBw8KUrb6x8klZIAFWTSV3YszURLMpu4JFmjRi42r8246iR4CSk/qlThGfYn3VSrm1Kj6+021Kbh23T4jekzYrDjaGWCIriHVKQFFSNpISMHbz3JNdtp/B70CdC09bpCBMdYRHZQlSjBhMOl8rWT/v3FFag39bBRnGDWE9yNSeTcFksWndP3FTkSOw1cpiMOu4y68Ac5Ue5AJ7mrDVF07qBE3U9zfiMKfElSwwvtlmMlCV7fb+ddUkDtwT5Va4N0jypa4mx1iShIUWnkbVFJ/SHkR7xW6LEWuhn0pSsmwpSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQFe6izJkPSMwWyQqPcJOyJDdSAS286oISoA8HBVn5V4qvznUi6qcauXUDUj6clKkelKbT9iCkV7PveLhrmy236zUFp24vD+lgtNZ/43CPemtKa1g2HTzl0l3afFitxUuSXEKWPELYVjKUZ3K544BrEkmsM3pzcHlfXc84Hp84t9T7zhedVypxxJWs/EqJNZidDPpjPyVFwsRkFx5zbhDaR5qPYD41sa36ntkzU9/sT1tVEXY1tSHiXN5k29XquSG8AY2Bbbg75SD8qvoqa9aNQ3nT+sTBuErTctaZD1yStxl+1yFJC3lIR/KeGShxIIPDh7YyKLVByxjPmdFcSvIxxGWleCS/I7tMdI2NTi52u2attMfUUEqS5bH0rLiCk4O/tgdvWTuHIrVekm3WuoV20Lfn4r7zjy4jL7JyhEppRCQg4GUq9ZHvKgfKt96cvsLprqlF6n2S4X2bOLGnpFxZZMZbiQcxpCWld0uoCU5Cu7PvrUf0tNF6V6ea9tiNKOz2Z0psz5Dbr/AIgZJWdhSo+tkkKPJPYVBRm1WdKa58tlzXMhq1ak463Jv5skhopQ/RUKK0Ws9t4rdPS5UTX2iLfqaOhHiyEFMttI/k308LHzPrD3KFWf8Th/NfdXR7KnUW8SKneXFF/BNr5nmSXoaYtBShSHE/quIrqtVs1rpdZcsEy8WvnP+z5ikpP90HH3V6g/E4fzX3U/E4fzX3VF7nBfgbXky+uN1pLFaMZ+a/U88vdROs7rPojmtNT7MYwlCUq/4gjd99VudY9UX+UJV3Fzub2eHbhIU4R8N54+Qr1V+Jw/mvup+Jw/mvurV2kpfimzaPF6VPenQin6nmONom47QHVNtD9VIzWWnRbgHJWo16R/E4fzX3U/E4fzX3VvCzow6epDX43eVtnPC8Njz1aNERfTBJuCCYUYF6QCfrJT+j/eOE/OpDQHTGRr5653OO9bbJa4Ehbcpx1ZKgdoX6rYwEpwRyT7eOKtXXJ42K0Ls1uW2iWtv0h9SsYAH8mk/E5P/DVx0ZF0xoTp7Eu9pZuuoHNYNMtrU66kBxakEJQQAEo+socAniuNfXbjNuHTZefXwO5b2co2VOEk3UrPOdvwrub3T6+Rpmd04W1MDECWzdELU4GnYhKg54YBWUjuQkKTkgY571Gr0SpSSklePMEZrZcqJCeC7c05EQmSVWmAiVDdbfZiNArmz474wCFFRHkCAnv2qY0iwxc2ZV5mNiPClvlMNr9GNFYTlxYHnhISge85qeVzSoxh28fiay8dCCjRuq/aztar0QeFl5z+1uaXi6EdhyBJgyZMJ8dnIy1NL+1JBrYXTxfVA6kt1rt3UPULYfeShKX3w8j3AhYPHtqx2O5WCf6KJ62bWuZ6QuMJDoCVNM4KllRwEj1sc9yDitldOdORxqa2XFgocZB8VC0HII2Egg/MGupQlSnFSpvZnEvveKdWVKulqXPZfmjbWmbmi82CFdEILfpLKVqbPdCsesk+8HI+VSVVjSB/B97vlgPDbT4nRR/5T+VEfJ0O/IirPmpyiKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAcGlDSgFK+VqCEKWo4SkZJqhx75qS+XJxFoKWGUc4KU4SPLcSDz8K5HFOM0eHSpwnGUpze0YrLeOfVcizb2s66bTSS5tkxpSOmJqC/MYwfFQtP9lW4j99U3pRFm3Oza71HE3Jl3zU8sx3Craosxlpio58uGFEfGrGJt0tF+anXyOhDLrXgOPs8pVzlJI9v+VTsmdbbRYVzILbPgKWpbaGQAlxxxRUe3mVKJPxJrlcLuLVWFa2m3BQ15T+GSjJuSeOfJ4T3WVsWLiFTtozW+ceKytv0ICPbjEnQLMlzx5jj6Zk53OcBJyBn4/f8a7NULatF6ThpD0O6IKJkZQylY7E/EhXz5qk9U9QXzSn4r2qy3WND1hq68tMeLIhqkJZjJI8ZW0YGE7m85I4JwRjIut7jNwrlbrxfR4wcSlDzaFqKGXQAcozyUZB4P8A7Vza9jVtOGqtTXZy1Rabf/HHlvzy2m9fjJ52RPCrGpX0y+JYf/0/3y8j6gT39PwrjCFojwoEBAEJmO2G2kJJwhCQkAY8+O3NSUayOzIzUubc7gmY42CpTT2wIzztAHkK6+oSgrTClJIKS4g5HmM1IX+8NWaMzIeYccZcXsJRjKeCRwfhXQ0UqderC+qudOnGLy//ADlLd47kkk+m/IhzKUIulHEpNrbwSIN25XbTc1tq6Omdb3ThD+PXT8ff7vPyq2tOIdaS62oLQsBSVDsQfOo6+Rmrvp51CRuDjXiNH34yk1E9NpypFociLVlUZeE/2Vcj7wams69Sw4irGU3KlUi5QbeWmucc82sbrPLka1YKtQdVLEovD/RlqpSleoOecjtSg7UoBSlKAUpXTKbfWgeA+GlDzKNwPyoDX0xeo9K6ovd9fgv3iHcVJajtxUKWtsJGUZABIGVLSfgk+dYIuMS5zHr2iH+MllmQEWu8sR0h52K60pZ3FA5Uk+IrO3J4BGRU3r++2yNbvQnbtdVS2nFJeFrWhLyfzeTuzxgBaTjvkpqm6Ziu2J+Ncbs7NjTJbiRbrVal+IqY22jbu24AQ0chWFH1dxycnFaMhezwVS6MNafvi5GnYyLjp7UEppDr1zfUrw5DCwUjxlOJLY2nPrAq3IKcdqsDlgtsdp0W5NtuCIjjjbsWUrMZxQQlZWw8gbmFkKBI+qSFZ55ORqDVTNmft0S4WW1NXCRIlBbMlhSkNNrLafGedQCCoqwlRCSFKOMjaTX0YK7daZ4nPQ4LEQyI7kqI6GmUZbHKFqxt5XtKcE5SaxgjSW5naWD/AKP+L71qfhsW9w3VLD7ynW1BXiEIKiEhQS6UrAGQRjk4pqkPCOdPM2p6ZHmuC6qYZeU02lI2ZQFAKCQp0LWQSAPbk1EWGJAvOkpmk4F/uLiGoJULgVYSVKUSEJRkqSQEEjdg4AOK41FEgWjSUbSM+/3FpDkAKNw3ZRuSsEpUjIUo4UnO3J2qJxTobZ2DWn7bIaaFxTbLeiW6htqLFVtitKKFLC33ljdIWAngH1QVDHPIr9oYa1Be25Wo4ybdp+wSXWmXbY+pPiSH1kqHiocUXBt/VAUVL244NWswV3K2wPQXoU1iYphhuVLdDrLm1onK1pzuOUbQnAOSK+NParavTs+NbrLa3Z7EqNsZisqShxpAcR4zDqwkBW7clJUAEqBGTkGmDXCyiaNyjW2Y3e1w/wAXLTGt67VZI0hIadlOuqQrdsP1Ejw043YPKicCs+EvUeqdVWW/sQXrRBt5W0+1KQpDjgUnK8AgEjKWwOP1jVZ1LFcvj8m5Wl6bKlRHFpuVruqyhcJDiNu7Zg72xgqwk+ttGDkYq56BvtslW4QmrrdETHXAGk3RaFvK9TIxjgghKjjv9asokW7wXmldMVD6EHx3g6onuEbR9ld1bkwpSmRQClMimRQClMimR7aAUpkUyPbQClMimRQCoPUWqLNYuLhNShw8hpOVLPyH+dYHUzUitPWHfHKfTJCvDYyPq8cq+X7yK0Bc5wClzLhL9dZytx5fKj8TXluO+0LsqitraOuq/nj5LdvwPScG4Cr2DuK8tNNfX12SN8W3qNpqbJEf0l6OpRwlTzZSkn484+dXBtQUgKBBB7GvKcSZEmNFcaQ28kHBKFZxW5Oi+o3ZkVyyTHCpyMnfHUTyW+xT8jj5H3VT4H7S1rm591vI6ZdNmt+5plrjPs9St7f3m1lqj16/NNGyqUpXtTyIpURqLUECyMhUlRW6r+TZbwVrPsH/AM58s1RBdtZ6qvi7VCkqsLSWvFWoxFEhBOEk7tiwSQcY9h9laOpBPS3uQ1K8YPTzfcbSyPbTI9taD6kaUudjjR1StazrlcJzoYhwtjylPrJHA3PEJAyMnyyKtlg6QWxFnbF2uN0FzUApx6DcX2Ag+xIC8HHtI591SEMbirKTiocvH/JtDI9tK07qDQWutPRnbhpTqpcG2mUlamL8tLzQA9rigdo/u/Oqp05619QLnfXLHI0lH1KthW12TaXAkAfrFeS2QfikUwayvo05qFWLTfLr+R6NpWPb33ZMRt5+I9DcWnKmXVIK0H2EoJT9hNZFYLy3FKUoBXVLW63FecYaDzqUFSGyrbvUBwM+WfbXbUXqy5fgjTVxuQGVx461Np81uYwhI95VgfOsMHlPpV16mXzrZqJOt7pb9JMhAiM2xf6braikJU8pPG3KzjKQSs8V83K26p0HquRc75qCJNfcmSbvAkRI6XpCoSykTmUNOdiEFtaSD+grHcg6s+k5YLJZeoVn1zC/29a33m2bwgFTfiTWAnxUKUR+mMHIBH1q21qq/aL1107Y67KiXi1TNPhTMZpboKJB3bSzt5SpCispJABwT7K49xOUKsaqeU9u/fpjzLipuKdOSw0UHqNEmaC1TZ9WehygbA63AmMynm3HplnfCvAcdCMhJKfFaIIyMIz5V9dT2m9PXCx68hJM+NZVItlyx/8Ae2qQgmM4fi0pbRP6yB51NphWKfpk2+P4JgojlhbMO2OOPPWeWAtqY++TgeA4DwM4LZGBmojpoUz9KXPQmq1BDthUuxXTPJMF5z8w+Pb4Mjac+SV+ypKyUWprl+j+36ojjvsWN99DSI8tV3YRc0uN2xd2nXEypMsqKXbbNSyoFKG0KUASR2KgSasmpIWudefRllOXvTVvvWsHVOMtNIYbQtkJc2KWNxwFgJUcJx3GBWt+kM24Ros7Rt6XcWpluUvTl6Zt7LSpMiG6tQjqStYyhLbqiCoforTntU7oW+R9JdQpeqJnpj0+TbxEl22PJC2nJiV7C+VJOxRWhCFZAPrKVwKr3rUUqmVlfXH3Rd4fZXF5N06MHLy6FS+hzrYaA17eNEazD1tiS0KcUiQ2oKjSGklRykDPrIz8dqa9KzNXWOJaFala6iaXFlffUWHn5G4FI5KAAM5GRwBn58nQPVTp3Aj6z03abVa7rddb32Su73eTFkoEllGchLQcIbSNyj38kd+auf0ol6jgaK03ohJ1Shu4KZiBT67f4Ly3FbdjgaG/cM4ynA95711besqtPtFyZzqtNwm4PmjdEPVumIFlh3S/aigCPc0+Pb3G2nMOMlKSD9UHPPmB38u1S8LUWjplhkX2Nd2XLdGJDr4QrCcYzxjPmK88/SA8OHe7Np+PgMWq2NspSPLy/clNSNpusSz9AUwpca4OG9PyGm1xI/i7CFAcjI/VriR4vXqS0win+/M9fceztna8LpX1ebTk1nlhJ/LPI3tddQaQtdni3efdWmYMvHgPFtZSvI3DsOOPbWJG1p0/kwlTG9SQgwlzwty9ycrxnaARknHsrzwde6euTzNnkWeRYZEcpZjzg6pPiNpRtbRIbIIweMkhXH21Qr1qGYLszHmW+3Jbtst1Xo8UbW1E7UkbknkeoMK7/GunC4q5TljB4u4vrCFGWjU552eVjGeqxlPB6p1VrPRy9MsahtOvLFFtaXCHZZlpKVHAPh7dqiVEZ9hHsNfdhvlpi2aLfbpqyNcYs2I5IhrZQUokICQrIG0YOATgnIzjyrSekeo+o5FketMeRpy2afCwFQ5TrXiFJxuQ0lYIHuykJH31I6MlTdYdNtR2KcqO3LhTXJlqaYksKcVDPPhbWiQCBuBHbkd6Xl1OnS10kT8Ina3dzCnVeIt4yVnRyZevutsK/u6bcvtuRNdRcPFY3Ro6VIwkkrwkqQQjgZOM1sjqre75Cu8i0LftkCEpxiFY/FRsb9LfBS2pSgCUhsBxXGAMDPFRfSW+aItEC8WqHerrbjeNqktSkZ8F/YUKWhxH63q8HHKffXRNs+q9LqS4hq7R5IaTAtlwbDMhiROl58Zx5tZKvDQhKE7zwMHv2PBt1GvXim/hW+/r+Z7Li7qW86tSpDTJ4jFYfLllfJY+ZBz0ZaFmsTb7Md5YstojfhMzGQy2vL77SzyEuubRyScIV8BP6uxHs0TTlnVlVyUm3RPdGbV+ccPs3u7j8E1jaIgtv3V6bbMNxYCE2azHaAAdpC3cduEb3D71VHyluX67zJdrExpmQpNltTkWMZC4rG3D0gI43BDWVH3uCoqkpXlxt1Z1LenDhdolL/qWp+M3yXy29GdzaHHLYfCduEO1XoGKlxPgSIcmyQ+XSRypp1xxasH62VDt5Xtm5NaB0ndLhqfWMa1vXsret3orZcWwsowPCSASvAKOAnGB76pmmIumL5qRpl1MVmLfcRITttiqiB6DHJ8JSm1coLrm4nAH8mn21E9fdRx51yjaEtlgch/ixKRidJkZUUFv6qEclSVJUPWUR27cVaupp11CDxGH7/M4Vla1a8I02m513l7Z+HPNP1Zf+g3UzUmrNQ2ybqaM004zG9ClSktFBdU6tIbSpI4B3pyDx9Yjzr0eK0V0UsloV08u+mY8pH4yvMJlyW9igqOs+swckY9UhB4PBrcmmbmi8afgXNI2mSwhxafNCyPWSfeDkH3iu7YynOipTe7+hyOOwo072VOhHEY4Xntz+fPuJKlKVcOOKUqodS9Wv6VhRnIzLT78lRShDiTgbe5JBHtHH30Bb6VqhOtuo6khSdIpUlQyCIL+CP8Airn8dOpH/hAf/oP/AOqhjJtalabuHUzWVvWET7JBiLPZL7DiCftXWN+V3UX7FZ/sX/robJN8kbtpWkvyu6i/YrP9i/8AXT8ruov2Kz/Yv/XQaZdxu2laT/K7qD9htH2L/wBdPyu6g/YbR9i/9dBpl3G7KVpP8ruoP2G0fYv/AF0/K7qD9htH2L/10GmXcbspWk/yu6g/YbR9i/8AXXKermolKCUwLQSTgABfP/XQaZdxuulUzpprF/VKZjUyM1Gkxdu5LYOFA555PGCO3vFXOhg4NKGlAfLiUrQpChlKgQfhVY0NG/Bsi5Wx7h9t0LBP6bZGAR/886tNU6Oyq/akur6ZDzPoaQxHU04UEHJyc/EH7a8/xfFO7tasI6qmZJLllOLct+mMLHjt1yXbbLp1It4jhfnsffU2U2m2MQgoF5x0L2juEgHn7SKiYNmmN7fweouyYcnL0V0/mypIJSsezIPn555qLt9x03FYvF+1Fd5DUjT7KpV0gS28SWEoBVuIyfEQceqpGUq7AnkVKWLWVivb7erdOS1yIDgQxcWVsraejlSQpBcbUApOUqSQSMEYIyCDXmbvhle4uJ8S4hT0LMY4TTcYr+bKyueG+a05yi9TrwhBUKLy934N93p9cEwx+Cb/AKhtU2fFdhXyzqdVHSrg7XEbHEgkcpIwccHKUnyql3t6Sq6TI777mwSlkpUolIO4jOKtuotRw5EtqLbIqZkxKwGn+wQrPG0jk/u+NcXmwxY0pN5usxtTZTiS2W/rrKSDtx5+Y+GaqcejW4vQ7GjVU+yl8U/wx0v+rfDaxvpysdE9iSzcLaeqUcalsubz4efiZ2tENjRSg0sLbQGtqh5jIANZ98t7F3tybW5JS09tS4OxUMcZxnt5VU2H3Daxb4ri7ha3X0AYTl9kBW8pKfPhJ7cfurPul0tx1fbbh6ZsaQytDuUkFOAogEEZ5zXR/ilrW11asVpqKlCSbwsapKTT6pKSeU+XPDIfd6kcRi905NPHgsZXyLIyn8E2AJedDgiRyCvGMhI44qsdLGlBE94/UJQge8jJP7xXbeblJ1Ij8F2RhxUdRHjSVpKU4B7fD7/dVksdtZtVtbhsndt5WrHKlHuav0IR4jxWjWt/+GhFpS6OUljCfVJde8hm3Rt5Rn+ObW3clvuZ1KUr2JzDkdqUHalAKUpQClKUBToNjasGs7tekQ3n2bs2nctpJWWlgncCnvhWU8gfo4PlUHeZMm26pkSLHHD02VbodtgqdQVBhWX3F5H9FsBZT5naPOtm1DvQHZOoI01xptmNCDhb59ZxxY2lXsACc+858sc4waOO2xoZ+NKRdbpe5Di9UTHJUWPGmToSEuRnUnKorQHC3CSQQkBLeCSrINZNteknUUq23C6W/wDC1ijFZEhhchEYBAUtMdoDaVJChlxWVKJOEgVLvQb2mBBYs0iPFlWmJIkRXpCfzYL0xaTIUecHwW1Hdg8OK45qE0+mTc9QXm+2eBEkTpCl+mSLust25thTKGwFDGd6ykLwADtKckdqjK+MM2AhiXDsxZkS3Z12hTg+pbrISiUhxZaLYSOydqykHjlOcYrhbMyXZW2Y8x2Ddps4yfEaZCkRUoV4QbKT3TtbCCeeTnFYVhkXuyi5L1JKgXabPSy8hxg70FpW5CW0nCQEJUlRAA/3oySck8X+Re73+DHtNyrfapsBLzrjkg7Gw0MILazhQKFKKSQR/ujgg4I2JehUri7KGo49qttztxu18jeJtjsLjtyQUFaEvtEbUqUlPDicKBxlJBrGjxpS7tar3FcXpiWiRKjyZcGChS5TpORGdB4Q6CAAlQKV90qyRXZqASbXqKz327wYkWewR6JJtSy5blsJYW2doxnc2Vb8EZ2BWCcYqejwL2qDPj3mQxJk3NiJKlPMJ/NlTU1KfSEnzJZKDuwOGwccVqRYyyx2aTIuWqGZN8jBmbHtky2zy0kgPLCmHEYH9JsqWE+WVDyNTkyxNX7W1rvi4jzDNqbUErcSUF5ZPq4T3wn1uT+uffUwxAdi3+VMbabejTvDW5z6zbiU7d2OxBSE+8Y888TFSJFhR7xSlKybitfdZNfS9GIs8K0W1u43i8SvR4rDjhSnuAScc91JHl391bBrRPXWwa0Rr+Hr21W6JcbbYYCltMqdIUlzCyV7cZJBKSMfqip7aMZVEpciC4lKMMxPrXHUfqxoyzJu9/0vptqKp5LKfDlrWpS1ZIAAPsB+yvu4dXtUS9VS7Dp6zWJty3sNKmLulwDQDqkgqQk5GdpJT/dPaqhofRHUTV2n9Ko1CkKsMSaq5qXKllb74OClvafqj1SBnyWTV66ddGLZ6BcLl1CtcK53q4zXJTmFqUloKOdoIIyc5J+Puq5NW9NfFhtd3+SpB15v4W8eP+CEY606tjX+5W68WvT/AIVttrs6Q7BkqeTwj82kKCiMqWptP96u+H1Q6mydPx74qy6PixJMcyGhKuJacU2M+sEFWecce2q670W1WqJqONAgQLa3ebk0htIkAojwULUvHGSSVBrj+hW43elWgpiY/p+nosx5iO1HS44VZ2NoCEjvgYAFYqStoYwk/wB+f7wZpq4lnL/foa4tnXHUt0slgbgaZhO329zHmYzJfUGfCRtHiHzGVFQ74/NqNS171t1nsr0JMzQtnlGW+GkNwnnHFdskkgkJH9I8CsbUmh9ZWzq9F1RpXT9mlWu2wREt0VcgMIZBSdx2gd8rX9tTTbPWK9agjSLg3a7Bb4jLqzHjSvE9Le2kNhRxkJCsE+4HvWJdls4qOPF7+RmLq7qTefBfUwo/UjX2pdSXyDobTNplwLRJ9FXImSSguKBIJTggY9U/LHtrP6YdQdWX7qJdtI6istsirtkbxH3obylpQslOEZJIOQo/DaarPS2w9WNA2B61Q9KWSap+SqS9IeuWFrUoAc49yR99XHoboq86cN/vepjHN6vk0yHksr3htOVEJ3fFSu3litaypRjJJLw7/PmbUnUk45b8e4gOt0xT+qGYgUdkaOOPYpRyfu21516kIuir0wmVvbYea3xm/ajJG75kE16z1doVu9awauDs3wmHUpDje0lSikdgewyK8zdVZ6p+uYcJxGxduZ9BWn2Ftaga817M8Lqx4vc3tePhF+Hf6YR6L2g4lTlwq3s6MvGXTf8AXfL9CJ0VFn2i6sTV7vQnCG5Ixx4Z7q+I7j4VuvRDz9m15BQ7lC0yfRnE5/WOw/eaiYlhS5oh50N5WW8JAHJJ4Aqw6sj+idSvCQfWEiOTj9YpQT99UfbmlBVbe+gsTUkn4rmvTBd9jqknTr2UnmLi35dH65N910T3/R4q3QMqA9Ue0+Vdye1dbze9Taj2Qrdj5V6KedPw8zzxUoEdCbzbbo6pxx6S8804peBtUEqwnA8vVPFcaNUp3XWsXVeth+M0k+wJa7ff99SE9tTMlK24zrxakKkoabHKllG0DJ4SOSSSR86q7l6/Fi3zIVuCL1q66SFyFRIh3pbcXwN5/RQgADKsZx5Z4oUKdT4FPmt36Y+vMqVMQmn0Tz9MEbAKtU/SGlSD+chaci+EjzSHTwfnlS/+CtsSnmYsdyQ+6hplpJW4tRwEpAyST7MVU+lmklaTsDomviRdZzpkz3++5w+QPmBk/Mk+dae+kB1JlaruKemmggue7KcDU1+Ochw+bST22jupXbjHbNdJLJC6ytaLnP8AFJ5x4vkiC1Bfr/166kp0vZZD0PS0VZW4oAgFtJ5eWPNR7JSe2R7zXovSlr0zo/TLtvszTMWBbgfSCkZVuSkKUpZ7qVggk1C9FOncTp7pQQtyH7nJw7OkJHCl44Sn+inkD5nzqQe9HE67Wpuda5Cbi8S7HefKHElTSUqRxnPAz5Hmo6s3Hka2tCdJdrV3nLn4dyRnManiuojjwHW5DshDKmFgpWgLKgleCBkHb5f5VlahvAtDLCvRnZLj7hbbaaBKlEJUrgAH9Wq2mxTnH2LtJvcZwNJY9FWtaVJVtXlIKkpTkK3YB5OSO/asifOF2ZRJaudoaVBPpKX2ZmS2NpSVHKCNpCiORjmqyqz0vOz6FlVJ6XnmS/4z2kMpWqQrJZ8VYS0tQbGSDuIGE4KVA5xjBrLsdyTc2n3EtFvwX1MkbgoEgDkEeXNUli3KRa5EiPqGAHF+M3Lkh9O0+K4paUqBQRxvOMbScmrPoWG3Cs622pjMxCnioONHj6qRj7q2pVakpJMzTqTlJJk/UFqu3yrm5aozSAYqLg3IlqKgMIaBWjjz/OJb++p2h7VaLJ5cf0TL6ldOOoelZMoy5cSYHbataiSh9veRjPYKA2/OtefQr1dq+7XKR08uTcGRpq2RHFOMSIyQ40Ss+pxjdlSlE7gfOvReoRpjpBAu97huynJlzVxHcdyFrySAnjjuefIV4q1e/p6Pr+Vq1+W9b7hKdD/o8NakFLpA3KTt5AUcnGR3rg1J03F2zWX4b7/4PWy4bW4hN3tPEaWyzJqK5LPnuuht+U9NtOrJ9p1PpVNrtirouHDtq7gIUSdbJK9mC4jhXhOEO7BzhxfbFW6xdDLl+NkbUl0vsJhxVrctdzjRmVPN3BkpKG1FSiCk+H4fJBOUA55rVznSrqX1TQh+6Wb8GxVgFFxvMgl7b7UNpJX9uAa9D9KtJP8AS/RKoF81pLvMSOkEOS20ttxk9tqO6tvuKj7sVUuLuUaCipJS7uZza9lSp19NKfaLvSa3+Z832fo/pooXJ+2vP3aWyhp2aiNl6TsSEjxHcBOcJGRn34qlaVmW/qN1GZuKdNxbbHt2ZT76VkrcIPqheMJ789ieO9TWuesOlVQ37fCtpvqFgpV4qdjJ/wCIZP2VVNUSnND/AEfbhOtsHwL5qx4RoEVgqUoeMMJSnJJ4RuPxNcylCdaaj1Z6mFL+FcOnWqUnCpLZNvHPnts+XeQ3S61Hq912vutpum9OagsjEoMxDMu6m3orTXqpWllsnOcbvzicEng11XS3s6o+l5YmnNN6cguwHlTnpNruypqnUsglPijICCFbeNiT7zVv6E9PrhpbplNnTegdu/GAR/DQh67IU/cEqBCgrxN3g8d055z2FVL6KVrYPUzXeqlaRY0oIEcQvwa06txLC1K3r5WSc4Qntgc8AV667at7SSXRY/Q8FRTqVV4nT1RcVe+p97IebbZYdUhbzhwhtDYCST8x5dyQBXYepUiHodGlNP2M3K2MJUmVMkNuJDuXN3CUEFAyQOTnt27VVpV0fcuFwkfm3EzXFKeQ4gKSsFe/kH3gH5VunVN9asHR602W1xWzeZ8JtxmNGQUHGQVKwgg/Z7687ZdnlLTmX0Pe+28L22tqEFUUKMUuW8tSXy+W5oXV+sbrqiNAjXBqG21b2/CjpZZ2lKPJJUSSQPeartWvqLZb1AmRbjelwC/cGUONpiqBynaBkj2+RJ7nPJqsLZdTI9HU2Q7u27fPPsrtpYPidzr7WWvLeevP5k9brjpm2QW1ps790uWPXXLcAjoyP0WwMqIOOVHBx2q/aD6m3SLLRMjaRYcgw9yZDVtAZBS5hI3JCTk5AweO+POtSz4kmDMdiTGFsPtKKHG1jBSR3FXXpnouTqe23N1EBq7REoCJUNmT4UptIKVpdR27KSD55IwR2rbGv4HyJbWpONRaXgvVm1bYdG6jcuETTkafBnq9IjSwsh5tKvrN85AKSSkgYPHvrcdh1FA17pmYmzyZ9vLjami8Y43NEjGUlYKFEfOtcatj2WdoSHrGDAh3R+LIQq8NqSWzIcCfDK3ADlJzg8d885xVg0d1h0lKYahzY6rEUpCUpKdzI9wUkcD4gV5e5goVGorGD7HKE+KcOp3UKbnU5Sknnl4c91vtsinTumfUzSFnlx9Pajtuo7cGng23cECHIjpcx4hDg9RRIGMqxgZ7VrjSOsrNeHl2iGhEW5R2UWuE6JzjL9uU6pRlzEut5aWOydu7JCE47kVvvrh05uHVPTTMO162l2iGpAX4DTSVx5WeQV4IUR8yPdXne79NNb9OLa4Z2lm5dpYSVu3G1uh1IAHKloOFj44xXRtK8VHWsOp6f2fyOTatXUvdrutopZy3jOX5/c9B6JavcXR+oLlFssW3yWWFCyPy0p5aQ3htK+dwHqg5JH1ia0/0gtt06pdSod1vk5y4OyUIdmuFtDaENN5IQEpAA5O3zPPeqLEv8LUtpRbm7k7Mgtq8T0RTqwhJ9pQeD9mK9H/RGkaeiN3KKlQbuzpT6hTgBodtvuyTn5VBQilUVOps298/l8z1NzYvh9CtxCi4zWMQ05enpnm+SLX0ndnSOr2s0vzVrYiq8JDO4lIyvggdhgDFbG0xbZFqcujCygxXp7kmLtPIS5hawR5fnC4fgRUfpPQ1n03fLneYC5S5VyVufLzu4fWKuBj2mrSPfXqrem6cNL8fzPnfE7mnc19dPliK9Ek/qc0pSpygK1Z19+vYP/Vd/wD51tOtWdfP5Swf+q7/APzojD5GyLhLEV2GFEBD8gMknyylRH2qAHzoqX/tlEBPOI6nnP6PrAJ+31/srA1m/DZsL3pkwws4LL+1RCHUncgnAP6QHx7VH6GuYuMmbImlbd0eKfGi+GsCM2kYQk5HGcqV793uoZKx9JV8M9P3AuUWEKJziT4WeO/8i5ux7PV+NeG691fSLTLOgnfREyVKGSQymWcDHdXo5HH9vivCtRz5nt/ZjHYT8xSpHT1rN3nqiJkNxiGXHQ47w2nYkq9Y/ojjGfbipL8VF/8AiDTv/MU1rg9BO4pwlpk9yupSVKCUglROAAOTWXOgLiQoclbiD6SlZ2chSClRTgj5ZqZZ0zIYeQ+zqSwNOtqC0LRckhSSDkEEdiKkXIEXU2oYFlRqBrx3HXELmynVOJUstoP1iMqy5vSD3Iwce1ghldx1Jxeyy36FJpVoa0xEhyku3e/Wkwml5kJhy0uvqSDylCfNR7DPHt4qBu3oP4Vl/gwumD46/RvFHr+HuO3d78YzQmp14VHiO/5GLSlKEx7U+j+pSrrdVKJKiw2ST58mtw1p36Pv/wBTun/47f7zW4qmPkb5s4NKGlDAql6AeDN4usF04dLm4A+e1RB/eKulUzVdintXQXuzBRdzuWhH1gr2geYPmP415r2hhXozoX1GDn2TeYrm4yWG14ov2ThJToyeNS2fijXt46VXzqRp+4N9XL1Igym5jnoxtiIiI7UXdkIbdLZfKVJA3hak5OODjNTukdI2KxN3n8XBOYts94P3W5TJK3npRQnalCSv9EDgAe35GaVd3Z60/hiwzX1NDJQgrDeR5lGP3k1OqgPXptgzW0w7YgBaYqVDLns3EcAe4VRr8SlxiLpWr+HuxJN/+zaSjHvSbclsmSwoK2alU59+23kur7s7IqVgQGJyrpFXCYIWfR48l1I9U+ZJUCOOM4PnVh1WQqPFev7SW4zZV+ajOlSnVnGByBjA3GubdYbFPuarjFnOSSy8CpsY2AjsOw9X2eXFR2t7xb3rkiOWvTEx23EFIWUpS4rAzkd8YrgK3/hfCKvbSioya0rKlGTzvJpJ934Vtth7FzX7xcx0p5S36NeH92cRbZIt12bRaZSkxrpGX4Dihyk7dwB9/v8Aea75UW4s6Ojy56QZUB9LrYPKtgONqv8A52ArGtC5cSE5qi+LUxbrPBccQkjHqIbO4gezaDz51Tfo83y/6g6a6gVfHfFZjtp2KUPW9IdYEp8Hz9VUhKPig10OG8KhW4fVuIqUItS0Rb2w1F5x0+NNx8MeBDXuHGtGDab2y/VYz5czd0dxt1ht1rGxaQpOPYRkV2VCaHfMjTEQqOVIBbPyJA+7FTde3sLlXVrTrr+aKfqsnJrU+zqSh3MUpSrZGcjtSg7UoBSlKAUpSgFa511fdXI6gWvTtotzv4KlIBky22t6kDdhSgcgJCQU5Cgc7sjtWxqYFYaMSWSo67sKrkgpZUltMuE7bnDj1U78FtRHmkKBSR/5lUhmUzblR5F6t5ahQr3Ik3Jso3paLqVeE6sAHKEL3IzjAwFdhW5FJSoYUARnPNVI6gsr+rZVmtDrb9+YSoPtKSoJQkhslSjjkDKe3mccc1ho0lFZyUeFebXqbU6mozsaNEi2t11x+GS4w68VMOLbaJSN+xTaycD9IHuTjmberVpjVJYlOxZESTa2HW5Ewlthp5JfcS26Qk7CsupUMj9EnuBmZ1HJ1G3q2JYpikmC6wp1uXCZS2lkgK9cpWFEFJAGQofXSfaKabk6jd1ZNsUMoTBZZQ65KmsJcS8SE+uEoCSSolQyVH6hPmKwabkM9IauKnX7Lby7Dm3xmVbGtmxLgabT4riQR6qFuYTnHO5Suxq8aFsKra0EuqDiYkFm2tHHCw0D4igD2BUrbj2NiuEagsrOro1muzrbF/eCQy0lKilaQHCFJOOEnC+/nxzxVtSlKRhIAGc8VlI3jFczXWgr7q5zXt107eLc6LXEQfRpbjWxS/WISonJCtwBxtHG3nvWxqUrKWDeKwKUpWTIqKujj/pHhpmMMJwCEqGSTuA55HHYfOpWo2baYkqYJTyFKcG3BCyMYOR99RVlJxxH7G8Gk9zE9MluKbQzcLeoLPdKSD7Tgbjnj/KulyTJ9FLTd4gBJTjft5SNvt38+2s5uywEKKkM4Jz+keMjacc+ziuTZoBQpHgDaokkZOOcf6R9lV3Sqtb/AJsl100/7IwvSZYjlv0+3tbSUpGSo8HsTuHkQPv88V9svvtOH/aUNb7igFEjCRjjATu75B8/Ksj8BwDuBaUQoYUCtRCuc8881x+ArduCyydwRsB3q7Zz7fbzmsKnW2+7Gun+0j4cdmyUpQzcoO4qChtaJzgk/r/0T9hrq8ZZAWbtEK/E38p9QDGMAbvaCe/trMZtMRp8vISsOFO0q8RXIxj2+yupdht6ikqZUopUlQysnlIwPP2Vl06uM9fNmFOGcdPJHQl6QmStwXKCoqAAyDgYyMBO72jvnyNSlpKzESVvofJJO9Awk8ntyf31hiw27xEL8DBSUKGFEAFGdvGfefjmpKKy3HYQy0kJQhISkewCpKNOcXmX5s1qSi18P5HElDfquqRuUjO34mtAdZ+ktwvupBq/STbT7zhHp0IuBKgsd1JycZ9oyORnnNehFp3JIqq6rnvaekKvDNremoUgIeDTihjBPrFOCD8cfOppXjsv97oufl8iNWvvbVLq+Xn8ypdONK38sRF6jhogRIaw6mOVhS3Vp5SVYJASDz7SQPLvX7MVal6pIkAFTaphezjjYjkfckD51J6u6gv3phdrssSUz4xCd4V66h5gJHt7d6s3SvR7tibcuNwSn014bUJ/m0fxPH2fGvJ39z/Hr6lTob04PVJ9PBfvvPUWVu+C2dWrX2qTWmK646v99xfwMUNKwL0pkMNof9J2OLCD4Jwefb7q9eeWPm62tucjIUhK/LxGkuIPxSry+GD76rsprW1qbUzZLTpSSDyPzrsPP9wJWP8AqqZZkxUtNJbkXFKCAEDwzwM7R+j++utliE/KVh2epYKXPWyNqsFQPI44A49wpk0lDV1wa31JpLrJrZKoF51JZNOWhz1XWbUHHHHE+xSlAE/DcB7qt/TDpjpjQERQtEdT01xO16c/hTrnuB7JT7h881OImMmOHlPXJKdu7GwE4zjyB8653wkOp2uTUKSot7kg8lSiTkY9o749lZyQwtKcZ9o95d73/wAEye1U+bp28POT/DmRhHkXRmWlpTZKglCmiSF54PqHjB+IzUuuZGwoKk3HCQN3qds7fYM/pDt7D7K7GUMtP+hNPzspPJ7gEgqySRz5/M1FUpxqLDJp01PmVmHpm9p8CE8iImM0zCYLyXiSRGdUvcE7e6spGM8c8mvifpq+v2iJa0sxECLb3oQkB8+vuSkJVt28fVBI/fVhXJjPxkFb1zAcAWABg/WwASBwcjtmvtyTEcRsW9cXErQVFPhHBAOMH1fu71F7rDGNyL3aGMELO0xeZmoGZj9waU0lUcqcZR4S8Nh/PGVDP5xPPHn2wKtsCMIrPhB550ZzudWVK+01EOGApLgSZ4A2+oEKwklGB39wwfKpKzpitxlNRUuBCFlKt+ckgDJ57/GpIUowba6kkKUYNtGbXw9v8NQbxuxxntX3SpGsrBIaE6idH9a6y1C7c5l+tiWhlMdn1yGkZ7duSfM1RdS/RSu99ieFJvVqS6kfm3kpXuQfs5Hur1rVe6i353TOjLpfGG23HojBW2lzO0q7DOOcf/OKox4dQpy1rKfmd+ftRfe6+7S09mljGlGnOjeh+oPS2Cm06w1pYbnpxtJEcOLcS/GwMgIJT6yePqnt5HyO1bI7atRx5Rtdwiz2WHVR39oJSFjuk5HNaz0TpO1ztEvdUOoKpd6lS47k1UZC1lptpXrBKWweePI5HNcaR6y9MrTLdtmlNOXVpUp4LW1HjcrV2JCdxORgcDvUVXh9tVnrmsZPOw4jUhjLSX1MrU/QC3zr7GuFpltQYxeSqXFKSUqTnJ2fqk+ztz5Vhddegt26p3yxxndSx7Rpy2Mnc00wXHluk4JAJCQNoSAcnHPFSNw6mdSJWprtpaw6HjquMZsS2HH5G0ejHlJUj9ZXbGRgnkcVlQusMqbBkzXINtssWCjwpb1xkK3CUkDxGm20jcvacjI45HwrejZW1GanBbou3ntBcXsI06821Hln7nOpuhbdw6WsaItevtWW8R0kIkrmqd8TOPVcTkZRxwkEYyaiujPRG7dP+lF50qbtBk3S5OPrMptKggbkBCM5GeACfnVmldVw+bPEtFvZ9Lmwkzpap7/o7MNk4wpSiDnccgAc9qwldVFyY1olxnWnI51K3apciO2fCeQptZyjdzgHGTx29lWK9OnXhonyKdK9VGanF7o1+Po46mxj8OWr7F/wrr1laLNZpGoLffdQxoF/W3EiwyGnVlEVIQAoFCTjcRgjuNvvra8fqxAldUYmkoUNUm3yS4wm5JKggSWwSpsZGFDAHIJ5NTHU696UsNreVfLk1a5k9lTDEhpnxJJIHBQACSQSCPLNVfcKEIPRt3np6ftBdcWuaXvGZuDzFRS59/J5WPA0Ax00vtw6xwYb8Bz0CGwgMzcHwllpCdpBIHng45+eDWdfeh1zk9RYIkzoBenxn5S0IUtKCtrYBykApB3pPH6p55rbP0cbxcrz05D91nvznWJr7CH3xhakJV6u7POfjU7cnEO9UtPqbcStH4MnD1TkZ3x6sU6UJQTXU4F/ZO1uKlKqlJqeW8dfs+4ovVno+9qqDDXCatKJrbZRKkOpX4yglvCNix5hXkrggnt3qt6B+j7antLzXJuo3zJnw3ob6Ii0ONsKUkpUMjIUU+z216CuspEG2yprjS3UMNKcKGxlSgATgDzNao6c9VNEMRnbfItDmjGlbpTKJifDbkBSuVpPmSfKsqFOi0s+pvR4TK7UrinTbcccvtz9F5lB6B2h6zaG15bNQ6iVddO2x5TCHX4hakIQlBCwpIJz+jj1ieD2zU70O6T2WZZYerZbv4QMjLkVp5opS2ArAJTk7jx8KsehZdq1BrLqO1ZnY8y1TY8VzxGiFNqdW0tKvn6ozVn6DvpkdJrBjjw43hke9KiP8qpOxo16mqe+c/R4PS1rmtw60q0rZuCbhldylBvHfnPMnhaHQMBxsCtG9dOj3VXqXLNtZ1ZZbRplKxiE34pcex+k4raNx8wnsPf3r0YaDGasUOG29GWuMdzzEripLZnlKxfRavFmhCLCvFqSP01EL3LPtJxU3ZOgus7NdI9zt2o7YzJjq3IUEr+YIxyD2r0nSsT4ZbzeqSbfmd+HtbxKnS7GLio4xjSsY9DDs6ZqIDSLgWjICAFlokpz54zWZSlXoQUIqK6Hm5S1NsUpStjUVqzr+dv4BWc7UuOkn/DradRuorHbb/bzBubHitZ3JIOFIV7QaGGQV0vGhb0WHJ96hvtNoVtZXI2pyoY3FPB3AZwe4yfOuqFM6fwbg3OhXeDHfQVblIl/ygUMFKsk5HAIHkRn210fkp0r/X/8cfwp+SnSv9f/AMcfwoNysdeLnZtSaWNstr8O4P8AJThtl3aePNx5vb8Ru7dq8sfk61b+wQ/+Zxv+5Xs78lOlf6//AI4/hT8lOlf6/wD44/hWHFM6tjxivZQcKaTT78/dHkL8UtcJs6rVHt1tjR3CDILVwjBcgg5G9RdJIB52jCc84zzUd+TrV37BD/5nG/7lezvyU6V/r/8Ajj+FPyU6V/r/APjj+FY0IuR9pbqPKEfR/c8Y/k61d+wQ/wDmcb/uVM2nTGsrRBcbtlntzM55KkOTlXOMp1CTwUtfnMN5HBIyrvggHFetfyU6V/r/APjj+FPyU6V/r/8Ajj+FNKMT9pLqaxKEcfP7njH8nWrv2CH/AMzjf9yn5OtXfsEP/mcb/uV7O/JTpX+v/wCOP4U/JTpX+v8A+OP4U0I3/wBT3n9MfR/c8Y/k61d+wQ/+Zxv+5XI6datzzBhj3/hKN/3K9m/kp0r/AF//ABx/Cn5KdK/1/wDxx/CmhD/U95/TH0f3K30AQU3W77TvQlptO8A4PJ/hW36itM6etWnYSotrYLaVq3OLUrctZ8sn/LtUrWx504NKGlAKUpQHRPSVwZCB3U0oD7KrU65NK0JFdU4tKHktsOqR9YDsvHvwDVsrWkp8WWZMstxiGVb1u+I2jcUlOeykn4cV5L2ou5WaU28RnGUG3nCbw45xvh4a2Olw+mqrxzaaeO9df0JKxri220XufbXHlR1bW45cGFFeCP3qFSen7JDspZXLQlyQ8APGXyEL80D2e4+fPuFRNokIvlxhW6BDMW2QleO4knJUR2yfj/nV3lMMyo6477YcaWMKSfOqfALKldUo1qaTVLaDw9Optym4p74y1FPGVgkvKsqcnGWVq59+OSz49fma++kiJbvRy82+HvBuS41udWgfybL8htp1R9wQtVVvpO6Ld0Atsx1oMzdSLfuimx5CS6p0fINqQkfAVfLlbdSxGXI8CSi4wlpKfCkBKlBJ8ju7j5/Koi0aPuclUduelEOHHbS020jaNjaRhKEJTwkADAHGPZU/GOK31ejKyt7WaqTWMtLSk9m9SeHty5foa21vShNVZ1FpW/j6Fm0A0prTEcqGPEUpY+GeP3VP18MNNsMoZaSENoSEpSPIDtX3XpuHWvudpTt850RS9EUK1Ttakp97FKUq4RHI7UoO1KAUpSgFKUoBSosXpk6iNk9Cnh0N+J45jnwCMA439s89qjrnrayQL6xZXfS1THpaIgCY6ggLWAQd5ASRyOxP3GmTGpFlqtWnQ+nrZqedqOLEKbhN3eIreQkbvr4SOPWIBJ88CszUupLdYIsp+aH1ejwnpqkttE5baxuwfq59YYBIz8q+tNX+Hf2pjsNDyEw5SorniJAytKUk457esKxsYeG8ENL0yuLcLheJFzkTkORDFZjPJBQy2ojdknO7HvxxnOa5i6ZXKuMC8sXORCQmImK/GZACHkJJ24PG37+MYxWRqO+SI90sMaA9Cej3aQqP66CsKwhSyQpKsD1UK8jk47VJyL5bol7jWNwvJlyEgtJSwsoxhR5WBtHCFdz7PaKbGMIjrrofT1y1TC1LJiFVxhgeGreSk7fqEpPGU5OCO2TVlqs6S1ratSzXIkBqUhbcf0g+KgAbfFca8iedzSvliufx0tTdufnzIt1hssv+AQ9Bc3KVsKspSASRgHntnimUZTjzRZaV8trC20rT2UMjIxX1WTYUpSgFKUoBSlKAUpSgFKUoBSlKAVwpIUMGuaUB0Nw4zbpdQw0lZ7qCACfnXfSlYSS5BvIpSlZApSlAKUpQClKUApSlAKUpQClKUArFusCJdLdJt09lL8WS2pp5tXZSSMEVlVx50BqFvRHUPRi3YfTy+W9+xrUXGrfdkqWY5/UQvvt+OMfaaztAaR1YzrVGo9TxNNRC1DcaQi1xylSluKSTuPngJ7/0jW0MVwsHacd8cVpoRAqEU0USDpu5tdcbjqksJRbHrI1EDm/lbocyRt9wA599Ue/9KL/Zuoz2rtIw7JdUSpCnzFuYIMZayorKFDyKiTj39uKxta636xaWtnpN3sdrbhvSBHbeS4FOZVwnCUKODV20azrCwPqueuNX212DIRwwpG3w1YGNqjj5jB7moFUjN6cP7HaufZ10qCqzqReW8aXqbfXGM/Upuu+musdbOs6nm2yxwb5F/Mm3reU/GlNpGUKKuNqgorA9xrO1JpLqPrWxxNO3W22HTsaK8h9uZCeLhScFKkpRxg7Vq5z3A5rZsvV1gZszt2buDUmK082ytbB3YUtSUgf9Q+VScu4wIbkduXMYYXJX4bCXFhJcV7E57mpdMe85D4fJbtPf645lD1N0xZe09puHp2d+D5em3UvQlupK0ukD1gvkH1jyTUd1P0Xq283mxaxsUu3w7zbIy0Ox3kF5sFQ5KDjk9x29lL1eVsfSAYhTboqHbWLaJHrSPDbKvXG1QJwQe/bukVtSO8zIYQ/HdQ60sZStCgQoe0GtMQqpx/ex16UKvCKtO4p4eqOd1lYaaw/keedPaU64RNG3OPGl2mEi4qkSXY60gP73clW0gYST5DyzVU6b2XX1u1k23paErT+6E4Q3eQVJK0hoPqSO/KtvPb7K9E9TNZN6MtUSaqI1JMmYmMPFkhhpvKVKKluEEAYSccckisOamNf9d2Z1kIlQHLHKL5ScpLbymQjn+ltXj4Go/dYprEnsXqntRUqRnTlSh8TTeI/muT+fIpNjs3WC3zJSbbrPTdy9OImLD4KikqACtgHZGRgeXHlWHrHpt1V1ZLt827XrTCn7csrjhMUkZOMhQUkhQ47EVlztW6I6adSHLInRtyZejWppqNMh7ny6wTu2bCeAFZ9bJJIru1B9IOxQoHpMLTl/eUlxPiCRELKUo8zuORntwadlBrE2/Uhl7UdhW7SioZW2dCT7uSz0JDQ1q6g6XtkiPJ0/p99yT47jrsApYUpzCQyNoABySrJ8gPtu2gNP/ilomDZkq8d2KyS4RxvcJKlYz5ZJxXn5Wooup4S7rrK69QWLpJytiJaoTrUeInPqpTgfnOMZUe9dls1+b307umhdYp1c9Jak+CibEtxL62AUqSHRnhRHBBzwR3reDjHGDiXHGZ3DnqSWt6tu9LC8ubx5m3ddai1c10nd1LbreLHdY5D78WVteUllK/XGRxkpGf8A35rOYv8Ae3urrVjSYosS7L6a2QMuOr8QJznyAz299ea7lqjVFkslx0vbV6nb0e80W2lXGz73kJWAFIKiRgDnGD8q9CQmd3VTTSoCHDHj6bcS+VjCkIUpvwgr3kpVx7jW8Z6mUadZ1Ht4GxqUpUxeFKUoBSlKAUpSgFRupbsiyWsz3Gi6hLiEqAVggKUAT8ge1SVY1ygx7hHSxJSVNpdQ5j2lKgoA+7IoDEtF4RcrpcojTWG4akJS7uz4hOQeMcYKSPPOKWy8Im3adADJb9HI8NZP8sASlRAx+itJT5+VfVkskGzpWmEHAFoQhW5Wc7c8/ElRJr5t9ht0B+O/FbLbrLakKcGNzwVgkrOPWOQD8aAjZermY7zjJilS2RIDo34CFN7ygE4/TCFEezjvUnfbsbTbUSnIxedUQPCQr2JKl8+5KVH3499dcvTltlS35LyHFLfeZeWN3G5sYTgY7EEg+3JrLn2yFPksvTGESPBStKG3EhSPWxk4I7+rx8TQHRf7k/b7YJ0RhiS3lO7c8UcKIAIwk57113+7uWi1My32o/iLdQ0sKeKW0FXc7tucD4VkKtMZVlbtKlOmO2lCUncN2EEFIzj3Cvu729u5R0NLeeZLbqXUONEbkqScg8gj7qAxJ94MTTibsUxV7vC7PnwsLWlO7ftzgbs5xWVZJxuVsamFtKPEKgAlRUkgKICgSBkEDI4HBr6dgofgtxJD7zwQ4254iikKUULCxnAA7pHYV926GzAiJix93hIKigKOdoJJ2j3DOB7gKAyKUpQClKUBwaUNKAi9S3dFkt6ZjjXiILqUK9bG0HOVcAk4xnABOOewJqvR+pem3Irbq3HULWyHggbTlJVsynkZ9f1ewPmQBki1GGs95sk/NP8Aprj0JX7ZJ/6f9NQdrP8Aofqvub6V3mWkhSQodiM1FXeHZbq96LNLS32ccBe1ad2cD54PHurPZjqbXuMp9wfqrKcfcKpes+n34cuUyfBvMq2S5yAl2SkJWtkIaUhCWwU8DKtxyr9bbtKyoYqUadzTdOvBOL6PDX6iMnTlmD3LBDlacstqdfZlxIsFphEp2QpweH4as7Vlw8EHafP94qUblxHHPDblMrXwNqXATyCRx7wCfgDWvofTRcbQ0vTK7l6WlVuiw2XXSQvLDi3QrcB+b9dwhG0EthCCCSMDJ0r0/dst5Zni5+IhK0OeGWG0lrYy8022nYlKcBL6snA+qMJGTiSlShRgqdNJRXJLZI1lJyeZPLLFeNTQrfcXLUhp+VdPCQ4xEaTlTwUVAEH9FIKfWWrCU5GTyKk7VOYuUBqbH3+E7nbuGDwSP8qocvpm3f1qf1RMaddTDRBQmPGZdHhpzuXufaWtK1lRJ2kYwnkkbjdrPa2bVZY9qjPvlthGxLiyCs+eTgYyfcK3bwjB0anvjdjYjuuMF7xlrQEpVgja0twnHmMNntz7j2qE03rpN5ukWB+A7hEVIUpO51PCMN+J63HHBTn+2juSQmzmGs95so/NP+mnoa/22V9qf9NQ9rP+h+q+5vpXeZdK6mGlNA7n3Xc/r44+wCu2pYttZawas5HalB2pWxgUpSgFKUoDTWv9IagtGsLhru3zoEhl1l1pSZTrjK46XGktDCkhWUpUNwASDlR5rGs+ntc3eBbb4hdsmJhi2uQkGe4W5Qjh0LcJUjKFLC0nsTxzWwbg/emrwPDbuC0ekgu7Wwpn0cFP1fPdjPv+t/Rrqt6dTB9yVJMktYWtDO4ZVhKChJGMDJ3DOa0wskOhZNcRtPdR73pfwWDaZkV22z7cVqubv5xT72S4Qpvu2UlAz3HYgVcmrNqrTOi9QOWptL1yeunprDbBSpS2ctb0gKGNxSlYx7xWWs63ZbUghxxYQlpRRtI3ZcV4iTgZBBSk8d8Y86zyb0bM7tVcRK3MeKVjsrf+c2YGduPZxjt50SCgijMQbi7dXdWC2zbPYLZN8ePEkNFLiGkwltqLbKckZcX2A5wTUbYbF1bmSNP6jeYjqdiRo+1qRdnW1LSAvxA4jYRuXvTnOSkoGK2AwjUr1v2Ou3Jud4Ki4RhKMBA2FJx9Yq7j+1nypIVrJtclTCHlNpadcZQVJUVA4QlBJAwsAb/PJJGcdmkxoIvphom+2KTIfui4zKn7Z6MTHdKyhwyH3DgkDIAdTz7RVKV0r6gWqDJs9sk2+XCkPokOPtz3ojjiksKbBUBuOd5S6TuwVDGMVta2Kv8A4L3j+mmf4C9oWEhjO0bP72e/zzxisF97VRbeFvYmllkr2qkKAcdC0BKcAp/RVuUR7uMjAppRlwjhIpDY1tfpF8sql29dzFqYtzrTV2eR4S0FZVJ3eEBuypHqjOfM1N2rTmvFa0tF9nwoEWQypLd0lR7u6tEtoNlBHo5SEJyQlXHY5qYlI1UyzcENuTlSUoHopRhTZGFbsqIyT2x55x5VJWk6hRdGA6X3YLj+FFwYLaQ0f1gCUlRHwKR5GmAo95a6UpW5MKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQGr/pIode0RBjMOKS4/d4jaQFY3Er4Hl5+8VTPpCv3ey61sV4eZZkWluIlDCpiFuxY0kKVla0IBJVtIx/7Vve522Dc2m2rhEZlIadS8hLiQoJWk5Soe8Gu2VFjy46o8php9lQwpDiApJHwNV6lBzzh4zj6Hd4fxiFoqcZQ1KOrPjqwtvFYPOWpV2R/pnqOe5rqPfbvc0RVuMs4QGkNOJXtbbHPCc9x5V9am07qvWXTZetbsicJsQtOWi2I58NpJRl0gclagCf8AKt6RNH6WiSESIunrWy8hJShaIyAQDwR2qdSABjAxUfu2rOp9P2y4/aJUdPYQ3UtWXjOMJOKwkkmktzzci76N1T1Mde1c7GZg3KwMtpW8stlDqcFaArIKVA7ge3b316DsKbaizRG7OWTb0tJTG8FW5GwDjB8xXXOsNkmpWmZaID6Vq3q8SOlWVe3kd+BWew02w0lpltDbaBhKUjASPYBUtKk4N5ObxPiNO7jCNNOKisYbytuq8SidQHtP2q8xp+sLe1Isi3EOMynmfEbhygCnKxzgKTjCiMAp5xkV2XzqhoCywTMRe4Mx50BLUeAQ88+f0UpSnJ+3gVeXmm3mlNOtocQoYUlQyCPYRUVa9MadtcxUy3WK2xJKu7rMZCFfaBUrT6HDcZp/DgpvSOyXl+8XjX2qIhhXW9FDbENSsqiRUfUQfee5FbGWhDiShaEqSe4IyK+xSspYRtCCgsHGMdq+UoQkqKUpBUcqIHc190rJufJA866mo0dqS7IbZQl57HiLA5VgYGT7q76UGBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgODXXJebjRnZDpIbaQVrIBJwBk8DvXYaUBqLpN+M8ObfG9QWyRE/GGIq+MhT5e2PKUQ62eB4e1C4qQjn6qjzzVZtdgvmkenOlL1bbRaUXYtJfzbbQtt7ItMw5kDeouqC1J4wnKuMZUK9B0oDR9y1fruIVKsk+ZfLV6S/6NcHIDZU+1HajyV58NtKSXB6XHSoJAylOPW5OLN1j1NaelbngxJbtq5DUJUfKlhVvU/4gQGCSUSD4W4uBJ8PaUlSgTvqlAam6wQFeg6OYvMmFcG25rplSLrazJYUTHcwVtM7QOSAn2cdzUJetYajs1xgwdIpQ9FjwUts2+PA8GM+sxHloU234anAgvBtAJdQAfUwonJ3pSgNGzZ+o3pir3Y9W3i6i2Wqa61JXaWm/SlAwleAoeGEqQVeIMoShY5TuyhROd10ajjUCJrsZmdJj2vMKFLhuKMh3xFHEGQ2csy8hIJ2HILeOAqtyUoDSP42awn3GVEtOoZjrrl2kQpKU21optjaLyzGaKD4frFUdTxO8rB2FQxtVntYuuuob9wegyJRZgXBCGoAgNJRNL93msuKWrZuz4SWl5QU8ncchVbhgQ4sBhTENlLLanXHlJT2K3FqcWr4lSlE+813LSlaChaQpKhggjIIoDX3SG/3K8TLnHn3qVdAxDhPEyIKYymXnUuF1sAITkJKQOckYKSSQTWw6i9O6fs+no7jFnhJituEFeFqUTgBKRlRJ2gAAJ7AcACpSgOR2pQdqUApSlAKUpQChpSgA7VwKUoYOT2oO1KUMg0PalKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAYpSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUBwaUpQClKUApSlAKUpQClKUApSlAKUpQHI7UpSgFKUoD/9k=" alt="Sponsors" style="height: 120px; width: auto;">
-  </div>
+<!-- ═══ SCHEDULE PAGE ═══ -->
+<div class="section-page active" id="page-schedule">
 
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="about-inner">
-    <div class="about-main-text reveal">
-      <h2>منبر جماهيري <em>للتفاعل الديمقراطي الحر</em></h2>
-      <p>
-        نطرح القضايا ذات الاهتمام المشترك، محلياً وإقليمياً ودولياً، ونستضيف الخبراء والمهتمين من داخل قطر وخارجها.
-      </p>
-      <p>
-        وتمثّل منبراً جماهيرياً للتفاعل الديمقراطي الحر، يتبنى منهجاً علمياً، حيث يتناول الاختصاصيون العرض كلٌّ حسب تخصصه، عقب ذلك يُتاح الوقت للمداخلات.
-      </p>
-      <p>
-        مع حرصنا على نشر خلاصات هذه اللقاءات في بيان ختامي يومي، مع ضمان التمثيل الإعلامي — وكالات الأنباء، التلفزيون، الصحافة، والإذاعة — لما فيه مصلحة البلاد والعباد.
-      </p>
-    </div>
-    <div class="about-pillars reveal">
-      <div class="pillar">
-        <h3>المحور البيئي والمناخي</h3>
-        <p>قضايا البيئة والمناخ والأمن الغذائي والمائي، من منظور علمي وسياسي ومجتمعي متكامل.</p>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        التسجيل مفتوح
       </div>
-      <div class="pillar">
-        <h3>المحور الاجتماعي والاقتصادي</h3>
-        <p>الأمن الاجتماعي، الصحة، الرياضة، التنمية الصناعية، والتكافل المجتمعي في مواجهة تحديات العصر.</p>
-      </div>
-      <div class="pillar">
-        <h3>المحور الرقمي والإبداعي</h3>
-        <p>الذكاء الاصطناعي، الإعلام الرقمي، الفنون، والشعر في خدمة الإنسان والمجتمع.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SCHEDULE -->
-<section class="schedule-section" id="schedule">
-  <div class="section-header">
-    <h2 class="section-title">جدول<br>الندوات</h2>
-    <span class="section-eyebrow">ملتقى الخيمة الخضراء · رمضان 2026</span>
-  </div>
-
-  <!-- FEBRUARY -->
-  <div class="month-block reveal">
-    <div class="month-label">فبراير 2026</div>
-
-    <div class="event-row">
-      <div class="event-date">
-        <span class="event-day">22</span>
-        <span class="event-month-small">فبراير</span>
-        <span class="event-weekday">الأحد</span>
-      </div>
-      <div class="event-info">
-        <div class="event-title">الدين الإسلامي ودوره في تعزيز الأمن الاجتماعي</div>
-        <ul class="event-subtopics">
-          <li>دور القيم الأخلاقية الإسلامية في تعزيز السلم الاجتماعي.</li>
-          <li>التكافل الاجتماعي ورعاية الفئات الضعيفة.</li>
-          <li>العدالة وحفظ الحقوق في الشريعة الإسلامية.</li>
-          <li>دور التعليم والوعي الديني في بناء مجتمع آمن.</li>
-        </ul>
-        <div class="event-tags">
-          <span class="tag tag-soc">المجتمع</span>
-          <span class="tag tag-pol">القيم</span>
+      <h1>ملتقى <span>الخيمة الخضراء</span></h1>
+      <p>منبر جماهيري للتفاعل الديمقراطي الحر · ندوات ولقاءات رمضانية مفتوحة</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">١٠</div>
+          <div class="label">ندوات</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">٣</div>
+          <div class="label">محاور</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">٢</div>
+          <div class="label">أشهر</div>
         </div>
       </div>
-      <div class="event-meta">
-        <span class="event-format">ندوة مفتوحة</span>
-        <span class="event-platform">ZOOM + حضوري</span>
-        <a href="#newsletter" class="event-register">تسجيل</a>
-      </div>
     </div>
+  </div>
 
-    <div class="event-row">
-      <div class="event-date">
-        <span class="event-day">23</span>
-        <span class="event-month-small">فبراير</span>
-        <span class="event-weekday">الاثنين</span>
-      </div>
-      <div class="event-info">
-        <div class="event-title">التأثير المتبادل بين الرعاية الصحية والتنمية الاقتصادية</div>
-        <ul class="event-subtopics">
-          <li>تأثير الرعاية الصحية على الإنتاجية والقوى العاملة.</li>
-          <li>تأثير الأمراض والأوبئة على الاستثمار والتنمية المستدامة.</li>
-          <li>التكاليف الصحية والضغط على المؤسسات والأفراد.</li>
-          <li>استراتيجيات الوقاية ودورها في دعم الاقتصاد والمجتمع.</li>
-        </ul>
-        <div class="event-tags">
-          <span class="tag tag-soc">الصحة</span>
-          <span class="tag tag-pol">الاقتصاد</span>
+  <!-- Track Filters -->
+  <div class="tracks">
+    <div class="tracks-scroll">
+      <div class="track-chip active" data-filter="all"><span class="icon">📋</span> الكل</div>
+      <div class="track-chip" data-filter="environment"><span class="icon">🌍</span> بيئي ومناخي</div>
+      <div class="track-chip" data-filter="social"><span class="icon">🏛️</span> اجتماعي واقتصادي</div>
+      <div class="track-chip" data-filter="digital"><span class="icon">💡</span> رقمي وإبداعي</div>
+    </div>
+  </div>
+
+  <!-- February -->
+  <div class="month-header">
+    <div class="line"></div>
+    <h2>فبراير ٢٠٢٦</h2>
+    <div class="line" style="background: linear-gradient(to right, transparent, rgba(11,61,46,0.12));"></div>
+  </div>
+
+  <div class="events" id="events-feb">
+
+    <!-- 22 Feb -->
+    <div class="event-card" data-track="social">
+      <div class="card-accent accent-society"></div>
+      <div class="card-top">
+        <div class="date-block">
+          <div class="day-num">٢٢</div>
+          <div class="day-name">الأحد</div>
+        </div>
+        <div class="card-info">
+          <h3>الدين الإسلامي ودوره في تعزيز الأمن الاجتماعي</h3>
+          <div class="card-tags">
+            <span class="tag">المجتمع</span>
+            <span class="tag gold">القيم</span>
+          </div>
         </div>
       </div>
-      <div class="event-meta">
-        <span class="event-format">ندوة مفتوحة</span>
-        <span class="event-platform">ZOOM + حضوري</span>
-        <a href="#newsletter" class="event-register">تسجيل</a>
+      <div class="card-details" id="details-1">
+        <ul class="detail-list">
+          <li>دور القيم الأخلاقية الإسلامية في تعزيز السلم الاجتماعي</li>
+          <li>التكافل الاجتماعي ورعاية الفئات الضعيفة</li>
+          <li>العدالة وحفظ الحقوق في الشريعة الإسلامية</li>
+          <li>دور التعليم والوعي الديني في بناء مجتمع آمن</li>
+        </ul>
+      </div>
+      <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+        انضم عبر Zoom
+      </a>
+      <div class="card-footer">
+        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+        <button class="expand-btn" onclick="toggleDetails('details-1', this)">تفاصيل <span class="arrow">▼</span></button>
       </div>
     </div>
 
-    <div class="event-row">
-      <div class="event-date">
-        <span class="event-day">24</span>
-        <span class="event-month-small">فبراير</span>
-        <span class="event-weekday">الثلاثاء</span>
-      </div>
-      <div class="event-info">
-        <div class="event-title">أخلاقيات استخدام الذكاء الاصطناعي</div>
-        <ul class="event-subtopics">
-          <li>الخصوصية وحماية البيانات والمحافظة على حقوق المستخدم.</li>
-          <li>السياسات والتشريعات في تحقيق الشفافية والمساءلة.</li>
-          <li>تحقيق العدالة وعدم التحيز في البيانات والخوارزميات.</li>
-          <li>التأثير الاجتماعي والأخلاقي لمنظومات الذكاء الاصطناعي.</li>
-        </ul>
-        <div class="event-tags">
-          <span class="tag tag-tech">التقنية</span>
-          <span class="tag tag-pol">الأخلاقيات</span>
+    <!-- 23 Feb -->
+    <div class="event-card" data-track="social">
+      <div class="card-accent accent-health"></div>
+      <div class="card-top">
+        <div class="date-block">
+          <div class="day-num">٢٣</div>
+          <div class="day-name">الاثنين</div>
+        </div>
+        <div class="card-info">
+          <h3>التأثير المتبادل بين الرعاية الصحية والتنمية الاقتصادية</h3>
+          <div class="card-tags">
+            <span class="tag">الصحة</span>
+            <span class="tag gold">الاقتصاد</span>
+          </div>
         </div>
       </div>
-      <div class="event-meta">
-        <span class="event-format">ندوة مفتوحة</span>
-        <span class="event-platform">ZOOM + حضوري</span>
-        <a href="#newsletter" class="event-register">تسجيل</a>
+      <div class="card-details" id="details-2">
+        <ul class="detail-list">
+          <li>تأثير الرعاية الصحية على الإنتاجية والقوى العاملة</li>
+          <li>تأثير الأمراض والأوبئة على الاستثمار والتنمية المستدامة</li>
+          <li>التكاليف الصحية والضغط على المؤسسات والأفراد</li>
+          <li>استراتيجيات الوقاية ودورها في دعم الاقتصاد والمجتمع</li>
+        </ul>
+      </div>
+      <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+        انضم عبر Zoom
+      </a>
+      <div class="card-footer">
+        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+        <button class="expand-btn" onclick="toggleDetails('details-2', this)">تفاصيل <span class="arrow">▼</span></button>
       </div>
     </div>
 
-    <div class="event-row">
-      <div class="event-date">
-        <span class="event-day">25</span>
-        <span class="event-month-small">فبراير</span>
-        <span class="event-weekday">الأربعاء</span>
-      </div>
-      <div class="event-info">
-        <div class="event-title">مخرجات قمة المناخ 30 بين المبادرات والتحديات</div>
-        <ul class="event-subtopics">
-          <li>صندوق حماية الغابات ومدى التزام الدول بعهودها.</li>
-          <li>دور الشعوب الأصلية والمعارف القديمة في تحقيق الاستدامة.</li>
-          <li>الوفاء بالالتزامات والتخلص من الوقود الأحفوري.</li>
-          <li>موقف العالم العربي من مخرجات قمم المناخ.</li>
-        </ul>
-        <div class="event-tags">
-          <span class="tag tag-env">المناخ</span>
-          <span class="tag tag-pol">السياسات</span>
+    <!-- 24 Feb -->
+    <div class="event-card" data-track="digital">
+      <div class="card-accent accent-tech"></div>
+      <div class="card-top">
+        <div class="date-block">
+          <div class="day-num">٢٤</div>
+          <div class="day-name">الثلاثاء</div>
+        </div>
+        <div class="card-info">
+          <h3>أخلاقيات استخدام الذكاء الاصطناعي</h3>
+          <div class="card-tags">
+            <span class="tag">التقنية</span>
+            <span class="tag gold">الأخلاقيات</span>
+          </div>
         </div>
       </div>
-      <div class="event-meta">
-        <span class="event-format">ندوة مفتوحة</span>
-        <span class="event-platform">ZOOM + حضوري</span>
-        <a href="#newsletter" class="event-register">تسجيل</a>
+      <div class="card-details" id="details-3">
+        <ul class="detail-list">
+          <li>الخصوصية وحماية البيانات والمحافظة على حقوق المستخدم</li>
+          <li>السياسات والتشريعات في تحقيق الشفافية والمساءلة</li>
+          <li>تحقيق العدالة وعدم التحيز في البيانات والخوارزميات</li>
+          <li>التأثير الاجتماعي والأخلاقي لمنظومات الذكاء الاصطناعي</li>
+        </ul>
+      </div>
+      <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+        انضم عبر Zoom
+      </a>
+      <div class="card-footer">
+        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+        <button class="expand-btn" onclick="toggleDetails('details-3', this)">تفاصيل <span class="arrow">▼</span></button>
       </div>
     </div>
-  </div>
 
-  <!-- MARCH -->
-  <div class="month-block reveal">
-    <div class="month-label">مارس 2026</div>
-
-    <div class="event-row">
-      <div class="event-date">
-        <span class="event-day">1</span>
-        <span class="event-month-small">مارس</span>
-        <span class="event-weekday">الأحد</span>
-      </div>
-      <div class="event-info">
-        <div class="event-title">استراتيجيات الأمن الغذائي والمائي لمواجهة التحديات المستدامة</div>
-        <ul class="event-subtopics">
-          <li>التحديات الراهنة للأمن المائي في العالم العربي.</li>
-          <li>دور التعاون الإقليمي في تعزيز الأمن المائي والغذائي.</li>
-          <li>الاستدامة والابتكار في إدارة الموارد المائية والزراعية.</li>
-          <li>تحقيق الأمن الغذائي في ظل التغيرات الاقتصادية والسياسية.</li>
-        </ul>
-        <div class="event-tags">
-          <span class="tag tag-env">البيئة</span>
-          <span class="tag tag-soc">الأمن الغذائي</span>
+    <!-- 25 Feb -->
+    <div class="event-card" data-track="environment">
+      <div class="card-accent accent-climate"></div>
+      <div class="card-top">
+        <div class="date-block">
+          <div class="day-num">٢٥</div>
+          <div class="day-name">الأربعاء</div>
+        </div>
+        <div class="card-info">
+          <h3>مخرجات قمة المناخ 30 بين المبادرات والتحديات</h3>
+          <div class="card-tags">
+            <span class="tag">البيئة</span>
+            <span class="tag gold">المناخ</span>
+          </div>
         </div>
       </div>
-      <div class="event-meta">
-        <span class="event-format">ندوة مفتوحة</span>
-        <span class="event-platform">ZOOM + حضوري</span>
-        <a href="#newsletter" class="event-register">تسجيل</a>
+      <div class="card-details" id="details-4">
+        <ul class="detail-list">
+          <li>صندوق حماية الغابات ومدى التزام الدول بعهودها</li>
+          <li>دور الشعوب الأصلية والمعارف القديمة في تحقيق الاستدامة</li>
+          <li>الوفاء بالالتزامات والتخلص من الوقود الأحفوري</li>
+          <li>موقف العالم العربي من مخرجات قمم المناخ</li>
+        </ul>
+      </div>
+      <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+        انضم عبر Zoom
+      </a>
+      <div class="card-footer">
+        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+        <button class="expand-btn" onclick="toggleDetails('details-4', this)">تفاصيل <span class="arrow">▼</span></button>
       </div>
     </div>
+  </div>
 
-    <div class="event-row">
-      <div class="event-date">
-        <span class="event-day">2</span>
-        <span class="event-month-small">مارس</span>
-        <span class="event-weekday">الاثنين</span>
-      </div>
-      <div class="event-info">
-        <div class="event-title">الإعلام في العصر الرقمي بين المصداقية وتحديات وسائل التواصل الاجتماعي</div>
-        <ul class="event-subtopics">
-          <li>دور الإعلام التقليدي في الحفاظ على المصداقية.</li>
-          <li>تأثير وسائل التواصل الاجتماعي على صناعة الأخبار.</li>
-          <li>مستقبل الإعلام: التوازن بين الحرية والمسؤولية.</li>
-          <li>مسؤولية الأفراد والجمهور في التحقق من المعلومات.</li>
-        </ul>
-        <div class="event-tags">
-          <span class="tag tag-tech">الرقمي</span>
-          <span class="tag tag-soc">الإعلام</span>
+  <!-- March -->
+  <div class="month-header">
+    <div class="line"></div>
+    <h2>مارس ٢٠٢٦</h2>
+    <div class="line" style="background: linear-gradient(to right, transparent, rgba(11,61,46,0.12));"></div>
+  </div>
+
+  <div class="events" id="events-mar">
+
+    <!-- 1 Mar -->
+    <div class="event-card" data-track="environment">
+      <div class="card-accent accent-food"></div>
+      <div class="card-top">
+        <div class="date-block">
+          <div class="day-num">١</div>
+          <div class="day-name">الأحد</div>
+        </div>
+        <div class="card-info">
+          <h3>استراتيجيات الأمن الغذائي والمائي لمواجهة التحديات المستدامة</h3>
+          <div class="card-tags">
+            <span class="tag">البيئة</span>
+            <span class="tag gold">الأمن الغذائي</span>
+          </div>
         </div>
       </div>
-      <div class="event-meta">
-        <span class="event-format">ندوة مفتوحة</span>
-        <span class="event-platform">ZOOM + حضوري</span>
-        <a href="#newsletter" class="event-register">تسجيل</a>
+      <div class="card-details" id="details-5">
+        <ul class="detail-list">
+          <li>التحديات الراهنة للأمن المائي في العالم العربي</li>
+          <li>دور التعاون الإقليمي في تعزيز الأمن المائي والغذائي</li>
+          <li>الاستدامة والابتكار في إدارة الموارد المائية والزراعية</li>
+          <li>تحقيق الأمن الغذائي في ظل التغيرات الاقتصادية والسياسية</li>
+        </ul>
+      </div>
+      <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+        انضم عبر Zoom
+      </a>
+      <div class="card-footer">
+        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+        <button class="expand-btn" onclick="toggleDetails('details-5', this)">تفاصيل <span class="arrow">▼</span></button>
       </div>
     </div>
 
-    <div class="event-row">
-      <div class="event-date">
-        <span class="event-day">3</span>
-        <span class="event-month-small">مارس</span>
-        <span class="event-weekday">الثلاثاء</span>
-      </div>
-      <div class="event-info">
-        <div class="event-title">نحو نهضة صناعية عربية في ظل الموارد المتاحة</div>
-        <ul class="event-subtopics">
-          <li>استغلال الموقع الاستراتيجي والبنية التحتية البحرية.</li>
-          <li>تنمية الكفاءات البشرية وبناء القدرات التقنية.</li>
-          <li>الاستثمار في التكنولوجيا والابتكار الصناعي.</li>
-          <li>تنويع الاقتصاد والحد من الاعتماد على الموارد الأولية.</li>
-        </ul>
-        <div class="event-tags">
-          <span class="tag tag-pol">الاقتصاد</span>
-          <span class="tag tag-sci">الصناعة</span>
+    <!-- 2 Mar -->
+    <div class="event-card" data-track="digital">
+      <div class="card-accent accent-media"></div>
+      <div class="card-top">
+        <div class="date-block">
+          <div class="day-num">٢</div>
+          <div class="day-name">الاثنين</div>
+        </div>
+        <div class="card-info">
+          <h3>الإعلام في العصر الرقمي بين المصداقية وتحديات وسائل التواصل</h3>
+          <div class="card-tags">
+            <span class="tag">الإعلام</span>
+            <span class="tag gold">الرقمي</span>
+          </div>
         </div>
       </div>
-      <div class="event-meta">
-        <span class="event-format">ندوة مفتوحة</span>
-        <span class="event-platform">ZOOM + حضوري</span>
-        <a href="#newsletter" class="event-register">تسجيل</a>
+      <div class="card-details" id="details-6">
+        <ul class="detail-list">
+          <li>دور الإعلام التقليدي في الحفاظ على المصداقية</li>
+          <li>تأثير وسائل التواصل الاجتماعي على صناعة الأخبار</li>
+          <li>مستقبل الإعلام: التوازن بين الحرية والمسؤولية</li>
+          <li>مسؤولية الأفراد والجمهور في التحقق من المعلومات</li>
+        </ul>
+      </div>
+      <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+        انضم عبر Zoom
+      </a>
+      <div class="card-footer">
+        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+        <button class="expand-btn" onclick="toggleDetails('details-6', this)">تفاصيل <span class="arrow">▼</span></button>
       </div>
     </div>
 
-    <div class="event-row">
-      <div class="event-date">
-        <span class="event-day">4</span>
-        <span class="event-month-small">مارس</span>
-        <span class="event-weekday">الأربعاء</span>
-      </div>
-      <div class="event-info">
-        <div class="event-title">الاستثمار الرياضي في قطر وتعزيز التضامن العربي</div>
-        <ul class="event-subtopics">
-          <li>قطر نموذجاً في الاستثمار الرياضي.</li>
-          <li>السياحة الرياضية كرافد اقتصادي وتنموي.</li>
-          <li>دور الرياضة في تعزيز الروابط العربية.</li>
-          <li>التخطيط المستدام في الاستثمار الرياضي.</li>
-        </ul>
-        <div class="event-tags">
-          <span class="tag tag-pol">الاستثمار</span>
-          <span class="tag tag-soc">الرياضة</span>
+    <!-- 3 Mar -->
+    <div class="event-card" data-track="social">
+      <div class="card-accent accent-economy"></div>
+      <div class="card-top">
+        <div class="date-block">
+          <div class="day-num">٣</div>
+          <div class="day-name">الثلاثاء</div>
+        </div>
+        <div class="card-info">
+          <h3>نحو نهضة صناعية عربية في ظل الموارد المتاحة</h3>
+          <div class="card-tags">
+            <span class="tag">الاقتصاد</span>
+            <span class="tag gold">الصناعة</span>
+          </div>
         </div>
       </div>
-      <div class="event-meta">
-        <span class="event-format">ندوة مفتوحة</span>
-        <span class="event-platform">ZOOM + حضوري</span>
-        <a href="#newsletter" class="event-register">تسجيل</a>
+      <div class="card-details" id="details-7">
+        <ul class="detail-list">
+          <li>استغلال الموقع الاستراتيجي والبنية التحتية البحرية</li>
+          <li>تنمية الكفاءات البشرية وبناء القدرات التقنية</li>
+          <li>الاستثمار في التكنولوجيا والابتكار الصناعي</li>
+          <li>تنويع الاقتصاد والحد من الاعتماد على الموارد الأولية</li>
+        </ul>
+      </div>
+      <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+        انضم عبر Zoom
+      </a>
+      <div class="card-footer">
+        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+        <button class="expand-btn" onclick="toggleDetails('details-7', this)">تفاصيل <span class="arrow">▼</span></button>
       </div>
     </div>
 
-    <div class="event-row">
-      <div class="event-date">
-        <span class="event-day">8</span>
-        <span class="event-month-small">مارس</span>
-        <span class="event-weekday">الأحد</span>
-      </div>
-      <div class="event-info">
-        <div class="event-title">تعزيز حقوق ذوي الإعاقة ودمجهم من خلال الابتكار والدعم المجتمعي</div>
-        <ul class="event-subtopics">
-          <li>تأصيل حقوق ذوي الإعاقة في المجتمع.</li>
-          <li>تعزيز الوعي المجتمعي والتضامن.</li>
-          <li>دور التكنولوجيا والابتكار في دعم ذوي الإعاقة.</li>
-          <li>التعليم والتدريب والتمكين.</li>
-        </ul>
-        <div class="event-tags">
-          <span class="tag tag-soc">الإدماج</span>
-          <span class="tag tag-tech">التقنية</span>
+    <!-- 4 Mar -->
+    <div class="event-card" data-track="social">
+      <div class="card-accent accent-sports"></div>
+      <div class="card-top">
+        <div class="date-block">
+          <div class="day-num">٤</div>
+          <div class="day-name">الأربعاء</div>
+        </div>
+        <div class="card-info">
+          <h3>الاستثمار الرياضي في قطر وتعزيز التضامن العربي</h3>
+          <div class="card-tags">
+            <span class="tag">الرياضة</span>
+            <span class="tag gold">الاقتصاد</span>
+          </div>
         </div>
       </div>
-      <div class="event-meta">
-        <span class="event-format">ندوة مفتوحة</span>
-        <span class="event-platform">ZOOM + حضوري</span>
-        <a href="#newsletter" class="event-register">تسجيل</a>
+      <div class="card-details" id="details-8">
+        <ul class="detail-list">
+          <li>قطر نموذجاً في الاستثمار الرياضي</li>
+          <li>السياحة الرياضية كرافد اقتصادي وتنموي</li>
+          <li>دور الرياضة في تعزيز الروابط العربية</li>
+          <li>التخطيط المستدام في الاستثمار الرياضي</li>
+        </ul>
+      </div>
+      <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+        انضم عبر Zoom
+      </a>
+      <div class="card-footer">
+        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+        <button class="expand-btn" onclick="toggleDetails('details-8', this)">تفاصيل <span class="arrow">▼</span></button>
       </div>
     </div>
 
-    <div class="event-row">
-      <div class="event-date">
-        <span class="event-day">9</span>
-        <span class="event-month-small">مارس</span>
-        <span class="event-weekday">الاثنين</span>
-      </div>
-      <div class="event-info">
-        <div class="event-title">الإبداع الشعري والفني في الخروج عن المألوف</div>
-        <ul class="event-subtopics">
-          <li>دور الابتكار والتجديد في الشعر العربي والفنون المعاصرة.</li>
-          <li>الربط بين الإبداع الفني والقدرة على التفكير النقدي.</li>
-          <li>شعراء وفنانون أبدعوا وتحدّوا القواعد وخلّدوا أعمالاً.</li>
-          <li>قراءات شعرية مباشرة.</li>
-        </ul>
-        <div class="event-tags">
-          <span class="tag tag-art">الفنون</span>
-          <span class="tag tag-soc">الثقافة</span>
+    <!-- 8 Mar -->
+    <div class="event-card" data-track="social">
+      <div class="card-accent accent-inclusion"></div>
+      <div class="card-top">
+        <div class="date-block">
+          <div class="day-num">٨</div>
+          <div class="day-name">الأحد</div>
+        </div>
+        <div class="card-info">
+          <h3>تعزيز حقوق ذوي الإعاقة ودمجهم عبر الابتكار والدعم المجتمعي</h3>
+          <div class="card-tags">
+            <span class="tag">المجتمع</span>
+            <span class="tag gold">الإدماج</span>
+          </div>
         </div>
       </div>
-      <div class="event-meta">
-        <span class="event-format">ندوة + قراءات</span>
-        <span class="event-platform">ZOOM + حضوري</span>
-        <a href="#newsletter" class="event-register">تسجيل</a>
+      <div class="card-details" id="details-9">
+        <ul class="detail-list">
+          <li>تأصيل حقوق ذوي الإعاقة في المجتمع</li>
+          <li>تعزيز الوعي المجتمعي والتضامن</li>
+          <li>دور التكنولوجيا والابتكار في دعم ذوي الإعاقة</li>
+          <li>التعليم والتدريب والتمكين</li>
+        </ul>
+      </div>
+      <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+        انضم عبر Zoom
+      </a>
+      <div class="card-footer">
+        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+        <button class="expand-btn" onclick="toggleDetails('details-9', this)">تفاصيل <span class="arrow">▼</span></button>
       </div>
     </div>
 
+    <!-- 9 Mar -->
+    <div class="event-card" data-track="digital">
+      <div class="card-accent accent-arts"></div>
+      <div class="card-top">
+        <div class="date-block">
+          <div class="day-num">٩</div>
+          <div class="day-name">الاثنين</div>
+        </div>
+        <div class="card-info">
+          <h3>الإبداع الشعري والفني في الخروج عن المألوف</h3>
+          <div class="card-tags">
+            <span class="tag">الفنون</span>
+            <span class="tag gold">الشعر</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-details" id="details-10">
+        <ul class="detail-list">
+          <li>دور الابتكار والتجديد في الشعر العربي والفنون المعاصرة</li>
+          <li>الربط بين الإبداع الفني والقدرة على التفكير النقدي</li>
+          <li>شعراء وفنانون أبدعوا وتحدّوا القواعد وخلّدوا أعمالاً</li>
+          <li>قراءات شعرية مباشرة</li>
+        </ul>
+      </div>
+      <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+        انضم عبر Zoom
+      </a>
+      <div class="card-footer">
+        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+        <button class="expand-btn" onclick="toggleDetails('details-10', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- FEATURES -->
-<section class="features-section" id="features">
-  <div class="section-header">
-    <h2 class="section-title">ما يميّز<br>الخيمة الخضراء</h2>
-    <span class="section-eyebrow">منصة متكاملة للحوار المعرفي</span>
-  </div>
-  <div class="features-grid">
-    <div class="feature-card reveal">
-      <span class="feature-icon">🎙️</span>
-      <div class="feature-title">متحدثون متخصصون</div>
-      <div class="feature-desc">نستضيف خبراء ومفكرين وأصحاب رأي من داخل قطر وخارجها، يتناولون كل قضية من منظورهم المتخصص بمنهجية علمية رصينة.</div>
-    </div>
-    <div class="feature-card reveal">
-      <span class="feature-icon">🌐</span>
-      <div class="feature-title">حضوري وعبر الزوم</div>
-      <div class="feature-desc">نقدم الندوات بشكل مزدوج: حضورياً في قطر وعبر منصة Zoom للمشاركة من أي مكان في العالم دون قيود.</div>
-    </div>
-    <div class="feature-card reveal">
-      <span class="feature-icon">📢</span>
-      <div class="feature-title">تغطية إعلامية شاملة</div>
-      <div class="feature-desc">تمثيل إعلامي كامل: وكالات الأنباء، التلفزيون، الصحافة، والإذاعة. مع نشر خلاصة كل لقاء في بيان ختامي يومي للرأي العام.</div>
-    </div>
-    <div class="feature-card reveal">
-      <span class="feature-icon">💬</span>
-      <div class="feature-title">حوار مفتوح وتفاعلي</div>
-      <div class="feature-desc">بعد كل عرض يُفتح الوقت للمداخلات والنقاش في مناخ ديمقراطي حر يشجع التعبير عن الرأي والتفاعل البنّاء.</div>
-    </div>
-    <div class="feature-card reveal">
-      <span class="feature-icon">📅</span>
-      <div class="feature-title">طوال شهر رمضان</div>
-      <div class="feature-desc">برنامج متكامل يمتد طوال أيام شهر رمضان المبارك، يغطي محاور متنوعة: البيئة، المجتمع، التقنية، الاقتصاد، والفنون.</div>
-    </div>
-    <div class="feature-card reveal">
-      <span class="feature-icon">🏛️</span>
-      <div class="feature-title">النسخة العشرون</div>
-      <div class="feature-desc">تجربة متراكمة من 21 نسخة متواصلة تجعل الملتقى مرجعاً معرفياً راسخاً في المشهد الثقافي والفكري في قطر والمنطقة.</div>
-    </div>
-  </div>
-</section>
+  <div class="bottom-spacer"></div>
+</div>
 
-<!-- QUOTE -->
-<section class="manifesto">
-  <div class="manifesto-quote reveal">
-    "تمثّل منبراً جماهيرياً للتفاعل الديمقراطي الحر،
-    <strong>يتبنى منهجاً علمياً</strong>،
-    حيث يتناول الاختصاصيون العرض كلٌّ حسب تخصصه،
-    لما فيه مصلحة البلاد والعباد."
-  </div>
-  <div class="manifesto-source reveal">ملتقى الخيمة الخضراء · قطر · رمضان المبارك 2026</div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter-section" id="newsletter">
-  <div class="reveal">
-    <h2 class="newsletter-title">انضم إلى الخيمة.<br>كن جزءاً من الحوار.</h2>
-    <p class="newsletter-sub">سجّل بريدك الإلكتروني لتصلك تذكيرات الندوات والإعلانات الجديدة. المشاركة مجانية ومفتوحة للجميع.</p>
-    <div class="zoom-note">
-      <span class="zoom-badge">ZOOM</span>
-      <span class="zoom-text">رابط الانضمام يُرسل قبل كل ندوة مباشرةً إلى بريدك</span>
+<!-- ═══ ABOUT PAGE ═══ -->
+<div class="section-page" id="page-about">
+  <div class="hero" style="padding: 28px 20px;">
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <h1 style="font-size: 26px;">عن <span>الخيمة الخضراء</span></h1>
+      <p style="margin-top: 8px;">منبر جماهيري للتفاعل الديمقراطي الحر</p>
     </div>
   </div>
-  <div class="reveal">
-    <form class="newsletter-form" onsubmit="handleSubmit(event)">
-      <input type="email" placeholder="أدخل بريدك الإلكتروني" id="email-input">
-      <button type="submit">اشترك مجاناً</button>
-    </form>
-    <p style="margin-top:1rem; font-size:0.78rem; color:var(--forest); opacity:0.6; font-family:'Cairo',sans-serif; font-weight:500;">جميع الندوات مجانية · لا رسوم تسجيل · مفتوحة للجميع</p>
-  </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <div>
-    <div class="footer-brand">الخيمة <span>الخضراء</span></div>
-    <p class="footer-tagline">منصة معرفية تستضيف أصحاب الرأي والعلم والخبرة لمناقشة القضايا المجتمعية خلال شهر رمضان المبارك من كل عام.</p>
-  </div>
-  <div class="footer-col">
-    <h4>الملتقى</h4>
-    <ul>
-      <li><a href="#about">عن الخيمة</a></li>
-      <li><a href="#schedule">البرنامج</a></li>
-      <li><a href="#features">مميزاتنا</a></li>
-      <li><a href="#">النسخ السابقة</a></li>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <h4>المشاركة</h4>
-    <ul>
-      <li><a href="#newsletter">التسجيل</a></li>
-      <li><a href="#">اقترح موضوعاً</a></li>
-      <li><a href="#">تطوّع معنا</a></li>
-      <li><a href="#">الشراكات</a></li>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <h4>تواصل معنا</h4>
-    <ul>
-      <li><a href="#">تويتر / X</a></li>
-      <li><a href="#">يوتيوب</a></li>
-      <li><a href="#">إنستغرام</a></li>
-      <li><a href="#">البريد الإلكتروني</a></li>
-    </ul>
-  </div>
-</footer>
+  <div style="padding: 20px 16px;">
+    <div class="about-section" style="margin: 0 0 16px;">
+      <h2>رسالتنا</h2>
+      <p>نطرح القضايا ذات الاهتمام المشترك، محلياً وإقليمياً ودولياً، ونستضيف الخبراء والمهتمين من داخل قطر وخارجها. يتناول الاختصاصيون العرض كلٌّ حسب تخصصه، عقب ذلك يُتاح الوقت للمداخلات.</p>
+      <p style="margin-top: 12px;">مع حرصنا على نشر خلاصات هذه اللقاءات في بيان ختامي يومي، مع ضمان التمثيل الإعلامي لما فيه مصلحة البلاد والعباد.</p>
+    </div>
 
-<div class="footer-bottom">
-  <span class="footer-copy">© 2026 ملتقى الخيمة الخضراء. جميع الحقوق محفوظة.</span>
-  <span class="footer-copy">مجاني ومفتوح للجميع · قطر</span>
+    <div class="about-section" style="margin: 0 0 16px; background: linear-gradient(135deg, #1A3A2E, #1A6B4A);">
+      <h2>المحاور الرئيسية</h2>
+      <div class="about-pillars">
+        <div class="pillar">
+          <div class="icon">🌍</div>
+          <div class="name">المحور البيئي<br>والمناخي</div>
+        </div>
+        <div class="pillar">
+          <div class="icon">🏛️</div>
+          <div class="name">المحور الاجتماعي<br>والاقتصادي</div>
+        </div>
+        <div class="pillar">
+          <div class="icon">💡</div>
+          <div class="name">المحور الرقمي<br>والإبداعي</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-spacer"></div>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav">
+  <button class="nav-item active" onclick="switchPage('schedule')">
+    <span class="nav-icon">📅</span>
+    <span class="nav-label">الجدول</span>
+  </button>
+  <button class="nav-item" onclick="switchPage('about')">
+    <span class="nav-icon">📖</span>
+    <span class="nav-label">عن الملتقى</span>
+  </button>
 </div>
 
 <script>
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
+  // Toggle event details
+  function toggleDetails(id, btn) {
+    const el = document.getElementById(id);
+    const isOpen = el.classList.contains('open');
+    
+    // Close all others
+    document.querySelectorAll('.card-details.open').forEach(d => {
+      d.classList.remove('open');
     });
-  }, { threshold: 0.08 });
-  revealEls.forEach(el => observer.observe(el));
+    document.querySelectorAll('.expand-btn.open').forEach(b => {
+      b.classList.remove('open');
+      b.innerHTML = 'تفاصيل <span class="arrow">▼</span>';
+    });
 
-  // Newsletter
-  function handleSubmit(e) {
-    e.preventDefault();
-    const input = document.getElementById('email-input');
-    const btn = e.target.querySelector('button');
-    if (input.value) {
-      btn.textContent = 'تم التسجيل ✓';
-      btn.style.background = '#2d5a3d';
-      btn.style.borderColor = '#2d5a3d';
-      input.value = '';
-      input.placeholder = 'أهلاً بك في الخيمة الخضراء!';
+    if (!isOpen) {
+      el.classList.add('open');
+      btn.classList.add('open');
+      btn.innerHTML = 'إغلاق <span class="arrow">▼</span>';
     }
   }
 
-  // Nav scroll
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('main-nav');
-    if (window.scrollY > 50) {
-      nav.style.background = 'rgba(245,240,232,0.94)';
-      nav.style.backdropFilter = 'blur(12px)';
-      nav.style.borderBottom = '1px solid rgba(26,58,42,0.1)';
-    } else {
-      nav.style.background = 'transparent';
-      nav.style.backdropFilter = 'none';
-      nav.style.borderBottom = 'none';
-    }
+  // Page switching
+  function switchPage(page) {
+    document.querySelectorAll('.section-page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    
+    document.getElementById('page-' + page).classList.add('active');
+    event.currentTarget.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Track filtering
+  document.querySelectorAll('.track-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.track-chip').forEach(c => c.classList.remove('active'));
+      this.classList.add('active');
+
+      const filter = this.dataset.filter;
+      const cards = document.querySelectorAll('.event-card');
+
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.track === filter) {
+          card.style.display = '';
+          card.style.animation = 'fadeUp 0.4s ease backwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Show/hide month headers based on visible cards
+      ['events-feb', 'events-mar'].forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        const visible = section.querySelectorAll('.event-card[style=""], .event-card:not([style])');
+        const header = section.previousElementSibling;
+        if (visible.length === 0) {
+          header.style.display = 'none';
+        } else {
+          header.style.display = '';
+        }
+      });
+    });
   });
 </script>
-<script>
-const M={'2026-02-22':{url:'https://us02web.zoom.us/j/88400652884',id:'884 0065 2884',passcode:'GAZA'},'2026-02-23':{url:'https://us02web.zoom.us/j/88400652884',id:'884 0065 2884',passcode:'GAZA'},'2026-02-24':{url:'https://us02web.zoom.us/j/88400652884',id:'884 0065 2884',passcode:'GAZA'},'2026-02-25':{url:'https://us02web.zoom.us/j/88400652884',id:'884 0065 2884',passcode:'GAZA'},'2026-03-01':{url:'https://us02web.zoom.us/j/88400652884',id:'884 0065 2884',passcode:'GAZA'},'2026-03-02':{url:'https://us02web.zoom.us/j/88400652884',id:'884 0065 2884',passcode:'GAZA'},'2026-03-03':{url:'https://us02web.zoom.us/j/88400652884',id:'884 0065 2884',passcode:'GAZA'},'2026-03-04':{url:'https://us02web.zoom.us/j/88400652884',id:'884 0065 2884',passcode:'GAZA'},'2026-03-08':{url:'https://us02web.zoom.us/j/88400652884',id:'884 0065 2884',passcode:'GAZA'},'2026-03-09':{url:'https://us02web.zoom.us/j/88400652884',id:'884 0065 2884',passcode:'GAZA'}};
-document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.event-register').forEach((b,i)=>{const m=M[Object.keys(M)[i]];if(m)b.addEventListener('click',e=>{e.preventDefault();if(confirm(`Join Zoom\n\n${m.url}\nID: ${m.id}\nPass: ${m.passcode}`))window.open(m.url,'_blank');});});});
-</script></body>
+
+</body>
 </html>
