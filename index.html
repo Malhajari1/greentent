@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -6,6 +7,7 @@
 <title>ملتقى الخيمة الخضراء · رمضان 2026</title>
 
 <!-- Open Graph / WhatsApp Preview -->
+
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://greentent.info/">
 <meta property="og:title" content="ملتقى الخيمة الخضراء · رمضان 2026">
@@ -15,6 +17,7 @@
 <meta property="og:image:height" content="630">
 
 <!-- Twitter Card -->
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ملتقى الخيمة الخضراء · رمضان 2026">
 <meta name="twitter:description" content="منبر جماهيري للتفاعل الديمقراطي الحر · ندوات ولقاءات رمضانية مفتوحة">
@@ -40,781 +43,783 @@
     --radius-sm: 12px;
   }
 
-  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-
-  body {
-    font-family: 'Tajawal', sans-serif;
-    background: var(--cream);
-    color: var(--text-dark);
-    overflow-x: hidden;
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* ─── Decorative Background ─── */
-  body::before {
-    content: '';
-    position: fixed;
-    top: -50%;
-    right: -30%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(46,204,113,0.06) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
-  }
-  body::after {
-    content: '';
-    position: fixed;
-    bottom: -30%;
-    left: -20%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(212,168,67,0.05) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  /* ─── Header ─── */
-  .header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(254,252,246,0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(11,61,46,0.06);
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .header-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .logo-icon {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, var(--green-main), var(--green-accent));
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    color: white;
-    box-shadow: 0 4px 12px rgba(26,107,74,0.3);
-  }
-
-  .logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-  }
-
-  .logo-text .title {
-    font-size: 15px;
-    font-weight: 800;
-    color: var(--green-deep);
-    letter-spacing: -0.3px;
-  }
-
-  .logo-text .sub {
-    font-size: 10px;
-    font-weight: 500;
-    color: var(--gold);
-    letter-spacing: 0.5px;
-  }
-
-  /* ─── Hero ─── */
-  .hero {
-    position: relative;
-    padding: 32px 20px 28px;
-    text-align: center;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, var(--green-deep) 0%, var(--green-main) 100%);
-    z-index: 0;
-  }
-
-  .hero-pattern {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    opacity: 0.06;
-    background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(255,255,255,0.5) 30px, rgba(255,255,255,0.5) 31px),
-      repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(255,255,255,0.5) 30px, rgba(255,255,255,0.5) 31px);
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 100px;
-    padding: 6px 16px;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--gold-light);
-    margin-bottom: 16px;
-    backdrop-filter: blur(10px);
-  }
-
-  .hero-badge .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--green-accent);
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0%,100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.8); }
-  }
-
-  .hero h1 {
-    font-family: 'Amiri', serif;
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
-    line-height: 1.3;
-    margin-bottom: 8px;
-  }
-
-  .hero h1 span {
-    color: var(--gold);
-  }
-
-  .hero p {
-    font-size: 13px;
-    color: rgba(255,255,255,0.65);
-    font-weight: 300;
-    max-width: 320px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .hero-stat {
-    text-align: center;
-  }
-
-  .hero-stat .num {
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--green-accent);
-  }
-
-  .hero-stat .label {
-    font-size: 10px;
-    color: rgba(255,255,255,0.5);
-    font-weight: 400;
-    margin-top: 2px;
-  }
-
-  /* ─── Tracks / Categories ─── */
-  .tracks {
-    padding: 20px 16px 8px;
-  }
-
-  .tracks-scroll {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 4px 0;
-  }
-  .tracks-scroll::-webkit-scrollbar { display: none; }
-
-  .track-chip {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 10px 16px;
-    border-radius: 100px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1.5px solid transparent;
-    background: white;
-    color: var(--text-mid);
-    box-shadow: var(--shadow-soft);
-  }
-
-  .track-chip.active {
-    background: var(--green-deep);
-    color: white;
-    border-color: var(--green-deep);
-    box-shadow: 0 4px 16px rgba(11,61,46,0.25);
-  }
-
-  .track-chip .icon {
-    font-size: 14px;
-  }
-
-  /* ─── Month Header ─── */
-  .month-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 24px 20px 12px;
-  }
-
-  .month-header .line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(to left, transparent, rgba(11,61,46,0.12));
-  }
-
-  .month-header h2 {
-    font-family: 'Amiri', serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--green-deep);
-    white-space: nowrap;
-  }
-
-  /* ─── Event Cards ─── */
-  .events {
-    padding: 0 16px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .event-card {
-    position: relative;
-    background: white;
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-card);
-    transition: all 0.3s ease;
-    animation: fadeUp 0.5s ease backwards;
-  }
-
-  .event-card:nth-child(1) { animation-delay: 0.05s; }
-  .event-card:nth-child(2) { animation-delay: 0.1s; }
-  .event-card:nth-child(3) { animation-delay: 0.15s; }
-  .event-card:nth-child(4) { animation-delay: 0.2s; }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .event-card:active {
-    transform: scale(0.985);
-  }
-
-  .card-accent {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 4px;
-    height: 100%;
-  }
-
-  .card-top {
-    display: flex;
-    gap: 14px;
-    padding: 18px 18px 0;
-    align-items: flex-start;
-  }
-
-  .date-block {
-    flex-shrink: 0;
-    width: 54px;
-    height: 62px;
-    border-radius: var(--radius-sm);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: var(--green-mist);
-    border: 1px solid rgba(11,61,46,0.06);
-  }
-
-  .date-block .day-num {
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--green-deep);
-    line-height: 1;
-  }
-
-  .date-block .day-name {
-    font-size: 10px;
-    font-weight: 500;
-    color: var(--green-main);
-    margin-top: 2px;
-  }
-
-  .card-info {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .card-info h3 {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text-dark);
-    line-height: 1.5;
-    margin-bottom: 6px;
-  }
-
-  .card-tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    font-size: 10px;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 100px;
-    background: var(--green-mist);
-    color: var(--green-main);
-  }
-
-  .tag.gold {
-    background: var(--gold-light);
-    color: #9A7B2F;
-  }
-
-  /* ─── Expandable Details ─── */
-  .card-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-    padding: 0 18px;
-  }
-
-  .card-details.open {
-    max-height: 400px;
-    padding: 14px 18px;
-  }
-
-  .detail-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .detail-list li {
-    font-size: 13px;
-    color: var(--text-mid);
-    line-height: 1.6;
-    padding-right: 18px;
-    position: relative;
-  }
-
-  .detail-list li::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 9px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--green-accent);
-    opacity: 0.6;
-  }
-
-  /* ─── Card Footer ─── */
-  .card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 18px 14px;
-    border-top: 1px solid rgba(11,61,46,0.04);
-    margin-top: 4px;
-  }
-
-  .format-badge {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 10px;
-    color: var(--text-light);
-    font-weight: 500;
-  }
-
-  .format-badge .dot-live {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--green-accent);
-  }
-
-  .expand-btn {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--green-main);
-    background: var(--green-mist);
-    border: none;
-    border-radius: 100px;
-    padding: 7px 14px;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-family: 'Tajawal', sans-serif;
-  }
-
-  .expand-btn:active {
-    background: var(--green-light);
-    transform: scale(0.95);
-  }
-
-  .expand-btn .arrow {
-    transition: transform 0.3s ease;
-    display: inline-block;
-    font-size: 10px;
-  }
-
-  .expand-btn.open .arrow {
-    transform: rotate(180deg);
-  }
-
-  /* ─── About Section ─── */
-  .about-section {
-    margin: 8px 16px 24px;
-    background: linear-gradient(135deg, var(--green-deep), #145C3F);
-    border-radius: var(--radius);
-    padding: 28px 22px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .about-section::before {
-    content: '';
-    position: absolute;
-    top: -40px;
-    left: -40px;
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background: rgba(46,204,113,0.08);
-  }
-
-  .about-section h2 {
-    font-family: 'Amiri', serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 12px;
-    position: relative;
-  }
-
-  .about-section p {
-    font-size: 13px;
-    color: rgba(255,255,255,0.7);
-    line-height: 1.8;
-    position: relative;
-  }
-
-  .about-pillars {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin-top: 20px;
-    position: relative;
-  }
-
-  .pillar {
-    text-align: center;
-    padding: 14px 8px;
-    background: rgba(255,255,255,0.07);
-    border-radius: var(--radius-sm);
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .pillar .icon {
-    font-size: 22px;
-    margin-bottom: 6px;
-  }
-
-  .pillar .name {
-    font-size: 10px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.85);
-    line-height: 1.4;
-  }
-
-  /* ─── Bottom Nav ─── */
-  .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background: rgba(254,252,246,0.92);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(11,61,46,0.06);
-    display: flex;
-    justify-content: space-around;
-    padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
-  }
-
-  .nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-    padding: 6px 16px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.2s;
-    background: none;
-    border: none;
-    font-family: 'Tajawal', sans-serif;
-  }
-
-  .nav-item.active {
-    color: var(--green-main);
-  }
-
-  .nav-item:not(.active) {
-    color: var(--text-light);
-  }
-
-  .nav-item .nav-icon {
-    font-size: 20px;
-  }
-
-  .nav-item .nav-label {
-    font-size: 10px;
-    font-weight: 600;
-  }
-
-  /* ─── Sections toggle ─── */
-  .section-page {
-    display: none;
-  }
-  .section-page.active {
-    display: block;
-  }
-
-  /* ─── Spacer for bottom nav ─── */
-  .bottom-spacer {
-    height: calc(72px + env(safe-area-inset-bottom));
-  }
-
-  /* ─── Scrollbar ─── */
-  ::-webkit-scrollbar { width: 0; }
-
-  /* ─── Zoom Buttons ─── */
-  .zoom-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin: 10px 18px 14px;
-  }
-
-  .zoom-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    padding: 12px 16px;
-    background: linear-gradient(135deg, #2D8CFF, #1A6FD4);
-    color: white;
-    border: none;
-    border-radius: var(--radius-sm);
-    font-family: 'Tajawal', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 16px rgba(45,140,255,0.3);
-  }
-
-  .zoom-btn:active {
-    transform: scale(0.97);
-    box-shadow: 0 2px 8px rgba(45,140,255,0.3);
-  }
-
-  .zoom-btn svg {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-  }
-
-  .zoom-row {
-    display: flex;
-    gap: 8px;
-  }
-
-  .zoom-copy-btn, .zoom-pass-btn {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 10px 12px;
-    border-radius: var(--radius-sm);
-    font-family: 'Tajawal', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: all 0.2s ease;
-  }
-
-  .zoom-copy-btn {
-    background: rgba(45,140,255,0.08);
-    color: #1A6FD4;
-    border: 1.5px solid rgba(45,140,255,0.2);
-  }
-
-  .zoom-copy-btn:active {
-    background: rgba(45,140,255,0.15);
-    transform: scale(0.97);
-  }
-
-  .zoom-pass-btn {
-    background: rgba(212,168,67,0.08);
-    color: #9A7B2F;
-    border: 1.5px solid rgba(212,168,67,0.2);
-  }
-
-  .zoom-pass-btn:active {
-    background: rgba(212,168,67,0.15);
-    transform: scale(0.97);
-  }
-
-  .zoom-copy-btn svg, .zoom-pass-btn svg {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-  }
-
-  .copied-toast {
-    position: fixed;
-    bottom: 90px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    background: var(--green-deep);
-    color: white;
-    padding: 10px 24px;
-    border-radius: 100px;
-    font-size: 13px;
-    font-weight: 600;
-    font-family: 'Tajawal', sans-serif;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    z-index: 200;
-    box-shadow: var(--shadow-elevated);
-  }
-
-  .copied-toast.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-
-  /* ─── Color variants for card accents ─── */
-  .accent-society { background: linear-gradient(to bottom, #2ECC71, #27AE60); }
-  .accent-health { background: linear-gradient(to bottom, #3498DB, #2980B9); }
-  .accent-tech { background: linear-gradient(to bottom, #9B59B6, #8E44AD); }
-  .accent-climate { background: linear-gradient(to bottom, #1ABC9C, #16A085); }
-  .accent-food { background: linear-gradient(to bottom, #E67E22, #D35400); }
-  .accent-media { background: linear-gradient(to bottom, #E74C3C, #C0392B); }
-  .accent-economy { background: linear-gradient(to bottom, var(--gold), #B8942E); }
-  .accent-sports { background: linear-gradient(to bottom, #2ECC71, #27AE60); }
-  .accent-inclusion { background: linear-gradient(to bottom, #E91E63, #C2185B); }
-  .accent-arts { background: linear-gradient(to bottom, #FF9800, #F57C00); }
-
-  /* ─── Sponsors ─── */
-  .sponsors-section {
-    margin: 28px 16px 8px;
-    text-align: center;
-  }
-
-  .sponsors-label {
-    font-family: 'Amiri', serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--green-deep);
-    margin-bottom: 14px;
-    position: relative;
-    display: inline-block;
-  }
-
-  .sponsors-label::before,
-  .sponsors-label::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 1px;
-    background: linear-gradient(to var(--dir, left), rgba(11,61,46,0.2), transparent);
-  }
-
-  .sponsors-label::before {
-    right: calc(100% + 12px);
-    --dir: left;
-  }
-
-  .sponsors-label::after {
-    left: calc(100% + 12px);
-    --dir: right;
-  }
-
-  .sponsors-strip {
-    background: white;
-    border-radius: var(--radius);
-    padding: 16px 12px;
-    box-shadow: var(--shadow-soft);
-    overflow: hidden;
-  }
-
-  .sponsors-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
+- { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+
+body {
+font-family: ‘Tajawal’, sans-serif;
+background: var(–cream);
+color: var(–text-dark);
+overflow-x: hidden;
+min-height: 100vh;
+-webkit-font-smoothing: antialiased;
+}
+
+/* ─── Decorative Background ─── */
+body::before {
+content: ‘’;
+position: fixed;
+top: -50%;
+right: -30%;
+width: 600px;
+height: 600px;
+background: radial-gradient(circle, rgba(46,204,113,0.06) 0%, transparent 70%);
+pointer-events: none;
+z-index: 0;
+}
+body::after {
+content: ‘’;
+position: fixed;
+bottom: -30%;
+left: -20%;
+width: 500px;
+height: 500px;
+background: radial-gradient(circle, rgba(212,168,67,0.05) 0%, transparent 70%);
+pointer-events: none;
+z-index: 0;
+}
+
+/* ─── Header ─── */
+.header {
+position: sticky;
+top: 0;
+z-index: 100;
+background: rgba(254,252,246,0.85);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border-bottom: 1px solid rgba(11,61,46,0.06);
+padding: 12px 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.header-logo {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.logo-icon {
+width: 40px;
+height: 40px;
+background: linear-gradient(135deg, var(–green-main), var(–green-accent));
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+color: white;
+box-shadow: 0 4px 12px rgba(26,107,74,0.3);
+}
+
+.logo-text {
+display: flex;
+flex-direction: column;
+line-height: 1.2;
+}
+
+.logo-text .title {
+font-size: 15px;
+font-weight: 800;
+color: var(–green-deep);
+letter-spacing: -0.3px;
+}
+
+.logo-text .sub {
+font-size: 10px;
+font-weight: 500;
+color: var(–gold);
+letter-spacing: 0.5px;
+}
+
+/* ─── Hero ─── */
+.hero {
+position: relative;
+padding: 32px 20px 28px;
+text-align: center;
+overflow: hidden;
+}
+
+.hero::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, var(–green-deep) 0%, var(–green-main) 100%);
+z-index: 0;
+}
+
+.hero-pattern {
+position: absolute;
+inset: 0;
+z-index: 1;
+opacity: 0.06;
+background-image:
+repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(255,255,255,0.5) 30px, rgba(255,255,255,0.5) 31px),
+repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(255,255,255,0.5) 30px, rgba(255,255,255,0.5) 31px);
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+}
+
+.hero-badge {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+background: rgba(255,255,255,0.1);
+border: 1px solid rgba(255,255,255,0.15);
+border-radius: 100px;
+padding: 6px 16px;
+font-size: 11px;
+font-weight: 500;
+color: var(–gold-light);
+margin-bottom: 16px;
+backdrop-filter: blur(10px);
+}
+
+.hero-badge .dot {
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: var(–green-accent);
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+0%,100% { opacity: 1; transform: scale(1); }
+50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.hero h1 {
+font-family: ‘Amiri’, serif;
+font-size: 30px;
+font-weight: 700;
+color: white;
+line-height: 1.3;
+margin-bottom: 8px;
+}
+
+.hero h1 span {
+color: var(–gold);
+}
+
+.hero p {
+font-size: 13px;
+color: rgba(255,255,255,0.65);
+font-weight: 300;
+max-width: 320px;
+margin: 0 auto;
+line-height: 1.6;
+}
+
+.hero-stats {
+display: flex;
+justify-content: center;
+gap: 24px;
+margin-top: 20px;
+padding-top: 20px;
+border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-stat {
+text-align: center;
+}
+
+.hero-stat .num {
+font-size: 22px;
+font-weight: 800;
+color: var(–green-accent);
+}
+
+.hero-stat .label {
+font-size: 10px;
+color: rgba(255,255,255,0.5);
+font-weight: 400;
+margin-top: 2px;
+}
+
+/* ─── Tracks / Categories ─── */
+.tracks {
+padding: 20px 16px 8px;
+}
+
+.tracks-scroll {
+display: flex;
+gap: 10px;
+overflow-x: auto;
+scroll-snap-type: x mandatory;
+-webkit-overflow-scrolling: touch;
+scrollbar-width: none;
+padding: 4px 0;
+}
+.tracks-scroll::-webkit-scrollbar { display: none; }
+
+.track-chip {
+scroll-snap-align: start;
+flex-shrink: 0;
+display: flex;
+align-items: center;
+gap: 6px;
+padding: 10px 16px;
+border-radius: 100px;
+font-size: 12px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+border: 1.5px solid transparent;
+background: white;
+color: var(–text-mid);
+box-shadow: var(–shadow-soft);
+}
+
+.track-chip.active {
+background: var(–green-deep);
+color: white;
+border-color: var(–green-deep);
+box-shadow: 0 4px 16px rgba(11,61,46,0.25);
+}
+
+.track-chip .icon {
+font-size: 14px;
+}
+
+/* ─── Month Header ─── */
+.month-header {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 24px 20px 12px;
+}
+
+.month-header .line {
+flex: 1;
+height: 1px;
+background: linear-gradient(to left, transparent, rgba(11,61,46,0.12));
+}
+
+.month-header h2 {
+font-family: ‘Amiri’, serif;
+font-size: 20px;
+font-weight: 700;
+color: var(–green-deep);
+white-space: nowrap;
+}
+
+/* ─── Event Cards ─── */
+.events {
+padding: 0 16px 24px;
+display: flex;
+flex-direction: column;
+gap: 14px;
+}
+
+.event-card {
+position: relative;
+background: white;
+border-radius: var(–radius);
+overflow: hidden;
+box-shadow: var(–shadow-card);
+transition: all 0.3s ease;
+animation: fadeUp 0.5s ease backwards;
+}
+
+.event-card:nth-child(1) { animation-delay: 0.05s; }
+.event-card:nth-child(2) { animation-delay: 0.1s; }
+.event-card:nth-child(3) { animation-delay: 0.15s; }
+.event-card:nth-child(4) { animation-delay: 0.2s; }
+
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(16px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.event-card:active {
+transform: scale(0.985);
+}
+
+.card-accent {
+position: absolute;
+top: 0;
+right: 0;
+width: 4px;
+height: 100%;
+}
+
+.card-top {
+display: flex;
+gap: 14px;
+padding: 18px 18px 0;
+align-items: flex-start;
+}
+
+.date-block {
+flex-shrink: 0;
+width: 54px;
+height: 62px;
+border-radius: var(–radius-sm);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+background: var(–green-mist);
+border: 1px solid rgba(11,61,46,0.06);
+}
+
+.date-block .day-num {
+font-size: 22px;
+font-weight: 800;
+color: var(–green-deep);
+line-height: 1;
+}
+
+.date-block .day-name {
+font-size: 10px;
+font-weight: 500;
+color: var(–green-main);
+margin-top: 2px;
+}
+
+.card-info {
+flex: 1;
+min-width: 0;
+}
+
+.card-info h3 {
+font-size: 15px;
+font-weight: 700;
+color: var(–text-dark);
+line-height: 1.5;
+margin-bottom: 6px;
+}
+
+.card-tags {
+display: flex;
+gap: 6px;
+flex-wrap: wrap;
+}
+
+.tag {
+font-size: 10px;
+font-weight: 600;
+padding: 3px 10px;
+border-radius: 100px;
+background: var(–green-mist);
+color: var(–green-main);
+}
+
+.tag.gold {
+background: var(–gold-light);
+color: #9A7B2F;
+}
+
+/* ─── Expandable Details ─── */
+.card-details {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.4s ease, padding 0.3s ease;
+padding: 0 18px;
+}
+
+.card-details.open {
+max-height: 400px;
+padding: 14px 18px;
+}
+
+.detail-list {
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.detail-list li {
+font-size: 13px;
+color: var(–text-mid);
+line-height: 1.6;
+padding-right: 18px;
+position: relative;
+}
+
+.detail-list li::before {
+content: ‘’;
+position: absolute;
+right: 0;
+top: 9px;
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: var(–green-accent);
+opacity: 0.6;
+}
+
+/* ─── Card Footer ─── */
+.card-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 12px 18px 14px;
+border-top: 1px solid rgba(11,61,46,0.04);
+margin-top: 4px;
+}
+
+.format-badge {
+display: flex;
+align-items: center;
+gap: 5px;
+font-size: 10px;
+color: var(–text-light);
+font-weight: 500;
+}
+
+.format-badge .dot-live {
+width: 5px;
+height: 5px;
+border-radius: 50%;
+background: var(–green-accent);
+}
+
+.expand-btn {
+display: flex;
+align-items: center;
+gap: 4px;
+font-size: 12px;
+font-weight: 600;
+color: var(–green-main);
+background: var(–green-mist);
+border: none;
+border-radius: 100px;
+padding: 7px 14px;
+cursor: pointer;
+transition: all 0.2s;
+font-family: ‘Tajawal’, sans-serif;
+}
+
+.expand-btn:active {
+background: var(–green-light);
+transform: scale(0.95);
+}
+
+.expand-btn .arrow {
+transition: transform 0.3s ease;
+display: inline-block;
+font-size: 10px;
+}
+
+.expand-btn.open .arrow {
+transform: rotate(180deg);
+}
+
+/* ─── About Section ─── */
+.about-section {
+margin: 8px 16px 24px;
+background: linear-gradient(135deg, var(–green-deep), #145C3F);
+border-radius: var(–radius);
+padding: 28px 22px;
+position: relative;
+overflow: hidden;
+}
+
+.about-section::before {
+content: ‘’;
+position: absolute;
+top: -40px;
+left: -40px;
+width: 160px;
+height: 160px;
+border-radius: 50%;
+background: rgba(46,204,113,0.08);
+}
+
+.about-section h2 {
+font-family: ‘Amiri’, serif;
+font-size: 20px;
+font-weight: 700;
+color: white;
+margin-bottom: 12px;
+position: relative;
+}
+
+.about-section p {
+font-size: 13px;
+color: rgba(255,255,255,0.7);
+line-height: 1.8;
+position: relative;
+}
+
+.about-pillars {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 10px;
+margin-top: 20px;
+position: relative;
+}
+
+.pillar {
+text-align: center;
+padding: 14px 8px;
+background: rgba(255,255,255,0.07);
+border-radius: var(–radius-sm);
+border: 1px solid rgba(255,255,255,0.08);
+}
+
+.pillar .icon {
+font-size: 22px;
+margin-bottom: 6px;
+}
+
+.pillar .name {
+font-size: 10px;
+font-weight: 600;
+color: rgba(255,255,255,0.85);
+line-height: 1.4;
+}
+
+/* ─── Bottom Nav ─── */
+.bottom-nav {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 100;
+background: rgba(254,252,246,0.92);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border-top: 1px solid rgba(11,61,46,0.06);
+display: flex;
+justify-content: space-around;
+padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+}
+
+.nav-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3px;
+padding: 6px 16px;
+border-radius: 12px;
+cursor: pointer;
+transition: all 0.2s;
+background: none;
+border: none;
+font-family: ‘Tajawal’, sans-serif;
+}
+
+.nav-item.active {
+color: var(–green-main);
+}
+
+.nav-item:not(.active) {
+color: var(–text-light);
+}
+
+.nav-item .nav-icon {
+font-size: 20px;
+}
+
+.nav-item .nav-label {
+font-size: 10px;
+font-weight: 600;
+}
+
+/* ─── Sections toggle ─── */
+.section-page {
+display: none;
+}
+.section-page.active {
+display: block;
+}
+
+/* ─── Spacer for bottom nav ─── */
+.bottom-spacer {
+height: calc(72px + env(safe-area-inset-bottom));
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 0; }
+
+/* ─── Zoom Buttons ─── */
+.zoom-group {
+display: flex;
+flex-direction: column;
+gap: 8px;
+margin: 10px 18px 14px;
+}
+
+.zoom-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+width: 100%;
+padding: 12px 16px;
+background: linear-gradient(135deg, #2D8CFF, #1A6FD4);
+color: white;
+border: none;
+border-radius: var(–radius-sm);
+font-family: ‘Tajawal’, sans-serif;
+font-size: 14px;
+font-weight: 700;
+cursor: pointer;
+text-decoration: none;
+transition: all 0.2s ease;
+box-shadow: 0 4px 16px rgba(45,140,255,0.3);
+}
+
+.zoom-btn:active {
+transform: scale(0.97);
+box-shadow: 0 2px 8px rgba(45,140,255,0.3);
+}
+
+.zoom-btn svg {
+width: 20px;
+height: 20px;
+flex-shrink: 0;
+}
+
+.zoom-row {
+display: flex;
+gap: 8px;
+}
+
+.zoom-copy-btn, .zoom-pass-btn {
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 6px;
+padding: 10px 12px;
+border-radius: var(–radius-sm);
+font-family: ‘Tajawal’, sans-serif;
+font-size: 12px;
+font-weight: 600;
+cursor: pointer;
+border: none;
+transition: all 0.2s ease;
+}
+
+.zoom-copy-btn {
+background: rgba(45,140,255,0.08);
+color: #1A6FD4;
+border: 1.5px solid rgba(45,140,255,0.2);
+}
+
+.zoom-copy-btn:active {
+background: rgba(45,140,255,0.15);
+transform: scale(0.97);
+}
+
+.zoom-pass-btn {
+background: rgba(212,168,67,0.08);
+color: #9A7B2F;
+border: 1.5px solid rgba(212,168,67,0.2);
+}
+
+.zoom-pass-btn:active {
+background: rgba(212,168,67,0.15);
+transform: scale(0.97);
+}
+
+.zoom-copy-btn svg, .zoom-pass-btn svg {
+width: 16px;
+height: 16px;
+flex-shrink: 0;
+}
+
+.copied-toast {
+position: fixed;
+bottom: 90px;
+left: 50%;
+transform: translateX(-50%) translateY(20px);
+background: var(–green-deep);
+color: white;
+padding: 10px 24px;
+border-radius: 100px;
+font-size: 13px;
+font-weight: 600;
+font-family: ‘Tajawal’, sans-serif;
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s ease;
+z-index: 200;
+box-shadow: var(–shadow-elevated);
+}
+
+.copied-toast.show {
+opacity: 1;
+transform: translateX(-50%) translateY(0);
+}
+
+/* ─── Color variants for card accents ─── */
+.accent-society { background: linear-gradient(to bottom, #2ECC71, #27AE60); }
+.accent-health { background: linear-gradient(to bottom, #3498DB, #2980B9); }
+.accent-tech { background: linear-gradient(to bottom, #9B59B6, #8E44AD); }
+.accent-climate { background: linear-gradient(to bottom, #1ABC9C, #16A085); }
+.accent-food { background: linear-gradient(to bottom, #E67E22, #D35400); }
+.accent-media { background: linear-gradient(to bottom, #E74C3C, #C0392B); }
+.accent-economy { background: linear-gradient(to bottom, var(–gold), #B8942E); }
+.accent-sports { background: linear-gradient(to bottom, #2ECC71, #27AE60); }
+.accent-inclusion { background: linear-gradient(to bottom, #E91E63, #C2185B); }
+.accent-arts { background: linear-gradient(to bottom, #FF9800, #F57C00); }
+
+/* ─── Sponsors ─── */
+.sponsors-section {
+margin: 28px 16px 8px;
+text-align: center;
+}
+
+.sponsors-label {
+font-family: ‘Amiri’, serif;
+font-size: 18px;
+font-weight: 700;
+color: var(–green-deep);
+margin-bottom: 14px;
+position: relative;
+display: inline-block;
+}
+
+.sponsors-label::before,
+.sponsors-label::after {
+content: ‘’;
+position: absolute;
+top: 50%;
+width: 40px;
+height: 1px;
+background: linear-gradient(to var(–dir, left), rgba(11,61,46,0.2), transparent);
+}
+
+.sponsors-label::before {
+right: calc(100% + 12px);
+–dir: left;
+}
+
+.sponsors-label::after {
+left: calc(100% + 12px);
+–dir: right;
+}
+
+.sponsors-strip {
+background: white;
+border-radius: var(–radius);
+padding: 16px 12px;
+box-shadow: var(–shadow-soft);
+overflow: hidden;
+}
+
+.sponsors-img {
+width: 100%;
+height: auto;
+object-fit: contain;
+display: block;
+}
 </style>
+
 </head>
 <body>
 
 <!-- Header -->
+
 <div class="header">
   <div class="header-logo">
     <div class="logo-icon">🌿</div>
@@ -826,9 +831,11 @@
 </div>
 
 <!-- ═══ SCHEDULE PAGE ═══ -->
+
 <div class="section-page active" id="page-schedule">
 
   <!-- Hero -->
+
   <div class="hero">
     <div class="hero-pattern"></div>
     <div class="hero-content">
@@ -850,11 +857,15 @@
           <div class="label">مجالات</div>
         </div>
 
-      </div>
-    </div>
+```
+  </div>
+</div>
+```
+
   </div>
 
   <!-- Track Filters -->
+
   <div class="tracks">
     <div class="tracks-scroll">
       <div class="track-chip active" data-filter="all"><span class="icon">📋</span> الكل</div>
@@ -865,6 +876,7 @@
   </div>
 
   <!-- February -->
+
   <div class="month-header">
     <div class="line"></div>
     <h2>فبراير 2026</h2>
@@ -873,192 +885,196 @@
 
   <div class="events" id="events-feb">
 
-    <!-- 22 Feb -->
-    <div class="event-card" data-track="social">
-      <div class="card-accent accent-society"></div>
-      <div class="card-top">
-        <div class="date-block">
-          <div class="day-num">22</div>
-          <div class="day-name">الأحد</div>
-        </div>
-        <div class="card-info">
-          <h3>الدين الإسلامي ودوره في تعزيز الأمن الاجتماعي</h3>
-          <div class="card-tags">
-            <span class="tag">المجتمع</span>
-            <span class="tag gold">القيم</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-details" id="details-1">
-        <ul class="detail-list">
-          <li>دور القيم الأخلاقية الإسلامية في تعزيز السلم الاجتماعي</li>
-          <li>التكافل الاجتماعي ورعاية الفئات الضعيفة</li>
-          <li>العدالة وحفظ الحقوق في الشريعة الإسلامية</li>
-          <li>دور التعليم والوعي الديني في بناء مجتمع آمن</li>
-        </ul>
-      </div>
-      <div class="zoom-group">
-        <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-          انضم عبر Zoom
-        </a>
-        <div class="zoom-row">
-          <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            نسخ رابط Zoom
-          </button>
-          <div class="zoom-pass-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            كلمة المرور: GAZA
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-        <button class="expand-btn" onclick="toggleDetails('details-1', this)">تفاصيل <span class="arrow">▼</span></button>
-      </div>
+```
+<!-- 22 Feb -->
+<div class="event-card" data-track="social">
+  <div class="card-accent accent-society"></div>
+  <div class="card-top">
+    <div class="date-block">
+      <div class="day-num">22</div>
+      <div class="day-name">الأحد</div>
     </div>
-
-    <!-- 23 Feb -->
-    <div class="event-card" data-track="social">
-      <div class="card-accent accent-health"></div>
-      <div class="card-top">
-        <div class="date-block">
-          <div class="day-num">23</div>
-          <div class="day-name">الاثنين</div>
-        </div>
-        <div class="card-info">
-          <h3>التأثير المتبادل بين الرعاية الصحية والتنمية الاقتصادية</h3>
-          <div class="card-tags">
-            <span class="tag">الصحة</span>
-            <span class="tag gold">الاقتصاد</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-details" id="details-2">
-        <ul class="detail-list">
-          <li>تأثير الرعاية الصحية على الإنتاجية والقوى العاملة</li>
-          <li>تأثير الأمراض والأوبئة على الاستثمار والتنمية المستدامة</li>
-          <li>التكاليف الصحية والضغط على المؤسسات والأفراد</li>
-          <li>استراتيجيات الوقاية ودورها في دعم الاقتصاد والمجتمع</li>
-        </ul>
-      </div>
-      <div class="zoom-group">
-        <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-          انضم عبر Zoom
-        </a>
-        <div class="zoom-row">
-          <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            نسخ رابط Zoom
-          </button>
-          <div class="zoom-pass-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            كلمة المرور: GAZA
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-        <button class="expand-btn" onclick="toggleDetails('details-2', this)">تفاصيل <span class="arrow">▼</span></button>
-      </div>
-    </div>
-
-    <!-- 24 Feb -->
-    <div class="event-card" data-track="digital">
-      <div class="card-accent accent-tech"></div>
-      <div class="card-top">
-        <div class="date-block">
-          <div class="day-num">24</div>
-          <div class="day-name">الثلاثاء</div>
-        </div>
-        <div class="card-info">
-          <h3>أخلاقيات استخدام الذكاء الاصطناعي</h3>
-          <div class="card-tags">
-            <span class="tag">التقنية</span>
-            <span class="tag gold">الأخلاقيات</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-details" id="details-3">
-        <ul class="detail-list">
-          <li>الخصوصية وحماية البيانات والمحافظة على حقوق المستخدم</li>
-          <li>السياسات والتشريعات في تحقيق الشفافية والمساءلة</li>
-          <li>تحقيق العدالة وعدم التحيز في البيانات والخوارزميات</li>
-          <li>التأثير الاجتماعي والأخلاقي لمنظومات الذكاء الاصطناعي</li>
-        </ul>
-      </div>
-      <div class="zoom-group">
-        <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-          انضم عبر Zoom
-        </a>
-        <div class="zoom-row">
-          <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            نسخ رابط Zoom
-          </button>
-          <div class="zoom-pass-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            كلمة المرور: GAZA
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-        <button class="expand-btn" onclick="toggleDetails('details-3', this)">تفاصيل <span class="arrow">▼</span></button>
-      </div>
-    </div>
-
-    <!-- 25 Feb -->
-    <div class="event-card" data-track="environment">
-      <div class="card-accent accent-climate"></div>
-      <div class="card-top">
-        <div class="date-block">
-          <div class="day-num">25</div>
-          <div class="day-name">الأربعاء</div>
-        </div>
-        <div class="card-info">
-          <h3>مخرجات قمة المناخ 30 بين المبادرات والتحديات</h3>
-          <div class="card-tags">
-            <span class="tag">البيئة</span>
-            <span class="tag gold">المناخ</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-details" id="details-4">
-        <ul class="detail-list">
-          <li>صندوق حماية الغابات ومدى التزام الدول بعهودها</li>
-          <li>دور الشعوب الأصلية والمعارف القديمة في تحقيق الاستدامة</li>
-          <li>الوفاء بالالتزامات والتخلص من الوقود الأحفوري</li>
-          <li>موقف العالم العربي من مخرجات قمم المناخ</li>
-        </ul>
-      </div>
-      <div class="zoom-group">
-        <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-          انضم عبر Zoom
-        </a>
-        <div class="zoom-row">
-          <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            نسخ رابط Zoom
-          </button>
-          <div class="zoom-pass-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            كلمة المرور: GAZA
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-        <button class="expand-btn" onclick="toggleDetails('details-4', this)">تفاصيل <span class="arrow">▼</span></button>
+    <div class="card-info">
+      <h3>الدين الإسلامي ودوره في تعزيز الأمن الاجتماعي</h3>
+      <div class="card-tags">
+        <span class="tag">المجتمع</span>
+        <span class="tag gold">القيم</span>
       </div>
     </div>
   </div>
+  <div class="card-details" id="details-1">
+    <ul class="detail-list">
+      <li>دور القيم الأخلاقية الإسلامية في تعزيز السلم الاجتماعي</li>
+      <li>التكافل الاجتماعي ورعاية الفئات الضعيفة</li>
+      <li>العدالة وحفظ الحقوق في الشريعة الإسلامية</li>
+      <li>دور التعليم والوعي الديني في بناء مجتمع آمن</li>
+    </ul>
+  </div>
+  <div class="zoom-group">
+    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+      انضم عبر Zoom
+    </a>
+    <div class="zoom-row">
+      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        نسخ رابط Zoom
+      </button>
+      <div class="zoom-pass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        كلمة المرور: GAZA
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+    <button class="expand-btn" onclick="toggleDetails('details-1', this)">تفاصيل <span class="arrow">▼</span></button>
+  </div>
+</div>
+
+<!-- 23 Feb -->
+<div class="event-card" data-track="social">
+  <div class="card-accent accent-health"></div>
+  <div class="card-top">
+    <div class="date-block">
+      <div class="day-num">23</div>
+      <div class="day-name">الاثنين</div>
+    </div>
+    <div class="card-info">
+      <h3>التأثير المتبادل بين الرعاية الصحية والتنمية الاقتصادية</h3>
+      <div class="card-tags">
+        <span class="tag">الصحة</span>
+        <span class="tag gold">الاقتصاد</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-details" id="details-2">
+    <ul class="detail-list">
+      <li>تأثير الرعاية الصحية على الإنتاجية والقوى العاملة</li>
+      <li>تأثير الأمراض والأوبئة على الاستثمار والتنمية المستدامة</li>
+      <li>التكاليف الصحية والضغط على المؤسسات والأفراد</li>
+      <li>استراتيجيات الوقاية ودورها في دعم الاقتصاد والمجتمع</li>
+    </ul>
+  </div>
+  <div class="zoom-group">
+    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+      انضم عبر Zoom
+    </a>
+    <div class="zoom-row">
+      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        نسخ رابط Zoom
+      </button>
+      <div class="zoom-pass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        كلمة المرور: GAZA
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+    <button class="expand-btn" onclick="toggleDetails('details-2', this)">تفاصيل <span class="arrow">▼</span></button>
+  </div>
+</div>
+
+<!-- 24 Feb -->
+<div class="event-card" data-track="digital">
+  <div class="card-accent accent-tech"></div>
+  <div class="card-top">
+    <div class="date-block">
+      <div class="day-num">24</div>
+      <div class="day-name">الثلاثاء</div>
+    </div>
+    <div class="card-info">
+      <h3>أخلاقيات استخدام الذكاء الاصطناعي</h3>
+      <div class="card-tags">
+        <span class="tag">التقنية</span>
+        <span class="tag gold">الأخلاقيات</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-details" id="details-3">
+    <ul class="detail-list">
+      <li>الخصوصية وحماية البيانات والمحافظة على حقوق المستخدم</li>
+      <li>السياسات والتشريعات في تحقيق الشفافية والمساءلة</li>
+      <li>تحقيق العدالة وعدم التحيز في البيانات والخوارزميات</li>
+      <li>التأثير الاجتماعي والأخلاقي لمنظومات الذكاء الاصطناعي</li>
+    </ul>
+  </div>
+  <div class="zoom-group">
+    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+      انضم عبر Zoom
+    </a>
+    <div class="zoom-row">
+      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        نسخ رابط Zoom
+      </button>
+      <div class="zoom-pass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        كلمة المرور: GAZA
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+    <button class="expand-btn" onclick="toggleDetails('details-3', this)">تفاصيل <span class="arrow">▼</span></button>
+  </div>
+</div>
+
+<!-- 25 Feb -->
+<div class="event-card" data-track="environment">
+  <div class="card-accent accent-climate"></div>
+  <div class="card-top">
+    <div class="date-block">
+      <div class="day-num">25</div>
+      <div class="day-name">الأربعاء</div>
+    </div>
+    <div class="card-info">
+      <h3>مخرجات قمة المناخ 30 بين المبادرات والتحديات</h3>
+      <div class="card-tags">
+        <span class="tag">البيئة</span>
+        <span class="tag gold">المناخ</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-details" id="details-4">
+    <ul class="detail-list">
+      <li>صندوق حماية الغابات ومدى التزام الدول بعهودها</li>
+      <li>دور الشعوب الأصلية والمعارف القديمة في تحقيق الاستدامة</li>
+      <li>الوفاء بالالتزامات والتخلص من الوقود الأحفوري</li>
+      <li>موقف العالم العربي من مخرجات قمم المناخ</li>
+    </ul>
+  </div>
+  <div class="zoom-group">
+    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+      انضم عبر Zoom
+    </a>
+    <div class="zoom-row">
+      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        نسخ رابط Zoom
+      </button>
+      <div class="zoom-pass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        كلمة المرور: GAZA
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+    <button class="expand-btn" onclick="toggleDetails('details-4', this)">تفاصيل <span class="arrow">▼</span></button>
+  </div>
+</div>
+```
+
+  </div>
 
   <!-- March -->
+
   <div class="month-header">
     <div class="line"></div>
     <h2>مارس 2026</h2>
@@ -1067,284 +1083,288 @@
 
   <div class="events" id="events-mar">
 
-    <!-- 1 Mar -->
-    <div class="event-card" data-track="environment">
-      <div class="card-accent accent-food"></div>
-      <div class="card-top">
-        <div class="date-block">
-          <div class="day-num">1</div>
-          <div class="day-name">الأحد</div>
-        </div>
-        <div class="card-info">
-          <h3>استراتيجيات مستدامة لمواجهة تحديات الامن الغذائي والمائي</h3>
-          <div class="card-tags">
-            <span class="tag">البيئة</span>
-            <span class="tag gold">الأمن الغذائي</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-details" id="details-5">
-        <ul class="detail-list">
-          <li>التحديات الراهنة للأمن المائي في العالم العربي</li>
-          <li>دور التعاون الإقليمي في تعزيز الأمن المائي والغذائي</li>
-          <li>الاستدامة والابتكار في إدارة الموارد المائية والزراعية</li>
-          <li>تحقيق الأمن الغذائي في ظل التغيرات الاقتصادية والسياسية</li>
-        </ul>
-      </div>
-      <div class="zoom-group">
-        <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-          انضم عبر Zoom
-        </a>
-        <div class="zoom-row">
-          <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            نسخ رابط Zoom
-          </button>
-          <div class="zoom-pass-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            كلمة المرور: GAZA
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-        <button class="expand-btn" onclick="toggleDetails('details-5', this)">تفاصيل <span class="arrow">▼</span></button>
-      </div>
+```
+<!-- 1 Mar -->
+<div class="event-card" data-track="environment">
+  <div class="card-accent accent-food"></div>
+  <div class="card-top">
+    <div class="date-block">
+      <div class="day-num">1</div>
+      <div class="day-name">الأحد</div>
     </div>
-
-    <!-- 2 Mar -->
-    <div class="event-card" data-track="digital">
-      <div class="card-accent accent-media"></div>
-      <div class="card-top">
-        <div class="date-block">
-          <div class="day-num">2</div>
-          <div class="day-name">الاثنين</div>
-        </div>
-        <div class="card-info">
-          <h3>الإعلام في العصر الرقمي بين المصداقية وتحديات وسائل التواصل الاجتماعي</h3>
-          <div class="card-tags">
-            <span class="tag">الإعلام</span>
-            <span class="tag gold">الرقمي</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-details" id="details-6">
-        <ul class="detail-list">
-          <li>دور الإعلام التقليدي في الحفاظ على المصداقية</li>
-          <li>تأثير وسائل التواصل الاجتماعي على صناعة الأخبار</li>
-          <li>مستقبل الإعلام: التوازن بين الحرية والمسؤولية</li>
-          <li>مسؤولية الأفراد والجمهور في التحقق من المعلومات</li>
-        </ul>
-      </div>
-      <div class="zoom-group">
-        <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-          انضم عبر Zoom
-        </a>
-        <div class="zoom-row">
-          <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            نسخ رابط Zoom
-          </button>
-          <div class="zoom-pass-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            كلمة المرور: GAZA
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-        <button class="expand-btn" onclick="toggleDetails('details-6', this)">تفاصيل <span class="arrow">▼</span></button>
-      </div>
-    </div>
-
-    <!-- 3 Mar -->
-    <div class="event-card" data-track="social">
-      <div class="card-accent accent-economy"></div>
-      <div class="card-top">
-        <div class="date-block">
-          <div class="day-num">3</div>
-          <div class="day-name">الثلاثاء</div>
-        </div>
-        <div class="card-info">
-          <h3>نحو نهضة صناعية عربية في ظل الموارد المتاحة</h3>
-          <div class="card-tags">
-            <span class="tag">الاقتصاد</span>
-            <span class="tag gold">الصناعة</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-details" id="details-7">
-        <ul class="detail-list">
-          <li>استغلال الموقع الاستراتيجي والبنية التحتية البحرية</li>
-          <li>تنمية الكفاءات البشرية وبناء القدرات التقنية</li>
-          <li>الاستثمار في التكنولوجيا والابتكار الصناعي</li>
-          <li>تنويع الاقتصاد والحد من الاعتماد على الموارد الأولية</li>
-        </ul>
-      </div>
-      <div class="zoom-group">
-        <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-          انضم عبر Zoom
-        </a>
-        <div class="zoom-row">
-          <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            نسخ رابط Zoom
-          </button>
-          <div class="zoom-pass-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            كلمة المرور: GAZA
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-        <button class="expand-btn" onclick="toggleDetails('details-7', this)">تفاصيل <span class="arrow">▼</span></button>
-      </div>
-    </div>
-
-    <!-- 4 Mar -->
-    <div class="event-card" data-track="social">
-      <div class="card-accent accent-sports"></div>
-      <div class="card-top">
-        <div class="date-block">
-          <div class="day-num">4</div>
-          <div class="day-name">الأربعاء</div>
-        </div>
-        <div class="card-info">
-          <h3>الاستثمار الرياضي في قطر وتعزيز التضامن العربي</h3>
-          <div class="card-tags">
-            <span class="tag">الرياضة</span>
-            <span class="tag gold">الاقتصاد</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-details" id="details-8">
-        <ul class="detail-list">
-          <li>قطر نموذجاً في الاستثمار الرياضي</li>
-          <li>السياحة الرياضية كرافد اقتصادي وتنموي</li>
-          <li>دور الرياضة في تعزيز الروابط العربية</li>
-          <li>التخطيط المستدام في الاستثمار الرياضي</li>
-        </ul>
-      </div>
-      <div class="zoom-group">
-        <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-          انضم عبر Zoom
-        </a>
-        <div class="zoom-row">
-          <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            نسخ رابط Zoom
-          </button>
-          <div class="zoom-pass-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            كلمة المرور: GAZA
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-        <button class="expand-btn" onclick="toggleDetails('details-8', this)">تفاصيل <span class="arrow">▼</span></button>
-      </div>
-    </div>
-
-    <!-- 8 Mar -->
-    <div class="event-card" data-track="social">
-      <div class="card-accent accent-inclusion"></div>
-      <div class="card-top">
-        <div class="date-block">
-          <div class="day-num">8</div>
-          <div class="day-name">الأحد</div>
-        </div>
-        <div class="card-info">
-          <h3>تعزيز حقوق ذوي الإعاقة ودمجهم عبر الابتكار والدعم المجتمعي</h3>
-          <div class="card-tags">
-            <span class="tag">المجتمع</span>
-            <span class="tag gold">الإدماج</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-details" id="details-9">
-        <ul class="detail-list">
-          <li>تأصيل حقوق ذوي الإعاقة في المجتمع</li>
-          <li>تعزيز الوعي المجتمعي والتضامن</li>
-          <li>دور التكنولوجيا والابتكار في دعم ذوي الإعاقة</li>
-          <li>التعليم والتدريب والتمكين</li>
-        </ul>
-      </div>
-      <div class="zoom-group">
-        <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-          انضم عبر Zoom
-        </a>
-        <div class="zoom-row">
-          <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            نسخ رابط Zoom
-          </button>
-          <div class="zoom-pass-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            كلمة المرور: GAZA
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-        <button class="expand-btn" onclick="toggleDetails('details-9', this)">تفاصيل <span class="arrow">▼</span></button>
-      </div>
-    </div>
-
-    <!-- 9 Mar -->
-    <div class="event-card" data-track="digital">
-      <div class="card-accent accent-arts"></div>
-      <div class="card-top">
-        <div class="date-block">
-          <div class="day-num">9</div>
-          <div class="day-name">الاثنين</div>
-        </div>
-        <div class="card-info">
-          <h3>الإبداع الشعري والفني في الخروج عن المألوف</h3>
-          <div class="card-tags">
-            <span class="tag">الفنون</span>
-            <span class="tag gold">الشعر</span>
-          </div>
-        </div>
-      </div>
-      <div class="card-details" id="details-10">
-        <ul class="detail-list">
-          <li>دور الابتكار والتجديد في الشعر العربي والفنون المعاصرة</li>
-          <li>الربط بين الإبداع الفني والقدرة على التفكير النقدي</li>
-          <li>شعراء و فنانون تحدوا القواعد وأبدعوا أعمالا خالدة</li>
-          <li>قراءات شعرية</li>
-        </ul>
-      </div>
-      <div class="zoom-group">
-        <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-          انضم عبر Zoom
-        </a>
-        <div class="zoom-row">
-          <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            نسخ رابط Zoom
-          </button>
-          <div class="zoom-pass-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            كلمة المرور: GAZA
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-        <button class="expand-btn" onclick="toggleDetails('details-10', this)">تفاصيل <span class="arrow">▼</span></button>
+    <div class="card-info">
+      <h3>استراتيجيات مستدامة لمواجهة تحديات الامن الغذائي والمائي</h3>
+      <div class="card-tags">
+        <span class="tag">البيئة</span>
+        <span class="tag gold">الأمن الغذائي</span>
       </div>
     </div>
   </div>
+  <div class="card-details" id="details-5">
+    <ul class="detail-list">
+      <li>التحديات الراهنة للأمن المائي في العالم العربي</li>
+      <li>دور التعاون الإقليمي في تعزيز الأمن المائي والغذائي</li>
+      <li>الاستدامة والابتكار في إدارة الموارد المائية والزراعية</li>
+      <li>تحقيق الأمن الغذائي في ظل التغيرات الاقتصادية والسياسية</li>
+    </ul>
+  </div>
+  <div class="zoom-group">
+    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+      انضم عبر Zoom
+    </a>
+    <div class="zoom-row">
+      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        نسخ رابط Zoom
+      </button>
+      <div class="zoom-pass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        كلمة المرور: GAZA
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+    <button class="expand-btn" onclick="toggleDetails('details-5', this)">تفاصيل <span class="arrow">▼</span></button>
+  </div>
+</div>
+
+<!-- 2 Mar -->
+<div class="event-card" data-track="digital">
+  <div class="card-accent accent-media"></div>
+  <div class="card-top">
+    <div class="date-block">
+      <div class="day-num">2</div>
+      <div class="day-name">الاثنين</div>
+    </div>
+    <div class="card-info">
+      <h3>الإعلام في العصر الرقمي بين المصداقية وتحديات وسائل التواصل الاجتماعي</h3>
+      <div class="card-tags">
+        <span class="tag">الإعلام</span>
+        <span class="tag gold">الرقمي</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-details" id="details-6">
+    <ul class="detail-list">
+      <li>دور الإعلام التقليدي في الحفاظ على المصداقية</li>
+      <li>تأثير وسائل التواصل الاجتماعي على صناعة الأخبار</li>
+      <li>مستقبل الإعلام: التوازن بين الحرية والمسؤولية</li>
+      <li>مسؤولية الأفراد والجمهور في التحقق من المعلومات</li>
+    </ul>
+  </div>
+  <div class="zoom-group">
+    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+      انضم عبر Zoom
+    </a>
+    <div class="zoom-row">
+      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        نسخ رابط Zoom
+      </button>
+      <div class="zoom-pass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        كلمة المرور: GAZA
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+    <button class="expand-btn" onclick="toggleDetails('details-6', this)">تفاصيل <span class="arrow">▼</span></button>
+  </div>
+</div>
+
+<!-- 3 Mar -->
+<div class="event-card" data-track="social">
+  <div class="card-accent accent-economy"></div>
+  <div class="card-top">
+    <div class="date-block">
+      <div class="day-num">3</div>
+      <div class="day-name">الثلاثاء</div>
+    </div>
+    <div class="card-info">
+      <h3>نحو نهضة صناعية عربية في ظل الموارد المتاحة</h3>
+      <div class="card-tags">
+        <span class="tag">الاقتصاد</span>
+        <span class="tag gold">الصناعة</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-details" id="details-7">
+    <ul class="detail-list">
+      <li>استغلال الموقع الاستراتيجي والبنية التحتية البحرية</li>
+      <li>تنمية الكفاءات البشرية وبناء القدرات التقنية</li>
+      <li>الاستثمار في التكنولوجيا والابتكار الصناعي</li>
+      <li>تنويع الاقتصاد والحد من الاعتماد على الموارد الأولية</li>
+    </ul>
+  </div>
+  <div class="zoom-group">
+    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+      انضم عبر Zoom
+    </a>
+    <div class="zoom-row">
+      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        نسخ رابط Zoom
+      </button>
+      <div class="zoom-pass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        كلمة المرور: GAZA
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+    <button class="expand-btn" onclick="toggleDetails('details-7', this)">تفاصيل <span class="arrow">▼</span></button>
+  </div>
+</div>
+
+<!-- 4 Mar -->
+<div class="event-card" data-track="social">
+  <div class="card-accent accent-sports"></div>
+  <div class="card-top">
+    <div class="date-block">
+      <div class="day-num">4</div>
+      <div class="day-name">الأربعاء</div>
+    </div>
+    <div class="card-info">
+      <h3>الاستثمار الرياضي في قطر وتعزيز التضامن العربي</h3>
+      <div class="card-tags">
+        <span class="tag">الرياضة</span>
+        <span class="tag gold">الاقتصاد</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-details" id="details-8">
+    <ul class="detail-list">
+      <li>قطر نموذجاً في الاستثمار الرياضي</li>
+      <li>السياحة الرياضية كرافد اقتصادي وتنموي</li>
+      <li>دور الرياضة في تعزيز الروابط العربية</li>
+      <li>التخطيط المستدام في الاستثمار الرياضي</li>
+    </ul>
+  </div>
+  <div class="zoom-group">
+    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+      انضم عبر Zoom
+    </a>
+    <div class="zoom-row">
+      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        نسخ رابط Zoom
+      </button>
+      <div class="zoom-pass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        كلمة المرور: GAZA
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+    <button class="expand-btn" onclick="toggleDetails('details-8', this)">تفاصيل <span class="arrow">▼</span></button>
+  </div>
+</div>
+
+<!-- 8 Mar -->
+<div class="event-card" data-track="social">
+  <div class="card-accent accent-inclusion"></div>
+  <div class="card-top">
+    <div class="date-block">
+      <div class="day-num">8</div>
+      <div class="day-name">الأحد</div>
+    </div>
+    <div class="card-info">
+      <h3>تعزيز حقوق ذوي الإعاقة ودمجهم عبر الابتكار والدعم المجتمعي</h3>
+      <div class="card-tags">
+        <span class="tag">المجتمع</span>
+        <span class="tag gold">الإدماج</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-details" id="details-9">
+    <ul class="detail-list">
+      <li>تأصيل حقوق ذوي الإعاقة في المجتمع</li>
+      <li>تعزيز الوعي المجتمعي والتضامن</li>
+      <li>دور التكنولوجيا والابتكار في دعم ذوي الإعاقة</li>
+      <li>التعليم والتدريب والتمكين</li>
+    </ul>
+  </div>
+  <div class="zoom-group">
+    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+      انضم عبر Zoom
+    </a>
+    <div class="zoom-row">
+      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        نسخ رابط Zoom
+      </button>
+      <div class="zoom-pass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        كلمة المرور: GAZA
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+    <button class="expand-btn" onclick="toggleDetails('details-9', this)">تفاصيل <span class="arrow">▼</span></button>
+  </div>
+</div>
+
+<!-- 9 Mar -->
+<div class="event-card" data-track="digital">
+  <div class="card-accent accent-arts"></div>
+  <div class="card-top">
+    <div class="date-block">
+      <div class="day-num">9</div>
+      <div class="day-name">الاثنين</div>
+    </div>
+    <div class="card-info">
+      <h3>الإبداع الشعري والفني في الخروج عن المألوف</h3>
+      <div class="card-tags">
+        <span class="tag">الفنون</span>
+        <span class="tag gold">الشعر</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-details" id="details-10">
+    <ul class="detail-list">
+      <li>دور الابتكار والتجديد في الشعر العربي والفنون المعاصرة</li>
+      <li>الربط بين الإبداع الفني والقدرة على التفكير النقدي</li>
+      <li>شعراء و فنانون تحدوا القواعد وأبدعوا أعمالا خالدة</li>
+      <li>قراءات شعرية</li>
+    </ul>
+  </div>
+  <div class="zoom-group">
+    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
+      انضم عبر Zoom
+    </a>
+    <div class="zoom-row">
+      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        نسخ رابط Zoom
+      </button>
+      <div class="zoom-pass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        كلمة المرور: GAZA
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
+    <button class="expand-btn" onclick="toggleDetails('details-10', this)">تفاصيل <span class="arrow">▼</span></button>
+  </div>
+</div>
+```
+
+  </div>
 
   <!-- Sponsors -->
+
   <div class="sponsors-section">
     <div class="sponsors-label">داعمونا</div>
     <div class="sponsors-strip">
@@ -1356,6 +1376,7 @@
 </div>
 
 <!-- ═══ ABOUT PAGE ═══ -->
+
 <div class="section-page" id="page-about">
   <div class="hero" style="padding: 28px 20px;">
     <div class="hero-pattern"></div>
@@ -1372,32 +1393,36 @@
       <p style="margin-top: 12px;">مع حرصنا على نشر خلاصات هذه اللقاءات في بيان ختامي يومي، مع ضمان التمثيل الإعلامي لما فيه مصلحة البلاد والعباد.</p>
     </div>
 
-    <div class="about-section" style="margin: 0 0 16px; background: linear-gradient(135deg, #1A3A2E, #1A6B4A);">
-      <h2>المجالات الرئيسية</h2>
-      <div class="about-pillars">
-        <div class="pillar">
-          <div class="icon">🌍</div>
-          <div class="name">المجال البيئي</div>
-        </div>
-        <div class="pillar">
-          <div class="icon">🏛️</div>
-          <div class="name">المجال الاجتماعي<br>والاقتصادي</div>
-        </div>
-        <div class="pillar">
-          <div class="icon">💡</div>
-          <div class="name">المجال الرقمي<br>والإبداعي</div>
-        </div>
-      </div>
+```
+<div class="about-section" style="margin: 0 0 16px; background: linear-gradient(135deg, #1A3A2E, #1A6B4A);">
+  <h2>المجالات الرئيسية</h2>
+  <div class="about-pillars">
+    <div class="pillar">
+      <div class="icon">🌍</div>
+      <div class="name">المجال البيئي</div>
     </div>
+    <div class="pillar">
+      <div class="icon">🏛️</div>
+      <div class="name">المجال الاجتماعي<br>والاقتصادي</div>
+    </div>
+    <div class="pillar">
+      <div class="icon">💡</div>
+      <div class="name">المجال الرقمي<br>والإبداعي</div>
+    </div>
+  </div>
+</div>
+```
+
   </div>
 
   <div class="bottom-spacer"></div>
 </div>
 
 <!-- Bottom Navigation -->
+
 <div class="bottom-nav">
   <button class="nav-item active" onclick="switchPage('schedule')">
-    <span class="nav-icon">📅</span>
+    <span class="nav-icon">🗓️</span>
     <span class="nav-label">الجدول</span>
   </button>
   <button class="nav-item" onclick="switchPage('about')">
@@ -1407,6 +1432,7 @@
 </div>
 
 <!-- Toast -->
+
 <div class="copied-toast" id="toast"></div>
 
 <script>
