@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -7,21 +6,39 @@
 <title>ملتقى الخيمة الخضراء · رمضان 2026</title>
 
 <!-- Open Graph / WhatsApp Preview -->
-
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://greentent.info/">
 <meta property="og:title" content="ملتقى الخيمة الخضراء · رمضان 2026">
-@@ -15,6 +17,7 @@
+<meta property="og:description" content="منبر جماهيري للتفاعل الديمقراطي الحر · ندوات ولقاءات رمضانية مفتوحة عبر Zoom وحضورياً">
+<meta property="og:image" content="https://greentent.info/og-image.png">
+<meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
 <!-- Twitter Card -->
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ملتقى الخيمة الخضراء · رمضان 2026">
 <meta name="twitter:description" content="منبر جماهيري للتفاعل الديمقراطي الحر · ندوات ولقاءات رمضانية مفتوحة">
-@@ -40,781 +43,783 @@
---radius-sm: 12px;
-}
+<meta name="twitter:image" content="https://greentent.info/og-image.png">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-deep: #0B3D2E;
+    --green-main: #1A6B4A;
+    --green-accent: #2ECC71;
+    --green-light: #E8F5E9;
+    --green-mist: #F0F7F2;
+    --gold: #D4A843;
+    --gold-light: #F5E6C8;
+    --cream: #FEFCF6;
+    --text-dark: #1A1A1A;
+    --text-mid: #4A5548;
+    --text-light: #7A8A7E;
+    --shadow-soft: 0 2px 20px rgba(11,61,46,0.08);
+    --shadow-card: 0 4px 24px rgba(11,61,46,0.10);
+    --shadow-elevated: 0 12px 40px rgba(11,61,46,0.15);
+    --radius: 20px;
+    --radius-sm: 12px;
+  }
 
   * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 
@@ -793,827 +810,94 @@
     object-fit: contain;
     display: block;
   }
-- { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-
-body {
-font-family: ‘Tajawal’, sans-serif;
-background: var(–cream);
-color: var(–text-dark);
-overflow-x: hidden;
-min-height: 100vh;
--webkit-font-smoothing: antialiased;
-}
-
-/* ─── Decorative Background ─── */
-body::before {
-content: ‘’;
-position: fixed;
-top: -50%;
-right: -30%;
-width: 600px;
-height: 600px;
-background: radial-gradient(circle, rgba(46,204,113,0.06) 0%, transparent 70%);
-pointer-events: none;
-z-index: 0;
-}
-body::after {
-content: ‘’;
-position: fixed;
-bottom: -30%;
-left: -20%;
-width: 500px;
-height: 500px;
-background: radial-gradient(circle, rgba(212,168,67,0.05) 0%, transparent 70%);
-pointer-events: none;
-z-index: 0;
-}
-
-/* ─── Header ─── */
-.header {
-position: sticky;
-top: 0;
-z-index: 100;
-background: rgba(254,252,246,0.85);
-backdrop-filter: blur(20px);
--webkit-backdrop-filter: blur(20px);
-border-bottom: 1px solid rgba(11,61,46,0.06);
-padding: 12px 20px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-
-.header-logo {
-display: flex;
-align-items: center;
-gap: 10px;
-}
-
-.logo-icon {
-width: 40px;
-height: 40px;
-background: linear-gradient(135deg, var(–green-main), var(–green-accent));
-border-radius: 12px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 20px;
-color: white;
-box-shadow: 0 4px 12px rgba(26,107,74,0.3);
-}
-
-.logo-text {
-display: flex;
-flex-direction: column;
-line-height: 1.2;
-}
-
-.logo-text .title {
-font-size: 15px;
-font-weight: 800;
-color: var(–green-deep);
-letter-spacing: -0.3px;
-}
-
-.logo-text .sub {
-font-size: 10px;
-font-weight: 500;
-color: var(–gold);
-letter-spacing: 0.5px;
-}
-
-/* ─── Hero ─── */
-.hero {
-position: relative;
-padding: 32px 20px 28px;
-text-align: center;
-overflow: hidden;
-}
-
-.hero::before {
-content: ‘’;
-position: absolute;
-inset: 0;
-background: linear-gradient(180deg, var(–green-deep) 0%, var(–green-main) 100%);
-z-index: 0;
-}
-
-.hero-pattern {
-position: absolute;
-inset: 0;
-z-index: 1;
-opacity: 0.06;
-background-image:
-repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(255,255,255,0.5) 30px, rgba(255,255,255,0.5) 31px),
-repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(255,255,255,0.5) 30px, rgba(255,255,255,0.5) 31px);
-}
-
-.hero-content {
-position: relative;
-z-index: 2;
-}
-
-.hero-badge {
-display: inline-flex;
-align-items: center;
-gap: 6px;
-background: rgba(255,255,255,0.1);
-border: 1px solid rgba(255,255,255,0.15);
-border-radius: 100px;
-padding: 6px 16px;
-font-size: 11px;
-font-weight: 500;
-color: var(–gold-light);
-margin-bottom: 16px;
-backdrop-filter: blur(10px);
-}
-
-.hero-badge .dot {
-width: 6px;
-height: 6px;
-border-radius: 50%;
-background: var(–green-accent);
-animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-0%,100% { opacity: 1; transform: scale(1); }
-50% { opacity: 0.5; transform: scale(0.8); }
-}
-
-.hero h1 {
-font-family: ‘Amiri’, serif;
-font-size: 30px;
-font-weight: 700;
-color: white;
-line-height: 1.3;
-margin-bottom: 8px;
-}
-
-.hero h1 span {
-color: var(–gold);
-}
-
-.hero p {
-font-size: 13px;
-color: rgba(255,255,255,0.65);
-font-weight: 300;
-max-width: 320px;
-margin: 0 auto;
-line-height: 1.6;
-}
-
-.hero-stats {
-display: flex;
-justify-content: center;
-gap: 24px;
-margin-top: 20px;
-padding-top: 20px;
-border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.hero-stat {
-text-align: center;
-}
-
-.hero-stat .num {
-font-size: 22px;
-font-weight: 800;
-color: var(–green-accent);
-}
-
-.hero-stat .label {
-font-size: 10px;
-color: rgba(255,255,255,0.5);
-font-weight: 400;
-margin-top: 2px;
-}
-
-/* ─── Tracks / Categories ─── */
-.tracks {
-padding: 20px 16px 8px;
-}
-
-.tracks-scroll {
-display: flex;
-gap: 10px;
-overflow-x: auto;
-scroll-snap-type: x mandatory;
--webkit-overflow-scrolling: touch;
-scrollbar-width: none;
-padding: 4px 0;
-}
-.tracks-scroll::-webkit-scrollbar { display: none; }
-
-.track-chip {
-scroll-snap-align: start;
-flex-shrink: 0;
-display: flex;
-align-items: center;
-gap: 6px;
-padding: 10px 16px;
-border-radius: 100px;
-font-size: 12px;
-font-weight: 600;
-cursor: pointer;
-transition: all 0.3s ease;
-border: 1.5px solid transparent;
-background: white;
-color: var(–text-mid);
-box-shadow: var(–shadow-soft);
-}
-
-.track-chip.active {
-background: var(–green-deep);
-color: white;
-border-color: var(–green-deep);
-box-shadow: 0 4px 16px rgba(11,61,46,0.25);
-}
-
-.track-chip .icon {
-font-size: 14px;
-}
-
-/* ─── Month Header ─── */
-.month-header {
-display: flex;
-align-items: center;
-gap: 12px;
-padding: 24px 20px 12px;
-}
-
-.month-header .line {
-flex: 1;
-height: 1px;
-background: linear-gradient(to left, transparent, rgba(11,61,46,0.12));
-}
-
-.month-header h2 {
-font-family: ‘Amiri’, serif;
-font-size: 20px;
-font-weight: 700;
-color: var(–green-deep);
-white-space: nowrap;
-}
-
-/* ─── Event Cards ─── */
-.events {
-padding: 0 16px 24px;
-display: flex;
-flex-direction: column;
-gap: 14px;
-}
-
-.event-card {
-position: relative;
-background: white;
-border-radius: var(–radius);
-overflow: hidden;
-box-shadow: var(–shadow-card);
-transition: all 0.3s ease;
-animation: fadeUp 0.5s ease backwards;
-}
-
-.event-card:nth-child(1) { animation-delay: 0.05s; }
-.event-card:nth-child(2) { animation-delay: 0.1s; }
-.event-card:nth-child(3) { animation-delay: 0.15s; }
-.event-card:nth-child(4) { animation-delay: 0.2s; }
-
-@keyframes fadeUp {
-from { opacity: 0; transform: translateY(16px); }
-to { opacity: 1; transform: translateY(0); }
-}
-
-.event-card:active {
-transform: scale(0.985);
-}
-
-.card-accent {
-position: absolute;
-top: 0;
-right: 0;
-width: 4px;
-height: 100%;
-}
-
-.card-top {
-display: flex;
-gap: 14px;
-padding: 18px 18px 0;
-align-items: flex-start;
-}
-
-.date-block {
-flex-shrink: 0;
-width: 54px;
-height: 62px;
-border-radius: var(–radius-sm);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-background: var(–green-mist);
-border: 1px solid rgba(11,61,46,0.06);
-}
-
-.date-block .day-num {
-font-size: 22px;
-font-weight: 800;
-color: var(–green-deep);
-line-height: 1;
-}
-
-.date-block .day-name {
-font-size: 10px;
-font-weight: 500;
-color: var(–green-main);
-margin-top: 2px;
-}
-
-.card-info {
-flex: 1;
-min-width: 0;
-}
-
-.card-info h3 {
-font-size: 15px;
-font-weight: 700;
-color: var(–text-dark);
-line-height: 1.5;
-margin-bottom: 6px;
-}
-
-.card-tags {
-display: flex;
-gap: 6px;
-flex-wrap: wrap;
-}
-
-.tag {
-font-size: 10px;
-font-weight: 600;
-padding: 3px 10px;
-border-radius: 100px;
-background: var(–green-mist);
-color: var(–green-main);
-}
-
-.tag.gold {
-background: var(–gold-light);
-color: #9A7B2F;
-}
-
-/* ─── Expandable Details ─── */
-.card-details {
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.4s ease, padding 0.3s ease;
-padding: 0 18px;
-}
-
-.card-details.open {
-max-height: 400px;
-padding: 14px 18px;
-}
-
-.detail-list {
-list-style: none;
-display: flex;
-flex-direction: column;
-gap: 8px;
-}
-
-.detail-list li {
-font-size: 13px;
-color: var(–text-mid);
-line-height: 1.6;
-padding-right: 18px;
-position: relative;
-}
-
-.detail-list li::before {
-content: ‘’;
-position: absolute;
-right: 0;
-top: 9px;
-width: 6px;
-height: 6px;
-border-radius: 50%;
-background: var(–green-accent);
-opacity: 0.6;
-}
-
-/* ─── Card Footer ─── */
-.card-footer {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 12px 18px 14px;
-border-top: 1px solid rgba(11,61,46,0.04);
-margin-top: 4px;
-}
-
-.format-badge {
-display: flex;
-align-items: center;
-gap: 5px;
-font-size: 10px;
-color: var(–text-light);
-font-weight: 500;
-}
-
-.format-badge .dot-live {
-width: 5px;
-height: 5px;
-border-radius: 50%;
-background: var(–green-accent);
-}
-
-.expand-btn {
-display: flex;
-align-items: center;
-gap: 4px;
-font-size: 12px;
-font-weight: 600;
-color: var(–green-main);
-background: var(–green-mist);
-border: none;
-border-radius: 100px;
-padding: 7px 14px;
-cursor: pointer;
-transition: all 0.2s;
-font-family: ‘Tajawal’, sans-serif;
-}
-
-.expand-btn:active {
-background: var(–green-light);
-transform: scale(0.95);
-}
-
-.expand-btn .arrow {
-transition: transform 0.3s ease;
-display: inline-block;
-font-size: 10px;
-}
-
-.expand-btn.open .arrow {
-transform: rotate(180deg);
-}
-
-/* ─── About Section ─── */
-.about-section {
-margin: 8px 16px 24px;
-background: linear-gradient(135deg, var(–green-deep), #145C3F);
-border-radius: var(–radius);
-padding: 28px 22px;
-position: relative;
-overflow: hidden;
-}
-
-.about-section::before {
-content: ‘’;
-position: absolute;
-top: -40px;
-left: -40px;
-width: 160px;
-height: 160px;
-border-radius: 50%;
-background: rgba(46,204,113,0.08);
-}
-
-.about-section h2 {
-font-family: ‘Amiri’, serif;
-font-size: 20px;
-font-weight: 700;
-color: white;
-margin-bottom: 12px;
-position: relative;
-}
-
-.about-section p {
-font-size: 13px;
-color: rgba(255,255,255,0.7);
-line-height: 1.8;
-position: relative;
-}
-
-.about-pillars {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 10px;
-margin-top: 20px;
-position: relative;
-}
-
-.pillar {
-text-align: center;
-padding: 14px 8px;
-background: rgba(255,255,255,0.07);
-border-radius: var(–radius-sm);
-border: 1px solid rgba(255,255,255,0.08);
-}
-
-.pillar .icon {
-font-size: 22px;
-margin-bottom: 6px;
-}
-
-.pillar .name {
-font-size: 10px;
-font-weight: 600;
-color: rgba(255,255,255,0.85);
-line-height: 1.4;
-}
-
-/* ─── Bottom Nav ─── */
-.bottom-nav {
-position: fixed;
-bottom: 0;
-left: 0;
-right: 0;
-z-index: 100;
-background: rgba(254,252,246,0.92);
-backdrop-filter: blur(20px);
--webkit-backdrop-filter: blur(20px);
-border-top: 1px solid rgba(11,61,46,0.06);
-display: flex;
-justify-content: space-around;
-padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
-}
-
-.nav-item {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 3px;
-padding: 6px 16px;
-border-radius: 12px;
-cursor: pointer;
-transition: all 0.2s;
-background: none;
-border: none;
-font-family: ‘Tajawal’, sans-serif;
-}
-
-.nav-item.active {
-color: var(–green-main);
-}
-
-.nav-item:not(.active) {
-color: var(–text-light);
-}
-
-.nav-item .nav-icon {
-font-size: 20px;
-}
-
-.nav-item .nav-label {
-font-size: 10px;
-font-weight: 600;
-}
-
-/* ─── Sections toggle ─── */
-.section-page {
-display: none;
-}
-.section-page.active {
-display: block;
-}
-
-/* ─── Spacer for bottom nav ─── */
-.bottom-spacer {
-height: calc(72px + env(safe-area-inset-bottom));
-}
-
-/* ─── Scrollbar ─── */
-::-webkit-scrollbar { width: 0; }
-
-/* ─── Zoom Buttons ─── */
-.zoom-group {
-display: flex;
-flex-direction: column;
-gap: 8px;
-margin: 10px 18px 14px;
-}
-
-.zoom-btn {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
-width: 100%;
-padding: 12px 16px;
-background: linear-gradient(135deg, #2D8CFF, #1A6FD4);
-color: white;
-border: none;
-border-radius: var(–radius-sm);
-font-family: ‘Tajawal’, sans-serif;
-font-size: 14px;
-font-weight: 700;
-cursor: pointer;
-text-decoration: none;
-transition: all 0.2s ease;
-box-shadow: 0 4px 16px rgba(45,140,255,0.3);
-}
-
-.zoom-btn:active {
-transform: scale(0.97);
-box-shadow: 0 2px 8px rgba(45,140,255,0.3);
-}
-
-.zoom-btn svg {
-width: 20px;
-height: 20px;
-flex-shrink: 0;
-}
-
-.zoom-row {
-display: flex;
-gap: 8px;
-}
-
-.zoom-copy-btn, .zoom-pass-btn {
-flex: 1;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 6px;
-padding: 10px 12px;
-border-radius: var(–radius-sm);
-font-family: ‘Tajawal’, sans-serif;
-font-size: 12px;
-font-weight: 600;
-cursor: pointer;
-border: none;
-transition: all 0.2s ease;
-}
-
-.zoom-copy-btn {
-background: rgba(45,140,255,0.08);
-color: #1A6FD4;
-border: 1.5px solid rgba(45,140,255,0.2);
-}
-
-.zoom-copy-btn:active {
-background: rgba(45,140,255,0.15);
-transform: scale(0.97);
-}
-
-.zoom-pass-btn {
-background: rgba(212,168,67,0.08);
-color: #9A7B2F;
-border: 1.5px solid rgba(212,168,67,0.2);
-}
-
-.zoom-pass-btn:active {
-background: rgba(212,168,67,0.15);
-transform: scale(0.97);
-}
-
-.zoom-copy-btn svg, .zoom-pass-btn svg {
-width: 16px;
-height: 16px;
-flex-shrink: 0;
-}
-
-.copied-toast {
-position: fixed;
-bottom: 90px;
-left: 50%;
-transform: translateX(-50%) translateY(20px);
-background: var(–green-deep);
-color: white;
-padding: 10px 24px;
-border-radius: 100px;
-font-size: 13px;
-font-weight: 600;
-font-family: ‘Tajawal’, sans-serif;
-opacity: 0;
-pointer-events: none;
-transition: all 0.3s ease;
-z-index: 200;
-box-shadow: var(–shadow-elevated);
-}
-
-.copied-toast.show {
-opacity: 1;
-transform: translateX(-50%) translateY(0);
-}
-
-/* ─── Color variants for card accents ─── */
-.accent-society { background: linear-gradient(to bottom, #2ECC71, #27AE60); }
-.accent-health { background: linear-gradient(to bottom, #3498DB, #2980B9); }
-.accent-tech { background: linear-gradient(to bottom, #9B59B6, #8E44AD); }
-.accent-climate { background: linear-gradient(to bottom, #1ABC9C, #16A085); }
-.accent-food { background: linear-gradient(to bottom, #E67E22, #D35400); }
-.accent-media { background: linear-gradient(to bottom, #E74C3C, #C0392B); }
-.accent-economy { background: linear-gradient(to bottom, var(–gold), #B8942E); }
-.accent-sports { background: linear-gradient(to bottom, #2ECC71, #27AE60); }
-.accent-inclusion { background: linear-gradient(to bottom, #E91E63, #C2185B); }
-.accent-arts { background: linear-gradient(to bottom, #FF9800, #F57C00); }
-
-/* ─── Sponsors ─── */
-.sponsors-section {
-margin: 28px 16px 8px;
-text-align: center;
-}
-
-.sponsors-label {
-font-family: ‘Amiri’, serif;
-font-size: 18px;
-font-weight: 700;
-color: var(–green-deep);
-margin-bottom: 14px;
-position: relative;
-display: inline-block;
-}
-
-.sponsors-label::before,
-.sponsors-label::after {
-content: ‘’;
-position: absolute;
-top: 50%;
-width: 40px;
-height: 1px;
-background: linear-gradient(to var(–dir, left), rgba(11,61,46,0.2), transparent);
-}
-
-.sponsors-label::before {
-right: calc(100% + 12px);
-–dir: left;
-}
-
-.sponsors-label::after {
-left: calc(100% + 12px);
-–dir: right;
-}
-
-.sponsors-strip {
-background: white;
-border-radius: var(–radius);
-padding: 16px 12px;
-box-shadow: var(–shadow-soft);
-overflow: hidden;
-}
-
-.sponsors-img {
-width: 100%;
-height: auto;
-object-fit: contain;
-display: block;
-}
+  /* ─── Desktop / Tablet Responsive ─── */
+  @media (min-width: 600px) {
+    body {
+      max-width: 480px;
+      margin: 0 auto;
+      box-shadow: 0 0 60px rgba(11,61,46,0.1);
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .header {
+      max-width: 480px;
+      margin: 0 auto;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+
+    .bottom-nav {
+      max-width: 480px;
+      margin: 0 auto;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+  }
 </style>
-
 </head>
 <body>
 
 <!-- Header -->
-
 <div class="header">
-<div class="header-logo">
-<div class="logo-icon">🌿</div>
-@@ -826,9 +831,11 @@
+  <div class="header-logo">
+    <div class="logo-icon">🌿</div>
+    <div class="logo-text">
+      <span class="title">الخيمة الخضراء</span>
+      <span class="sub">رمضان 2026</span>
+    </div>
+  </div>
 </div>
 
 <!-- ═══ SCHEDULE PAGE ═══ -->
-
 <div class="section-page active" id="page-schedule">
 
-<!-- Hero -->
-
-<div class="hero">
-<div class="hero-pattern"></div>
-<div class="hero-content">
-@@ -850,11 +857,15 @@ <h1>ملتقى <span>الخيمة الخضراء</span></h1>
-<div class="label">مجالات</div>
-</div>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        التسجيل مفتوح
+      </div>
+      <h1>ملتقى <span>الخيمة الخضراء</span></h1>
+      <p>منبر جماهيري للتفاعل الديمقراطي الحر.
+<br>ندوات ولقاءات رمضانية مفتوحة
+<br>(حضور + تواصل حي عبر Zoom)</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">10</div>
+          <div class="label">ندوات</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">3</div>
+          <div class="label">مجالات</div>
+        </div>
 
       </div>
     </div>
-```
   </div>
-</div>
-```
 
-</div>
+  <!-- Track Filters -->
+  <div class="tracks">
+    <div class="tracks-scroll">
+      <div class="track-chip active" data-filter="all"><span class="icon">📋</span> الكل</div>
+      <div class="track-chip" data-filter="environment"><span class="icon">🌍</span> بيئي</div>
+      <div class="track-chip" data-filter="social"><span class="icon">🏛️</span> اجتماعي واقتصادي</div>
+      <div class="track-chip" data-filter="digital"><span class="icon">💡</span> رقمي وإبداعي</div>
+    </div>
+  </div>
 
-<!-- Track Filters -->
+  <!-- February -->
+  <div class="month-header">
+    <div class="line"></div>
+    <h2>فبراير 2026</h2>
+    <div class="line" style="background: linear-gradient(to right, transparent, rgba(11,61,46,0.12));"></div>
+  </div>
 
-<div class="tracks">
-<div class="tracks-scroll">
-<div class="track-chip active" data-filter="all"><span class="icon">📋</span> الكل</div>
-@@ -865,6 +876,7 @@ <h1>ملتقى <span>الخيمة الخضراء</span></h1>
-</div>
-
-<!-- February -->
-
-<div class="month-header">
-<div class="line"></div>
-<h2>فبراير 2026</h2>
-@@ -873,192 +885,196 @@ <h2>فبراير 2026</h2>
-
-<div class="events" id="events-feb">
+  <div class="events" id="events-feb">
 
     <!-- 22 Feb -->
     <div class="event-card" data-track="social">
@@ -1654,55 +938,12 @@ display: block;
             كلمة المرور: GAZA
           </div>
         </div>
-```
-<!-- 22 Feb -->
-<div class="event-card" data-track="social">
-  <div class="card-accent accent-society"></div>
-  <div class="card-top">
-    <div class="date-block">
-      <div class="day-num">22</div>
-      <div class="day-name">الأحد</div>
-    </div>
-    <div class="card-info">
-      <h3>الدين الإسلامي ودوره في تعزيز الأمن الاجتماعي</h3>
-      <div class="card-tags">
-        <span class="tag">المجتمع</span>
-        <span class="tag gold">القيم</span>
-</div>
+      </div>
       <div class="card-footer">
         <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
         <button class="expand-btn" onclick="toggleDetails('details-1', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
     </div>
-  </div>
-  <div class="card-details" id="details-1">
-    <ul class="detail-list">
-      <li>دور القيم الأخلاقية الإسلامية في تعزيز السلم الاجتماعي</li>
-      <li>التكافل الاجتماعي ورعاية الفئات الضعيفة</li>
-      <li>العدالة وحفظ الحقوق في الشريعة الإسلامية</li>
-      <li>دور التعليم والوعي الديني في بناء مجتمع آمن</li>
-    </ul>
-  </div>
-  <div class="zoom-group">
-    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-      انضم عبر Zoom
-    </a>
-    <div class="zoom-row">
-      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        نسخ رابط Zoom
-      </button>
-      <div class="zoom-pass-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        كلمة المرور: GAZA
-</div>
-</div>
-  </div>
-  <div class="card-footer">
-    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-    <button class="expand-btn" onclick="toggleDetails('details-1', this)">تفاصيل <span class="arrow">▼</span></button>
-  </div>
-</div>
 
     <!-- 23 Feb -->
     <div class="event-card" data-track="social">
@@ -1743,54 +984,12 @@ display: block;
             كلمة المرور: GAZA
           </div>
         </div>
-<!-- 23 Feb -->
-<div class="event-card" data-track="social">
-  <div class="card-accent accent-health"></div>
-  <div class="card-top">
-    <div class="date-block">
-      <div class="day-num">23</div>
-      <div class="day-name">الاثنين</div>
-    </div>
-    <div class="card-info">
-      <h3>التأثير المتبادل بين الرعاية الصحية والتنمية الاقتصادية</h3>
-      <div class="card-tags">
-        <span class="tag">الصحة</span>
-        <span class="tag gold">الاقتصاد</span>
-</div>
+      </div>
       <div class="card-footer">
         <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
         <button class="expand-btn" onclick="toggleDetails('details-2', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
     </div>
-  </div>
-  <div class="card-details" id="details-2">
-    <ul class="detail-list">
-      <li>تأثير الرعاية الصحية على الإنتاجية والقوى العاملة</li>
-      <li>تأثير الأمراض والأوبئة على الاستثمار والتنمية المستدامة</li>
-      <li>التكاليف الصحية والضغط على المؤسسات والأفراد</li>
-      <li>استراتيجيات الوقاية ودورها في دعم الاقتصاد والمجتمع</li>
-    </ul>
-  </div>
-  <div class="zoom-group">
-    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-      انضم عبر Zoom
-    </a>
-    <div class="zoom-row">
-      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        نسخ رابط Zoom
-      </button>
-      <div class="zoom-pass-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        كلمة المرور: GAZA
-</div>
-</div>
-  </div>
-  <div class="card-footer">
-    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-    <button class="expand-btn" onclick="toggleDetails('details-2', this)">تفاصيل <span class="arrow">▼</span></button>
-  </div>
-</div>
 
     <!-- 24 Feb -->
     <div class="event-card" data-track="digital">
@@ -1831,54 +1030,12 @@ display: block;
             كلمة المرور: GAZA
           </div>
         </div>
-<!-- 24 Feb -->
-<div class="event-card" data-track="digital">
-  <div class="card-accent accent-tech"></div>
-  <div class="card-top">
-    <div class="date-block">
-      <div class="day-num">24</div>
-      <div class="day-name">الثلاثاء</div>
-    </div>
-    <div class="card-info">
-      <h3>أخلاقيات استخدام الذكاء الاصطناعي</h3>
-      <div class="card-tags">
-        <span class="tag">التقنية</span>
-        <span class="tag gold">الأخلاقيات</span>
-</div>
+      </div>
       <div class="card-footer">
         <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
         <button class="expand-btn" onclick="toggleDetails('details-3', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
     </div>
-  </div>
-  <div class="card-details" id="details-3">
-    <ul class="detail-list">
-      <li>الخصوصية وحماية البيانات والمحافظة على حقوق المستخدم</li>
-      <li>السياسات والتشريعات في تحقيق الشفافية والمساءلة</li>
-      <li>تحقيق العدالة وعدم التحيز في البيانات والخوارزميات</li>
-      <li>التأثير الاجتماعي والأخلاقي لمنظومات الذكاء الاصطناعي</li>
-    </ul>
-  </div>
-  <div class="zoom-group">
-    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-      انضم عبر Zoom
-    </a>
-    <div class="zoom-row">
-      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        نسخ رابط Zoom
-      </button>
-      <div class="zoom-pass-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        كلمة المرور: GAZA
-</div>
-</div>
-  </div>
-  <div class="card-footer">
-    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-    <button class="expand-btn" onclick="toggleDetails('details-3', this)">تفاصيل <span class="arrow">▼</span></button>
-  </div>
-</div>
 
     <!-- 25 Feb -->
     <div class="event-card" data-track="environment">
@@ -1919,66 +1076,22 @@ display: block;
             كلمة المرور: GAZA
           </div>
         </div>
-<!-- 25 Feb -->
-<div class="event-card" data-track="environment">
-  <div class="card-accent accent-climate"></div>
-  <div class="card-top">
-    <div class="date-block">
-      <div class="day-num">25</div>
-      <div class="day-name">الأربعاء</div>
-    </div>
-    <div class="card-info">
-      <h3>مخرجات قمة المناخ 30 بين المبادرات والتحديات</h3>
-      <div class="card-tags">
-        <span class="tag">البيئة</span>
-        <span class="tag gold">المناخ</span>
-</div>
+      </div>
       <div class="card-footer">
         <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
         <button class="expand-btn" onclick="toggleDetails('details-4', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
     </div>
   </div>
-  <div class="card-details" id="details-4">
-    <ul class="detail-list">
-      <li>صندوق حماية الغابات ومدى التزام الدول بعهودها</li>
-      <li>دور الشعوب الأصلية والمعارف القديمة في تحقيق الاستدامة</li>
-      <li>الوفاء بالالتزامات والتخلص من الوقود الأحفوري</li>
-      <li>موقف العالم العربي من مخرجات قمم المناخ</li>
-    </ul>
-  </div>
-  <div class="zoom-group">
-    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-      انضم عبر Zoom
-    </a>
-    <div class="zoom-row">
-      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        نسخ رابط Zoom
-      </button>
-      <div class="zoom-pass-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        كلمة المرور: GAZA
-</div>
-</div>
-</div>
-  <div class="card-footer">
-    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-    <button class="expand-btn" onclick="toggleDetails('details-4', this)">تفاصيل <span class="arrow">▼</span></button>
-  </div>
-</div>
-```
 
+  <!-- March -->
+  <div class="month-header">
+    <div class="line"></div>
+    <h2>مارس 2026</h2>
+    <div class="line" style="background: linear-gradient(to right, transparent, rgba(11,61,46,0.12));"></div>
   </div>
 
-<!-- March -->
-
-<div class="month-header">
-<div class="line"></div>
-<h2>مارس 2026</h2>
-@@ -1067,284 +1083,288 @@ <h2>مارس 2026</h2>
-
-<div class="events" id="events-mar">
+  <div class="events" id="events-mar">
 
     <!-- 1 Mar -->
     <div class="event-card" data-track="environment">
@@ -2019,55 +1132,12 @@ display: block;
             كلمة المرور: GAZA
           </div>
         </div>
-```
-<!-- 1 Mar -->
-<div class="event-card" data-track="environment">
-  <div class="card-accent accent-food"></div>
-  <div class="card-top">
-    <div class="date-block">
-      <div class="day-num">1</div>
-      <div class="day-name">الأحد</div>
-    </div>
-    <div class="card-info">
-      <h3>استراتيجيات مستدامة لمواجهة تحديات الامن الغذائي والمائي</h3>
-      <div class="card-tags">
-        <span class="tag">البيئة</span>
-        <span class="tag gold">الأمن الغذائي</span>
-</div>
+      </div>
       <div class="card-footer">
         <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
         <button class="expand-btn" onclick="toggleDetails('details-5', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
     </div>
-  </div>
-  <div class="card-details" id="details-5">
-    <ul class="detail-list">
-      <li>التحديات الراهنة للأمن المائي في العالم العربي</li>
-      <li>دور التعاون الإقليمي في تعزيز الأمن المائي والغذائي</li>
-      <li>الاستدامة والابتكار في إدارة الموارد المائية والزراعية</li>
-      <li>تحقيق الأمن الغذائي في ظل التغيرات الاقتصادية والسياسية</li>
-    </ul>
-  </div>
-  <div class="zoom-group">
-    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-      انضم عبر Zoom
-    </a>
-    <div class="zoom-row">
-      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        نسخ رابط Zoom
-      </button>
-      <div class="zoom-pass-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        كلمة المرور: GAZA
-</div>
-</div>
-  </div>
-  <div class="card-footer">
-    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-    <button class="expand-btn" onclick="toggleDetails('details-5', this)">تفاصيل <span class="arrow">▼</span></button>
-  </div>
-</div>
 
     <!-- 2 Mar -->
     <div class="event-card" data-track="digital">
@@ -2108,54 +1178,12 @@ display: block;
             كلمة المرور: GAZA
           </div>
         </div>
-<!-- 2 Mar -->
-<div class="event-card" data-track="digital">
-  <div class="card-accent accent-media"></div>
-  <div class="card-top">
-    <div class="date-block">
-      <div class="day-num">2</div>
-      <div class="day-name">الاثنين</div>
-    </div>
-    <div class="card-info">
-      <h3>الإعلام في العصر الرقمي بين المصداقية وتحديات وسائل التواصل الاجتماعي</h3>
-      <div class="card-tags">
-        <span class="tag">الإعلام</span>
-        <span class="tag gold">الرقمي</span>
-</div>
+      </div>
       <div class="card-footer">
         <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
         <button class="expand-btn" onclick="toggleDetails('details-6', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
     </div>
-  </div>
-  <div class="card-details" id="details-6">
-    <ul class="detail-list">
-      <li>دور الإعلام التقليدي في الحفاظ على المصداقية</li>
-      <li>تأثير وسائل التواصل الاجتماعي على صناعة الأخبار</li>
-      <li>مستقبل الإعلام: التوازن بين الحرية والمسؤولية</li>
-      <li>مسؤولية الأفراد والجمهور في التحقق من المعلومات</li>
-    </ul>
-  </div>
-  <div class="zoom-group">
-    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-      انضم عبر Zoom
-    </a>
-    <div class="zoom-row">
-      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        نسخ رابط Zoom
-      </button>
-      <div class="zoom-pass-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        كلمة المرور: GAZA
-</div>
-</div>
-  </div>
-  <div class="card-footer">
-    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-    <button class="expand-btn" onclick="toggleDetails('details-6', this)">تفاصيل <span class="arrow">▼</span></button>
-  </div>
-</div>
 
     <!-- 3 Mar -->
     <div class="event-card" data-track="social">
@@ -2196,54 +1224,12 @@ display: block;
             كلمة المرور: GAZA
           </div>
         </div>
-<!-- 3 Mar -->
-<div class="event-card" data-track="social">
-  <div class="card-accent accent-economy"></div>
-  <div class="card-top">
-    <div class="date-block">
-      <div class="day-num">3</div>
-      <div class="day-name">الثلاثاء</div>
-    </div>
-    <div class="card-info">
-      <h3>نحو نهضة صناعية عربية في ظل الموارد المتاحة</h3>
-      <div class="card-tags">
-        <span class="tag">الاقتصاد</span>
-        <span class="tag gold">الصناعة</span>
-</div>
+      </div>
       <div class="card-footer">
         <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
         <button class="expand-btn" onclick="toggleDetails('details-7', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
     </div>
-  </div>
-  <div class="card-details" id="details-7">
-    <ul class="detail-list">
-      <li>استغلال الموقع الاستراتيجي والبنية التحتية البحرية</li>
-      <li>تنمية الكفاءات البشرية وبناء القدرات التقنية</li>
-      <li>الاستثمار في التكنولوجيا والابتكار الصناعي</li>
-      <li>تنويع الاقتصاد والحد من الاعتماد على الموارد الأولية</li>
-    </ul>
-  </div>
-  <div class="zoom-group">
-    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-      انضم عبر Zoom
-    </a>
-    <div class="zoom-row">
-      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        نسخ رابط Zoom
-      </button>
-      <div class="zoom-pass-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        كلمة المرور: GAZA
-</div>
-</div>
-  </div>
-  <div class="card-footer">
-    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-    <button class="expand-btn" onclick="toggleDetails('details-7', this)">تفاصيل <span class="arrow">▼</span></button>
-  </div>
-</div>
 
     <!-- 4 Mar -->
     <div class="event-card" data-track="social">
@@ -2284,54 +1270,12 @@ display: block;
             كلمة المرور: GAZA
           </div>
         </div>
-<!-- 4 Mar -->
-<div class="event-card" data-track="social">
-  <div class="card-accent accent-sports"></div>
-  <div class="card-top">
-    <div class="date-block">
-      <div class="day-num">4</div>
-      <div class="day-name">الأربعاء</div>
-    </div>
-    <div class="card-info">
-      <h3>الاستثمار الرياضي في قطر وتعزيز التضامن العربي</h3>
-      <div class="card-tags">
-        <span class="tag">الرياضة</span>
-        <span class="tag gold">الاقتصاد</span>
-</div>
+      </div>
       <div class="card-footer">
         <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
         <button class="expand-btn" onclick="toggleDetails('details-8', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
     </div>
-  </div>
-  <div class="card-details" id="details-8">
-    <ul class="detail-list">
-      <li>قطر نموذجاً في الاستثمار الرياضي</li>
-      <li>السياحة الرياضية كرافد اقتصادي وتنموي</li>
-      <li>دور الرياضة في تعزيز الروابط العربية</li>
-      <li>التخطيط المستدام في الاستثمار الرياضي</li>
-    </ul>
-  </div>
-  <div class="zoom-group">
-    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-      انضم عبر Zoom
-    </a>
-    <div class="zoom-row">
-      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        نسخ رابط Zoom
-      </button>
-      <div class="zoom-pass-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        كلمة المرور: GAZA
-</div>
-</div>
-  </div>
-  <div class="card-footer">
-    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-    <button class="expand-btn" onclick="toggleDetails('details-8', this)">تفاصيل <span class="arrow">▼</span></button>
-  </div>
-</div>
 
     <!-- 8 Mar -->
     <div class="event-card" data-track="social">
@@ -2372,54 +1316,12 @@ display: block;
             كلمة المرور: GAZA
           </div>
         </div>
-<!-- 8 Mar -->
-<div class="event-card" data-track="social">
-  <div class="card-accent accent-inclusion"></div>
-  <div class="card-top">
-    <div class="date-block">
-      <div class="day-num">8</div>
-      <div class="day-name">الأحد</div>
-    </div>
-    <div class="card-info">
-      <h3>تعزيز حقوق ذوي الإعاقة ودمجهم عبر الابتكار والدعم المجتمعي</h3>
-      <div class="card-tags">
-        <span class="tag">المجتمع</span>
-        <span class="tag gold">الإدماج</span>
-</div>
+      </div>
       <div class="card-footer">
         <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
         <button class="expand-btn" onclick="toggleDetails('details-9', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
     </div>
-  </div>
-  <div class="card-details" id="details-9">
-    <ul class="detail-list">
-      <li>تأصيل حقوق ذوي الإعاقة في المجتمع</li>
-      <li>تعزيز الوعي المجتمعي والتضامن</li>
-      <li>دور التكنولوجيا والابتكار في دعم ذوي الإعاقة</li>
-      <li>التعليم والتدريب والتمكين</li>
-    </ul>
-  </div>
-  <div class="zoom-group">
-    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-      انضم عبر Zoom
-    </a>
-    <div class="zoom-row">
-      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        نسخ رابط Zoom
-      </button>
-      <div class="zoom-pass-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        كلمة المرور: GAZA
-</div>
-</div>
-  </div>
-  <div class="card-footer">
-    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-    <button class="expand-btn" onclick="toggleDetails('details-9', this)">تفاصيل <span class="arrow">▼</span></button>
-  </div>
-</div>
 
     <!-- 9 Mar -->
     <div class="event-card" data-track="digital">
@@ -2460,74 +1362,41 @@ display: block;
             كلمة المرور: GAZA
           </div>
         </div>
-<!-- 9 Mar -->
-<div class="event-card" data-track="digital">
-  <div class="card-accent accent-arts"></div>
-  <div class="card-top">
-    <div class="date-block">
-      <div class="day-num">9</div>
-      <div class="day-name">الاثنين</div>
-    </div>
-    <div class="card-info">
-      <h3>الإبداع الشعري والفني في الخروج عن المألوف</h3>
-      <div class="card-tags">
-        <span class="tag">الفنون</span>
-        <span class="tag gold">الشعر</span>
-</div>
+      </div>
       <div class="card-footer">
         <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
         <button class="expand-btn" onclick="toggleDetails('details-10', this)">تفاصيل <span class="arrow">▼</span></button>
+      </div>
     </div>
   </div>
-  <div class="card-details" id="details-10">
-    <ul class="detail-list">
-      <li>دور الابتكار والتجديد في الشعر العربي والفنون المعاصرة</li>
-      <li>الربط بين الإبداع الفني والقدرة على التفكير النقدي</li>
-      <li>شعراء و فنانون تحدوا القواعد وأبدعوا أعمالا خالدة</li>
-      <li>قراءات شعرية</li>
-    </ul>
-  </div>
-  <div class="zoom-group">
-    <a href="https://us02web.zoom.us/j/88400652884" target="_blank" class="zoom-btn">
-      <svg viewBox="0 0 24 24" fill="white"><path d="M4 3h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-2l-4 4v-4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M16 8l4-2v8l-4-2" fill="rgba(255,255,255,0.6)"/></svg>
-      انضم عبر Zoom
-    </a>
-    <div class="zoom-row">
-      <button class="zoom-copy-btn" onclick="copyZoomLink(this)">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        نسخ رابط Zoom
-      </button>
-      <div class="zoom-pass-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        كلمة المرور: GAZA
-</div>
-</div>
-</div>
-  <div class="card-footer">
-    <div class="format-badge"><span class="dot-live"></span> ZOOM + حضوري</div>
-    <button class="expand-btn" onclick="toggleDetails('details-10', this)">تفاصيل <span class="arrow">▼</span></button>
-  </div>
-</div>
-```
 
+  <!-- Sponsors -->
+  <div class="sponsors-section">
+    <div class="sponsors-label">داعمونا</div>
+    <div class="sponsors-strip">
+      <img src="data:image/jpeg;base64,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" alt="داعمونا" class="sponsors-img">
+    </div>
   </div>
 
-<!-- Sponsors -->
-
-<div class="sponsors-section">
-<div class="sponsors-label">داعمونا</div>
-<div class="sponsors-strip">
-@@ -1356,6 +1376,7 @@ <h3>الإبداع الشعري والفني في الخروج عن المألو
+  <div class="bottom-spacer"></div>
 </div>
 
 <!-- ═══ ABOUT PAGE ═══ -->
-
 <div class="section-page" id="page-about">
-<div class="hero" style="padding: 28px 20px;">
-<div class="hero-pattern"></div>
-@@ -1372,32 +1393,36 @@ <h2>رسالتنا</h2>
-<p style="margin-top: 12px;">مع حرصنا على نشر خلاصات هذه اللقاءات في بيان ختامي يومي، مع ضمان التمثيل الإعلامي لما فيه مصلحة البلاد والعباد.</p>
-</div>
+  <div class="hero" style="padding: 28px 20px;">
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <h1 style="font-size: 26px;">عن <span>الخيمة الخضراء</span></h1>
+      <p style="margin-top: 8px;">منبر جماهيري للتفاعل الديمقراطي الحر</p>
+    </div>
+  </div>
+
+  <div style="padding: 20px 16px;">
+    <div class="about-section" style="margin: 0 0 16px;">
+      <h2>رسالتنا</h2>
+      <p>نطرح القضايا ذات الاهتمام المشترك، محلياً وإقليمياً ودولياً، ونستضيف الخبراء والمهتمين من داخل قطر وخارجها. يتناول الاختصاصيون العرض كلٌّ حسب تخصصه، عقب ذلك يُتاح الوقت للمداخلات.</p>
+      <p style="margin-top: 12px;">مع حرصنا على نشر خلاصات هذه اللقاءات في بيان ختامي يومي، مع ضمان التمثيل الإعلامي لما فيه مصلحة البلاد والعباد.</p>
+    </div>
 
     <div class="about-section" style="margin: 0 0 16px; background: linear-gradient(135deg, #1A3A2E, #1A6B4A);">
       <h2>المجالات الرئيسية</h2>
@@ -2545,51 +1414,126 @@ display: block;
           <div class="name">المجال الرقمي<br>والإبداعي</div>
         </div>
       </div>
-```
-<div class="about-section" style="margin: 0 0 16px; background: linear-gradient(135deg, #1A3A2E, #1A6B4A);">
-  <h2>المجالات الرئيسية</h2>
-  <div class="about-pillars">
-    <div class="pillar">
-      <div class="icon">🌍</div>
-      <div class="name">المجال البيئي</div>
     </div>
-    <div class="pillar">
-      <div class="icon">🏛️</div>
-      <div class="name">المجال الاجتماعي<br>والاقتصادي</div>
-    </div>
-    <div class="pillar">
-      <div class="icon">💡</div>
-      <div class="name">المجال الرقمي<br>والإبداعي</div>
-</div>
-</div>
-</div>
-```
-
   </div>
 
-<div class="bottom-spacer"></div>
+  <div class="bottom-spacer"></div>
 </div>
 
 <!-- Bottom Navigation -->
-
 <div class="bottom-nav">
-<button class="nav-item active" onclick="switchPage('schedule')">
-    <span class="nav-icon">📅</span>
+  <button class="nav-item active" onclick="switchPage('schedule')">
     <span class="nav-icon">🗓️</span>
-<span class="nav-label">الجدول</span>
-</button>
-<button class="nav-item" onclick="switchPage('about')">
-@@ -1407,6 +1432,7 @@ <h2>المجالات الرئيسية</h2>
+    <span class="nav-label">الجدول</span>
+  </button>
+  <button class="nav-item" onclick="switchPage('about')">
+    <span class="nav-icon">📖</span>
+    <span class="nav-label">عن الملتقى</span>
+  </button>
 </div>
 
 <!-- Toast -->
-
 <div class="copied-toast" id="toast"></div>
 
 <script>
-@@ -1510,4 +1536,4 @@ <h2>المجالات الرئيسية</h2>
+  // Copy Zoom link
+  function copyZoomLink(btn) {
+    const link = 'https://us02web.zoom.us/j/88400652884\nPasscode: GAZA';
+    navigator.clipboard.writeText(link).then(() => {
+      showToast('تم نسخ الرابط ✓');
+    }).catch(() => {
+      // Fallback
+      const ta = document.createElement('textarea');
+      ta.value = link;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast('تم نسخ الرابط ✓');
+    });
+  }
+
+  // Show password
+  function showPassword(btn) {
+    if (btn.dataset.showing === 'true') {
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> كلمة المرور`;
+      btn.dataset.showing = 'false';
+    } else {
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> GAZA`;
+      btn.dataset.showing = 'true';
+    }
+  }
+
+  // Toast notification
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  }
+  // Toggle event details
+  function toggleDetails(id, btn) {
+    const el = document.getElementById(id);
+    const isOpen = el.classList.contains('open');
+    
+    // Close all others
+    document.querySelectorAll('.card-details.open').forEach(d => {
+      d.classList.remove('open');
+    });
+    document.querySelectorAll('.expand-btn.open').forEach(b => {
+      b.classList.remove('open');
+      b.innerHTML = 'تفاصيل <span class="arrow">▼</span>';
+    });
+
+    if (!isOpen) {
+      el.classList.add('open');
+      btn.classList.add('open');
+      btn.innerHTML = 'إغلاق <span class="arrow">▼</span>';
+    }
+  }
+
+  // Page switching
+  function switchPage(page) {
+    document.querySelectorAll('.section-page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    
+    document.getElementById('page-' + page).classList.add('active');
+    event.currentTarget.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Track filtering
+  document.querySelectorAll('.track-chip').forEach(chip => {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.track-chip').forEach(c => c.classList.remove('active'));
+      this.classList.add('active');
+
+      const filter = this.dataset.filter;
+      const cards = document.querySelectorAll('.event-card');
+
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.track === filter) {
+          card.style.display = '';
+          card.style.animation = 'fadeUp 0.4s ease backwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Show/hide month headers based on visible cards
+      ['events-feb', 'events-mar'].forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        const visible = section.querySelectorAll('.event-card[style=""], .event-card:not([style])');
+        const header = section.previousElementSibling;
+        if (visible.length === 0) {
+          header.style.display = 'none';
+        } else {
+          header.style.display = '';
+        }
+      });
+    });
+  });
 </script>
 
 </body>
-</html>
 </html>
