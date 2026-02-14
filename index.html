@@ -810,32 +810,6 @@
     object-fit: contain;
     display: block;
   }
-  /* ─── Desktop / Tablet Responsive ─── */
-  @media (min-width: 600px) {
-    body {
-      max-width: 480px;
-      margin: 0 auto;
-      box-shadow: 0 0 60px rgba(11,61,46,0.1);
-      min-height: 100vh;
-      position: relative;
-    }
-
-    .header {
-      max-width: 480px;
-      margin: 0 auto;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-    }
-
-    .bottom-nav {
-      max-width: 480px;
-      margin: 0 auto;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-    }
-  }
 </style>
 </head>
 <body>
@@ -1423,7 +1397,7 @@
 <!-- Bottom Navigation -->
 <div class="bottom-nav">
   <button class="nav-item active" onclick="switchPage('schedule')">
-    <span class="nav-icon">🗓️</span>
+    <span class="nav-icon">📅</span>
     <span class="nav-label">الجدول</span>
   </button>
   <button class="nav-item" onclick="switchPage('about')">
